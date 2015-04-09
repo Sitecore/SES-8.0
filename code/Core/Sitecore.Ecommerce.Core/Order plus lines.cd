@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Sitecore.Ecommerce.OrderManagement.Orders.Order">
+    <Position X="7.75" Y="1" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>EAAQAgBAUAQogAECAAIEAAAAIABAAAEAAAALhAEAAAg=</HashCode>
+      <FileName>OrderManagement\Orders\Order.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="orderLines" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Sitecore.Ecommerce.OrderManagement.Orders.OrderLine">
+    <Position X="1.75" Y="6.75" Width="2.5" />
+    <AssociationLine Name="LineItem" Type="Sitecore.Ecommerce.OrderManagement.Orders.LineItem" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.625" Y="8.238" />
+        <Point X="3.625" Y="8.613" />
+        <Point X="3.125" Y="8.613" />
+        <Point X="3.125" Y="10.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.328" Y="1.893" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="BuyerProposedSubstituteLineItem" Type="Sitecore.Ecommerce.OrderManagement.Orders.LineItem" FixedToPoint="true">
+      <Path>
+        <Point X="2.625" Y="8.238" />
+        <Point X="2.625" Y="10.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-2.275" Y="0.873" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="SellerProposedSubstituteLineItem" Type="Sitecore.Ecommerce.OrderManagement.Orders.LineItem">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.293" Y="1.56" Height="0.182" Width="2.37" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="SellerSubstitutedLineItem" Type="Sitecore.Ecommerce.OrderManagement.Orders.LineItem" FixedToPoint="true">
+      <Path>
+        <Point X="2.25" Y="8.238" />
+        <Point X="2.25" Y="10.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.527" Y="1.154" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAIAAAAAAAACAAAAAAAAAAQAACACAAEAAAA=</HashCode>
+      <FileName>OrderManagement\Orders\OrderLine.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="LineItem" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="BuyerProposedSubstituteLineItem" />
+      <Property Name="SellerProposedSubstituteLineItem" />
+      <Property Name="SellerSubstitutedLineItem" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sitecore.Ecommerce.OrderManagement.Orders.LineItem">
+    <Position X="1.5" Y="10.5" Width="2" />
+    <AssociationLine Name="LineExtensionAmount" Type="Sitecore.Ecommerce.Common.Amount" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.5" Y="13.375" />
+        <Point X="5.938" Y="13.375" />
+        <Point X="5.938" Y="14.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="TotalTaxAmount" Type="Sitecore.Ecommerce.Common.Amount" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.438" Y="13.594" />
+        <Point X="3.438" Y="14.74" />
+        <Point X="5.5" Y="14.74" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Delivery" Type="Sitecore.Ecommerce.OrderManagement.Orders.Delivery" FixedToPoint="true">
+      <Path>
+        <Point X="3.5" Y="12.188" />
+        <Point X="13.75" Y="12.188" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Price" Type="Sitecore.Ecommerce.OrderManagement.Orders.Price" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.5" Y="12.949" />
+        <Point X="13.5" Y="12.949" />
+        <Point X="13.5" Y="16.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="ParentLine" Type="Sitecore.Ecommerce.OrderManagement.Orders.LineItem" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.625" Y="13.594" />
+        <Point X="1.625" Y="13.969" />
+        <Point X="1.125" Y="13.969" />
+        <Point X="1.125" Y="13.002" />
+        <Point X="1.5" Y="13.002" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Substates" Type="Sitecore.Ecommerce.OrderManagement.Orders.Substate" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.5" Y="10.618" />
+        <Point X="3.875" Y="10.618" />
+        <Point X="3.875" Y="9.944" />
+        <Point X="6.304" Y="9.944" />
+        <Point X="6.304" Y="8.816" />
+        <Point X="8.25" Y="8.816" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAgAABAIAQIBgAAIAAAAAAAFAiAAQEgAAABCgAEAAAg=</HashCode>
+      <FileName>OrderManagement\Orders\LineItem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Item" />
+      <Property Name="LineExtensionAmount" />
+      <Property Name="TotalTaxAmount" />
+      <Property Name="OrderedShipment" />
+      <Property Name="Price" />
+      <Property Name="ParentLine" />
+      <Property Name="OrderLine" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Delivery" />
+      <Property Name="SubLineItem" />
+      <Property Name="Substates" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sitecore.Ecommerce.OrderManagement.Orders.Item">
+    <Position X="0.75" Y="16" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAgAAAAAAAgAAQAAAAAAQBAAAAAAAgAIIA=</HashCode>
+      <FileName>OrderManagement\Orders\Item.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sitecore.Ecommerce.Common.Amount">
+    <Position X="5.5" Y="14.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAQAAAAIAYAUDAAAAAAAAACAAAAAgAAAAAgA=</HashCode>
+      <FileName>Common\Amount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sitecore.Ecommerce.OrderManagement.Orders.Delivery">
+    <Position X="13.75" Y="9.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQACAAgAAIAgACAAgAAAAABAAAAYAAAAgBAgAAAAAA=</HashCode>
+      <FileName>OrderManagement\Orders\Delivery.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DeliveryLocation" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sitecore.Ecommerce.OrderManagement.Orders.OrderedShipment">
+    <Position X="6.25" Y="10.25" Width="1.5" />
+    <AssociationLine Name="Shipment" Type="Sitecore.Ecommerce.OrderManagement.Orders.Shipment" FixedFromPoint="true">
+      <Path>
+        <Point X="7.75" Y="10.5" />
+        <Point X="12.719" Y="10.5" />
+        <Point X="12.719" Y="8.411" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OrderManagement\Orders\OrderedShipment.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Shipment" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sitecore.Ecommerce.OrderManagement.Orders.Shipment">
+    <Position X="11.75" Y="2.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>wAAAEQAgCQICBAIAAAEIAEAAAASgAICAACAQAEEAAEg=</HashCode>
+      <FileName>OrderManagement\Orders\Shipment.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sitecore.Ecommerce.OrderManagement.Orders.Price">
+    <Position X="12.25" Y="16.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="PriceAmount" Type="Sitecore.Ecommerce.Common.Amount" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.25" Y="17.693" />
+        <Point X="11.875" Y="17.693" />
+        <Point X="11.875" Y="16.062" />
+        <Point X="7" Y="16.062" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ACABAAAoAEIACAAAAAAEAIAAAAAAgAAAAAAAAAAEAAA=</HashCode>
+      <FileName>OrderManagement\Orders\Price.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PriceAmount" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="AllowanceCharge" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sitecore.Ecommerce.OrderManagement.Orders.Substate">
+    <Position X="8.25" Y="7.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAIAAAAAgAAgAAQAAAAAAIAgAAAAAAAAAiA=</HashCode>
+      <FileName>OrderManagement\Orders\Substate.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sitecore.Ecommerce.OrderManagement.Orders.AllowanceCharge">
+    <Position X="9.5" Y="19" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAGAAAAAEAIggAACAAIAAACAAAAAIAAAAQAABAAAAAA=</HashCode>
+      <FileName>OrderManagement\Orders\AllowanceCharge.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TaxTotal" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sitecore.Ecommerce.OrderManagement.Orders.TaxTotal">
+    <Position X="6.25" Y="20" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAgAAAAAAAAQDAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OrderManagement\Orders\TaxTotal.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TaxAmount" />
+      <Property Name="RoundingAmount" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="TaxSubtotal" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sitecore.Ecommerce.OrderManagement.Orders.TaxSubTotal">
+    <Position X="3.75" Y="22.25" Width="2.5" />
+    <AssociationLine Name="TaxableAmount" Type="Sitecore.Ecommerce.Common.Amount" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="22.25" />
+        <Point X="4.75" Y="15.25" />
+        <Point X="5.5" Y="15.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="TaxAmount" Type="Sitecore.Ecommerce.Common.Amount" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.969" Y="22.25" />
+        <Point X="5.969" Y="16.824" />
+        <Point X="6" Y="16.824" />
+        <Point X="6" Y="16.449" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.103" Y="1.402" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="TaxCategory" Type="Sitecore.Ecommerce.OrderManagement.Orders.TaxCategory" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.938" Y="23.738" />
+        <Point X="4.938" Y="24.026" />
+        <Point X="3.25" Y="24.026" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.368" Y="-0.306" Height="0.182" Width="1.605" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAIAAAAAAAAAIQAAAAAAAAAAAABAAAABAAA=</HashCode>
+      <FileName>OrderManagement\Orders\TaxSubTotal.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TaxableAmount" />
+      <Property Name="TaxAmount" />
+      <Property Name="TaxCategory" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sitecore.Ecommerce.OrderManagement.Orders.TaxCategory">
+    <Position X="1" Y="22.25" Width="2.25" />
+    <AssociationLine Name="PerUnitAmount" Type="Sitecore.Ecommerce.Common.Amount" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.156" Y="22.25" />
+        <Point X="3.156" Y="15.062" />
+        <Point X="5.5" Y="15.062" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAIAgAAAAAAAAAQAAEAAAAACAAIACAAAAgA=</HashCode>
+      <FileName>OrderManagement\Orders\TaxCategory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BaseUnitMeasure" />
+      <Property Name="PerUnitAmount" />
+      <Property Name="TaxScheme" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sitecore.Ecommerce.Common.Measure">
+    <Position X="0.75" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\Measure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sitecore.Ecommerce.OrderManagement.Orders.TaxScheme">
+    <Position X="3.25" Y="24.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAQAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>OrderManagement\Orders\TaxScheme.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sitecore.Ecommerce.Common.Location">
+    <Position X="17.25" Y="11.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIggAAAAAAAAAAAAAAIAAICAAAAAAAAACA=</HashCode>
+      <FileName>Common\Location.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://BBS.EPayment" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://BBS.EPayment" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://BBS.EPayment/Imports">
+      <xsd:import schemaLocation="https://epayment-test.bbs.no/Netaxept.svc?xsd=xsd0" namespace="http://BBS.EPayment" />
+      <xsd:import schemaLocation="https://epayment-test.bbs.no/Netaxept.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BBS.EPayment.ServiceLibrary" />
+      <xsd:import schemaLocation="https://epayment-test.bbs.no/Netaxept.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="INetaxept_Register_InputMessage">
+    <wsdl:part name="parameters" element="tns:Register" />
+  </wsdl:message>
+  <wsdl:message name="INetaxept_Register_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="INetaxept_Register_MerchantTranslationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/BBS.EPayment.ServiceLibrary" name="detail" element="q1:MerchantTranslationException" />
+  </wsdl:message>
+  <wsdl:message name="INetaxept_Register_SecurityExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/BBS.EPayment.ServiceLibrary" name="detail" element="q2:SecurityException" />
+  </wsdl:message>
+  <wsdl:message name="INetaxept_Register_BBSExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/BBS.EPayment.ServiceLibrary" name="detail" element="q3:BBSException" />
+  </wsdl:message>
+  <wsdl:message name="INetaxept_Register_AuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/BBS.EPayment.ServiceLibrary" name="detail" element="q4:AuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="INetaxept_Register_UniqueTransactionIdExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/BBS.EPayment.ServiceLibrary" name="detail" element="q5:UniqueTransactionIdException" />
+  </wsdl:message>
+  <wsdl:message name="INetaxept_Register_GenericErrorFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/BBS.EPayment.ServiceLibrary" name="detail" element="q6:GenericError" />
+  </wsdl:message>
+  <wsdl:message name="INetaxept_Register_ValidationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/BBS.EPayment.ServiceLibrary" name="detail" element="q7:ValidationException" />
+  </wsdl:message>
+  <wsdl:message name="INetaxept_Query_InputMessage">
+    <wsdl:part name="parameters" element="tns:Query" />
+  </wsdl:message>
+  <wsdl:message name="INetaxept_Query_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="INetaxept_Query_AuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/BBS.EPayment.ServiceLibrary" name="detail" element="q8:AuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="INetaxept_Query_QueryExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/BBS.EPayment.ServiceLibrary" name="detail" element="q9:QueryException" />
+  </wsdl:message>
+  <wsdl:message name="INetaxept_Process_InputMessage">
+    <wsdl:part name="parameters" element="tns:Process" />
+  </wsdl:message>
+  <wsdl:message name="INetaxept_Process_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessResponse" />
+  </wsdl:message>
+  <wsdl:message name="INetaxept_Process_NotSupportedExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/BBS.EPayment.ServiceLibrary" name="detail" element="q10:NotSupportedException" />
+  </wsdl:message>
+  <wsdl:message name="INetaxept_Process_MerchantTranslationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/BBS.EPayment.ServiceLibrary" name="detail" element="q11:MerchantTranslationException" />
+  </wsdl:message>
+  <wsdl:message name="INetaxept_Process_AuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/BBS.EPayment.ServiceLibrary" name="detail" element="q12:AuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="INetaxept_Process_GenericErrorFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/BBS.EPayment.ServiceLibrary" name="detail" element="q13:GenericError" />
+  </wsdl:message>
+  <wsdl:message name="INetaxept_Process_ValidationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/BBS.EPayment.ServiceLibrary" name="detail" element="q14:ValidationException" />
+  </wsdl:message>
+  <wsdl:message name="INetaxept_Process_BBSExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/BBS.EPayment.ServiceLibrary" name="detail" element="q15:BBSException" />
+  </wsdl:message>
+  <wsdl:message name="INetaxept_Batch_InputMessage">
+    <wsdl:part name="parameters" element="tns:Batch" />
+  </wsdl:message>
+  <wsdl:message name="INetaxept_Batch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="INetaxept_Batch_AuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/BBS.EPayment.ServiceLibrary" name="detail" element="q16:AuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="INetaxept_Batch_MerchantTranslationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/BBS.EPayment.ServiceLibrary" name="detail" element="q17:MerchantTranslationException" />
+  </wsdl:message>
+  <wsdl:message name="INetaxept_Batch_GenericErrorFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/BBS.EPayment.ServiceLibrary" name="detail" element="q18:GenericError" />
+  </wsdl:message>
+  <wsdl:portType name="INetaxept">
+    <wsdl:operation name="Register">
+      <wsdl:input wsaw:Action="http://BBS.EPayment/INetaxept/Register" message="tns:INetaxept_Register_InputMessage" />
+      <wsdl:output wsaw:Action="http://BBS.EPayment/INetaxept/RegisterResponse" message="tns:INetaxept_Register_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BBS.EPayment/INetaxept/RegisterMerchantTranslationExceptionFault" name="MerchantTranslationExceptionFault" message="tns:INetaxept_Register_MerchantTranslationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://BBS.EPayment/INetaxept/RegisterSecurityExceptionFault" name="SecurityExceptionFault" message="tns:INetaxept_Register_SecurityExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://BBS.EPayment/INetaxept/RegisterBBSExceptionFault" name="BBSExceptionFault" message="tns:INetaxept_Register_BBSExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://BBS.EPayment/INetaxept/RegisterAuthenticationExceptionFault" name="AuthenticationExceptionFault" message="tns:INetaxept_Register_AuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://BBS.EPayment/INetaxept/RegisterUniqueTransactionIdExceptionFault" name="UniqueTransactionIdExceptionFault" message="tns:INetaxept_Register_UniqueTransactionIdExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://BBS.EPayment/INetaxept/RegisterGenericErrorFault" name="GenericErrorFault" message="tns:INetaxept_Register_GenericErrorFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://BBS.EPayment/INetaxept/RegisterValidationExceptionFault" name="ValidationExceptionFault" message="tns:INetaxept_Register_ValidationExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Query">
+      <wsdl:input wsaw:Action="http://BBS.EPayment/INetaxept/Query" message="tns:INetaxept_Query_InputMessage" />
+      <wsdl:output wsaw:Action="http://BBS.EPayment/INetaxept/QueryResponse" message="tns:INetaxept_Query_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BBS.EPayment/INetaxept/QueryAuthenticationExceptionFault" name="AuthenticationExceptionFault" message="tns:INetaxept_Query_AuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://BBS.EPayment/INetaxept/QueryQueryExceptionFault" name="QueryExceptionFault" message="tns:INetaxept_Query_QueryExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Process">
+      <wsdl:input wsaw:Action="http://BBS.EPayment/INetaxept/Process" message="tns:INetaxept_Process_InputMessage" />
+      <wsdl:output wsaw:Action="http://BBS.EPayment/INetaxept/ProcessResponse" message="tns:INetaxept_Process_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BBS.EPayment/INetaxept/ProcessNotSupportedExceptionFault" name="NotSupportedExceptionFault" message="tns:INetaxept_Process_NotSupportedExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://BBS.EPayment/INetaxept/ProcessMerchantTranslationExceptionFault" name="MerchantTranslationExceptionFault" message="tns:INetaxept_Process_MerchantTranslationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://BBS.EPayment/INetaxept/ProcessAuthenticationExceptionFault" name="AuthenticationExceptionFault" message="tns:INetaxept_Process_AuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://BBS.EPayment/INetaxept/ProcessGenericErrorFault" name="GenericErrorFault" message="tns:INetaxept_Process_GenericErrorFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://BBS.EPayment/INetaxept/ProcessValidationExceptionFault" name="ValidationExceptionFault" message="tns:INetaxept_Process_ValidationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://BBS.EPayment/INetaxept/ProcessBBSExceptionFault" name="BBSExceptionFault" message="tns:INetaxept_Process_BBSExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Batch">
+      <wsdl:input wsaw:Action="http://BBS.EPayment/INetaxept/Batch" message="tns:INetaxept_Batch_InputMessage" />
+      <wsdl:output wsaw:Action="http://BBS.EPayment/INetaxept/BatchResponse" message="tns:INetaxept_Batch_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BBS.EPayment/INetaxept/BatchAuthenticationExceptionFault" name="AuthenticationExceptionFault" message="tns:INetaxept_Batch_AuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://BBS.EPayment/INetaxept/BatchMerchantTranslationExceptionFault" name="MerchantTranslationExceptionFault" message="tns:INetaxept_Batch_MerchantTranslationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://BBS.EPayment/INetaxept/BatchGenericErrorFault" name="GenericErrorFault" message="tns:INetaxept_Batch_GenericErrorFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

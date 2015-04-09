@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--======================================================================================
+Copyright 2015 Sitecore Corporation A/S
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file 
+except in compliance with the License. You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the 
+License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, 
+either express or implied. See the License for the specific language governing permissions 
+and limitations under the License.
+======================================================================================-->
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Sitecore.Ecommerce.Products" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Sitecore.Ecommerce.Products" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:53125/ProductStockService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Sitecore.Ecommerce.DomainModel.Products" />
+  <xs:complexType name="ProductStock">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Sitecore.Ecommerce.DomainModel.Products" base="q1:ProductStock">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductStock" nillable="true" type="tns:ProductStock" />
+</xs:schema>

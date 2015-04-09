@@ -1,0 +1,1831 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer application="StiReport" version="1.0">
+  <Dictionary isKey="true" Ref="1" type="Dictionary">
+    <Databases isList="true" count="0"/>
+    <DataSources isList="true" count="10">
+      <Order isKey="true" Ref="2" type="Stimulsoft.Report.Dictionary.StiBusinessObjectSource">
+        <Name>Order</Name>
+        <Dictionary isRef="1"/>
+        <Alias>Order</Alias>
+        <Parameters isList="true" count="0"/>
+        <NameInSource>Order</NameInSource>
+        <Columns isList="true" count="60">
+          <value>LanguageCode,System.String</value>
+          <value>OrderId,System.String</value>
+          <value>IssueDate,System.DateTime</value>
+          <value>CompanyName,System.String</value>
+          <value>CompanyAddress,System.String</value>
+          <value>CompanyCity,System.String</value>
+          <value>CompanyZip,System.String</value>
+          <value>CompanyCountry,System.String</value>
+          <value>CompanyPostBox,System.String</value>
+          <value>CompanyNumber,System.String</value>
+          <value>CompanyFax,System.String</value>
+          <value>CompanyMail,System.String</value>
+          <value>CompanyWebsite,System.String</value>
+          <value>CompanyLogoUrl,System.String</value>
+          <value>BuyerPartySupplierAssignedAccountId,System.String</value>
+          <value>BuyerPartyName,System.String</value>
+          <value>BuyerContactName,System.String</value>
+          <value>BuyerPartyAddressLine,System.String</value>
+          <value>BuyerPartyStreetName,System.String</value>
+          <value>BuyerPartyCityName,System.String</value>
+          <value>BuyerPartyPostalZone,System.String</value>
+          <value>BuyerPartyCountry,System.String</value>
+          <value>BuyerPartyTelephone,System.String</value>
+          <value>BuyerPartyTelefax,System.String</value>
+          <value>BuyerPartyMail,System.String</value>
+          <value>BuyerPartyNote,System.String</value>
+          <value>DeliveryPartyName,System.String</value>
+          <value>DeliveryPartyAddressLine,System.String</value>
+          <value>DeliveryPartyStreetName,System.String</value>
+          <value>DeliveryPartyCityName,System.String</value>
+          <value>DeliveryPartyPostalZone,System.String</value>
+          <value>DeliveryPartyCountry,System.String</value>
+          <value>DeliveryPartyTelephone,System.String</value>
+          <value>DeliveryPartyMail,System.String</value>
+          <value>DeliveryPartyNote,System.String</value>
+          <value>OrderLines,System.Object</value>
+          <value>AnticipatedMonetaryTotalTaxExclusiveAmount,System.String</value>
+          <value>AnticipatedMonetaryTotalTaxInclusiveAmount,System.String</value>
+          <value>AggregatedAllowanceCharges,System.String</value>
+          <value>AggregatedTaxPercents,System.Decimal</value>
+          <value>AnticipatedMonetaryTotalPayableAmount,System.String</value>
+          <value>AnticipatedMonetaryTotalAllowanceTotalAmount,System.String</value>
+          <value>AnticipatedMonetaryTotalLineExtensionAmount,System.String</value>
+          <value>DeliveryTrackingID,System.String</value>
+          <value>DeliveryPartyWebsiteURI,System.String</value>
+          <value>_ID,System.Int32</value>
+          <value>_Current,System.Object</value>
+          <value>SupplierPartyName,System.String</value>
+          <value>SupplierPartyAddressLine,System.String</value>
+          <value>SupplierPartyCityName,System.String</value>
+          <value>SupplierPartyPostalZone,System.String</value>
+          <value>SupplierPartyCountry,System.String</value>
+          <value>SupplierPartyPostBox,System.String</value>
+          <value>SupplierPartyTelephone,System.String</value>
+          <value>SupplierPartyTelefax,System.String</value>
+          <value>SupplierPartyMail,System.String</value>
+          <value>SupplierPartyWebsiteURI,System.String</value>
+          <value>TaxTotalAmount,System.String</value>
+          <value>SupplierPartyStreetName,System.String</value>
+          <value>FreightForwarderPartyIdentification, System.String</value>
+        </Columns>
+      </Order>
+      <Order_OrderLines isKey="true" Ref="3" type="Stimulsoft.Report.Dictionary.StiBusinessObjectSource">
+        <Name>Order_OrderLines</Name>
+        <Dictionary isRef="1"/>
+        <Alias>Order_OrderLines</Alias>
+        <Parameters isList="true" count="0"/>
+        <NameInSource>Order_OrderLines</NameInSource>
+        <Columns isList="true" count="12">
+          <value>OrderLineItemCode,System.String</value>
+          <value>OrderLineItemName,System.String</value>
+          <value>OrderLineItemDescription,System.String</value>
+          <value>OrderLineQuantity,System.Decimal</value>
+          <value>OrderLinePrice,System.String</value>
+          <value>OrderLineExtensionPrice,System.String</value>
+          <value>OrderLineSublines,System.Object</value>
+          <value>OrderLineTotalTaxAmount,System.String</value>
+          <value>OrderLineTotalTaxPercent,System.String</value>
+          <value>_ID,System.Int32</value>
+          <value>_parentID,System.Int32</value>
+          <value>_Current,System.Object</value>
+        </Columns>
+      </Order_OrderLines>
+      <Order_OrderLines_OrderLineSublines isKey="true" Ref="4" type="Stimulsoft.Report.Dictionary.StiBusinessObjectSource">
+        <Name>Order_OrderLines_OrderLineSublines</Name>
+        <Dictionary isRef="1"/>
+        <Alias>Order_OrderLines_OrderLineSublines</Alias>
+        <Parameters isList="true" count="0"/>
+        <NameInSource>Order_OrderLines_OrderLineSublines</NameInSource>
+        <Columns isList="true" count="11">
+          <value>SublineItemCode,System.String</value>
+          <value>SublineItemName,System.String</value>
+          <value>SublineQuantity,System.Decimal</value>
+          <value>SublinePrice,System.String</value>
+          <value>SublineExtensionPrice,System.String</value>
+          <value>Sublines,System.Object</value>
+          <value>SubLineTotalTaxAmount,System.String</value>
+          <value>SubLineTotalTaxPercent,System.String</value>
+          <value>_ID,System.Int32</value>
+          <value>_parentID,System.Int32</value>
+          <value>_Current,System.Object</value>
+        </Columns>
+      </Order_OrderLines_OrderLineSublines>
+      <Order_OrderLines_OrderLineSublines_Sublines isKey="true" Ref="5" type="Stimulsoft.Report.Dictionary.StiBusinessObjectSource">
+        <Name>Order_OrderLines_OrderLineSublines_Sublines</Name>
+        <Dictionary isRef="1"/>
+        <Alias>Order_OrderLines_OrderLineSublines_Sublines</Alias>
+        <Parameters isList="true" count="0"/>
+        <NameInSource>Order_OrderLines_OrderLineSublines_Sublines</NameInSource>
+        <Columns isList="true" count="11">
+          <value>SublineItemCode,System.String</value>
+          <value>SublineItemName,System.String</value>
+          <value>SublineQuantity,System.Decimal</value>
+          <value>SublinePrice,System.String</value>
+          <value>SublineExtensionPrice,System.String</value>
+          <value>Sublines,System.Object</value>
+          <value>SubLineTotalTaxAmount,System.String</value>
+          <value>SubLineTotalTaxPercent,System.String</value>
+          <value>_ID,System.Int32</value>
+          <value>_parentID,System.Int32</value>
+          <value>_Current,System.Object</value>
+        </Columns>
+      </Order_OrderLines_OrderLineSublines_Sublines>
+      <Order_OrderLines_OrderLineSublines_Sublines_Sublines isKey="true" Ref="6" type="Stimulsoft.Report.Dictionary.StiBusinessObjectSource">
+        <Name>Order_OrderLines_OrderLineSublines_Sublines_Sublines</Name>
+        <Dictionary isRef="1"/>
+        <Alias>Order_OrderLines_OrderLineSublines_Sublines_Sublines</Alias>
+        <Parameters isList="true" count="0"/>
+        <NameInSource>Order_OrderLines_OrderLineSublines_Sublines_Sublines</NameInSource>
+        <Columns isList="true" count="11">
+          <value>SublineItemCode,System.String</value>
+          <value>SublineItemName,System.String</value>
+          <value>SublineQuantity,System.Decimal</value>
+          <value>SublinePrice,System.String</value>
+          <value>SublineExtensionPrice,System.String</value>
+          <value>Sublines,System.Object</value>
+          <value>SubLineTotalTaxAmount,System.String</value>
+          <value>SubLineTotalTaxPercent,System.String</value>
+          <value>_ID,System.Int32</value>
+          <value>_parentID,System.Int32</value>
+          <value>_Current,System.Object</value>
+        </Columns>
+      </Order_OrderLines_OrderLineSublines_Sublines_Sublines>
+      <Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines isKey="true" Ref="7" type="Stimulsoft.Report.Dictionary.StiBusinessObjectSource">
+        <Name>Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines</Name>
+        <Dictionary isRef="1"/>
+        <Alias>Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines</Alias>
+        <Parameters isList="true" count="0"/>
+        <NameInSource>Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines</NameInSource>
+        <Columns isList="true" count="11">
+          <value>SublineItemCode,System.String</value>
+          <value>SublineItemName,System.String</value>
+          <value>SublineQuantity,System.Decimal</value>
+          <value>SublinePrice,System.String</value>
+          <value>SublineExtensionPrice,System.String</value>
+          <value>Sublines,System.Object</value>
+          <value>SubLineTotalTaxAmount,System.String</value>
+          <value>SubLineTotalTaxPercent,System.String</value>
+          <value>_ID,System.Int32</value>
+          <value>_parentID,System.Int32</value>
+          <value>_Current,System.Object</value>
+        </Columns>
+      </Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines>
+      <Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines isKey="true" Ref="8" type="Stimulsoft.Report.Dictionary.StiBusinessObjectSource">
+        <Name>Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines</Name>
+        <Dictionary isRef="1"/>
+        <Alias>Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines</Alias>
+        <Parameters isList="true" count="0"/>
+        <NameInSource>Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines</NameInSource>
+        <Columns isList="true" count="11">
+          <value>SublineItemCode,System.String</value>
+          <value>SublineItemName,System.String</value>
+          <value>SublineQuantity,System.Decimal</value>
+          <value>SublinePrice,System.String</value>
+          <value>SublineExtensionPrice,System.String</value>
+          <value>Sublines,System.Object</value>
+          <value>SubLineTotalTaxAmount,System.String</value>
+          <value>SubLineTotalTaxPercent,System.String</value>
+          <value>_ID,System.Int32</value>
+          <value>_parentID,System.Int32</value>
+          <value>_Current,System.Object</value>
+        </Columns>
+      </Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines>
+      <Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines_Sublines isKey="true" Ref="9" type="Stimulsoft.Report.Dictionary.StiBusinessObjectSource">
+        <Name>Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines_Sublines</Name>
+        <Dictionary isRef="1"/>
+        <Alias>Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines_Sublines</Alias>
+        <Parameters isList="true" count="0"/>
+        <NameInSource>Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines_Sublines</NameInSource>
+        <Columns isList="true" count="11">
+          <value>SublineItemCode,System.String</value>
+          <value>SublineItemName,System.String</value>
+          <value>SublineQuantity,System.Decimal</value>
+          <value>SublinePrice,System.String</value>
+          <value>SublineExtensionPrice,System.String</value>
+          <value>Sublines,System.Object</value>
+          <value>SubLineTotalTaxAmount,System.String</value>
+          <value>SubLineTotalTaxPercent,System.String</value>
+          <value>_ID,System.Int32</value>
+          <value>_parentID,System.Int32</value>
+          <value>_Current,System.Object</value>
+        </Columns>
+      </Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines_Sublines>
+      <Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines_Sublines_Sublines isKey="true" Ref="10" type="Stimulsoft.Report.Dictionary.StiBusinessObjectSource">
+        <Name>Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines_Sublines_Sublines</Name>
+        <Dictionary isRef="1"/>
+        <Alias>Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines_Sublines_Sublines</Alias>
+        <Parameters isList="true" count="0"/>
+        <NameInSource>Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines_Sublines_Sublines</NameInSource>
+        <Columns isList="true" count="11">
+          <value>SublineItemCode,System.String</value>
+          <value>SublineItemName,System.String</value>
+          <value>SublineQuantity,System.Decimal</value>
+          <value>SublinePrice,System.String</value>
+          <value>SublineExtensionPrice,System.String</value>
+          <value>Sublines,System.Object</value>
+          <value>SubLineTotalTaxAmount,System.String</value>
+          <value>SubLineTotalTaxPercent,System.String</value>
+          <value>_ID,System.Int32</value>
+          <value>_parentID,System.Int32</value>
+          <value>_Current,System.Object</value>
+        </Columns>
+      </Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines_Sublines_Sublines>
+      <Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines_Sublines_Sublines_Sublines isKey="true" Ref="11" type="Stimulsoft.Report.Dictionary.StiBusinessObjectSource">
+        <Name>Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines_Sublines_Sublines_Sublines</Name>
+        <Dictionary isRef="1"/>
+        <Alias>Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines_Sublines_Sublines_Sublines</Alias>
+        <Parameters isList="true" count="0"/>
+        <NameInSource>Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines_Sublines_Sublines_Sublines</NameInSource>
+        <Columns isList="true" count="11">
+          <value>SublineItemCode,System.String</value>
+          <value>SublineItemName,System.String</value>
+          <value>SublineQuantity,System.Decimal</value>
+          <value>SublinePrice,System.String</value>
+          <value>SublineExtensionPrice,System.String</value>
+          <value>Sublines,System.Object</value>
+          <value>SubLineTotalTaxAmount,System.String</value>
+          <value>SubLineTotalTaxPercent,System.String</value>
+          <value>_ID,System.Int32</value>
+          <value>_parentID,System.Int32</value>
+          <value>_Current,System.Object</value>
+        </Columns>
+      </Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines_Sublines_Sublines_Sublines>
+    </DataSources>
+    <Relations isList="true" count="9">
+      <Order isKey="true" Ref="12" type="DataRelation">
+        <Alias>Order</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>_parentID</value>
+        </ChildColumns>
+        <ParentColumns isList="true" count="1">
+          <value>_ID</value>
+        </ParentColumns>
+        <ParentSource isRef="2"/>
+        <Dictionary isRef="1"/>
+        <ChildSource isRef="3"/>
+        <Name>Order</Name>
+        <NameInSource>Order_OrderLinesRelation</NameInSource>
+      </Order>
+      <Order_OrderLines isKey="true" Ref="13" type="DataRelation">
+        <Alias>Order_OrderLines</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>_parentID</value>
+        </ChildColumns>
+        <ParentColumns isList="true" count="1">
+          <value>_ID</value>
+        </ParentColumns>
+        <ParentSource isRef="3"/>
+        <Dictionary isRef="1"/>
+        <ChildSource isRef="4"/>
+        <Name>Order_OrderLines</Name>
+        <NameInSource>Order_OrderLines_OrderLineSublinesRelation</NameInSource>
+      </Order_OrderLines>
+      <Order_OrderLines_OrderLineSublines isKey="true" Ref="14" type="DataRelation">
+        <Alias>Order_OrderLines_OrderLineSublines</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>_parentID</value>
+        </ChildColumns>
+        <ParentColumns isList="true" count="1">
+          <value>_ID</value>
+        </ParentColumns>
+        <ParentSource isRef="4"/>
+        <Dictionary isRef="1"/>
+        <ChildSource isRef="5"/>
+        <Name>Order_OrderLines_OrderLineSublines</Name>
+        <NameInSource>Order_OrderLines_OrderLineSublines_SublinesRelation</NameInSource>
+      </Order_OrderLines_OrderLineSublines>
+      <Order_OrderLines_OrderLineSublines_Sublines isKey="true" Ref="15" type="DataRelation">
+        <Alias>Order_OrderLines_OrderLineSublines_Sublines</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>_parentID</value>
+        </ChildColumns>
+        <ParentColumns isList="true" count="1">
+          <value>_ID</value>
+        </ParentColumns>
+        <ParentSource isRef="5"/>
+        <Dictionary isRef="1"/>
+        <ChildSource isRef="6"/>
+        <Name>Order_OrderLines_OrderLineSublines_Sublines</Name>
+        <NameInSource>Order_OrderLines_OrderLineSublines_Sublines_SublinesRelation</NameInSource>
+      </Order_OrderLines_OrderLineSublines_Sublines>
+      <Order_OrderLines_OrderLineSublines_Sublines_Sublines isKey="true" Ref="16" type="DataRelation">
+        <Alias>Order_OrderLines_OrderLineSublines_Sublines_Sublines</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>_parentID</value>
+        </ChildColumns>
+        <ParentColumns isList="true" count="1">
+          <value>_ID</value>
+        </ParentColumns>
+        <ParentSource isRef="6"/>
+        <Dictionary isRef="1"/>
+        <ChildSource isRef="7"/>
+        <Name>Order_OrderLines_OrderLineSublines_Sublines_Sublines</Name>
+        <NameInSource>Order_OrderLines_OrderLineSublines_Sublines_Sublines_SublinesRelation</NameInSource>
+      </Order_OrderLines_OrderLineSublines_Sublines_Sublines>
+      <Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines isKey="true" Ref="17" type="DataRelation">
+        <Alias>Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>_parentID</value>
+        </ChildColumns>
+        <ParentColumns isList="true" count="1">
+          <value>_ID</value>
+        </ParentColumns>
+        <ParentSource isRef="7"/>
+        <Dictionary isRef="1"/>
+        <ChildSource isRef="8"/>
+        <Name>Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines</Name>
+        <NameInSource>Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_SublinesRelation</NameInSource>
+      </Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines>
+      <Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines isKey="true" Ref="18" type="DataRelation">
+        <Alias>Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>_parentID</value>
+        </ChildColumns>
+        <ParentColumns isList="true" count="1">
+          <value>_ID</value>
+        </ParentColumns>
+        <ParentSource isRef="8"/>
+        <Dictionary isRef="1"/>
+        <ChildSource isRef="9"/>
+        <Name>Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines</Name>
+        <NameInSource>Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines_SublinesRelation</NameInSource>
+      </Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines>
+      <Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines_Sublines isKey="true" Ref="19" type="DataRelation">
+        <Alias>Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines_Sublines</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>_parentID</value>
+        </ChildColumns>
+        <ParentColumns isList="true" count="1">
+          <value>_ID</value>
+        </ParentColumns>
+        <ParentSource isRef="9"/>
+        <Dictionary isRef="1"/>
+        <ChildSource isRef="10"/>
+        <Name>Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines_Sublines</Name>
+        <NameInSource>Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines_Sublines_SublinesRelation</NameInSource>
+      </Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines_Sublines>
+      <Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines_Sublines_Sublines isKey="true" Ref="20" type="DataRelation">
+        <Alias>Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines_Sublines_Sublines</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>_parentID</value>
+        </ChildColumns>
+        <ParentColumns isList="true" count="1">
+          <value>_ID</value>
+        </ParentColumns>
+        <ParentSource isRef="10"/>
+        <Dictionary isRef="1"/>
+        <ChildSource isRef="11"/>
+        <Name>Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines_Sublines_Sublines</Name>
+        <NameInSource>Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines_Sublines_Sublines_SublinesRelation</NameInSource>
+      </Order_OrderLines_OrderLineSublines_Sublines_Sublines_Sublines_Sublines_Sublines_Sublines>
+    </Relations>
+    <Variables isList="true" count="33">
+      <value>,BaseUrl,BaseUrl,System.String,http_x003a__x002f__x002f_ecommerce_x003a_80,False,False</value>
+      <value>,TEXT_PostBox,TEXT_PostBox,System.String,Postbox,False,False</value>
+      <value>,TEXT_InvoiceNumber,TEXT_InvoiceNumber,System.String,Invoice_x0020__x0023_,False,False</value>
+      <value>,TEXT_Date,TEXT_Date,System.String,Date,False,False</value>
+      <value>,TEXT_BillTo,TEXT_BillTo,System.String,Bill_x0020_to,False,False</value>
+      <value>,TEXT_SendTo,TEXT_SendTo,System.String,Send_x0020_to,False,False</value>
+      <value>,TEXT_Note,TEXT_Note,System.String,Note,False,False</value>
+      <value>,TEXT_OrderLineCode,TEXT_OrderLineCode,System.String,No_x002e_,False,False</value>
+      <value>,TEXT_Name,TEXT_Name,System.String,Name,False,False</value>
+      <value>,TEXT_Description,TEXT_Description,System.String,Description,False,False</value>
+      <value>,TEXT_Quantity,TEXT_Quantity,System.String,Qty_x002e_,False,False</value>
+      <value>,TEXT_Tax,TEXT_Tax,System.String,Tax,False,False</value>
+      <value>,TEXT_AfterTax,TEXT_AfterTax,System.String,After_x0020_tax,False,False</value>
+      <value>,TEXT_UnitPrice,TEXT_UnitPrice,System.String,Unit_x0020_Price,False,False</value>
+      <value>,TEXT_TotalPrice,TEXT_TotalPrice,System.String,Total_x0020_Price,False,False</value>
+      <value>,TEXT_SubTotals,TEXT_SubTotals,System.String,Sub_x0020_totals,False,False</value>
+      <value>,TEXT_BeforeTax,TEXT_BeforeTax,System.String,Before_x0020_tax,False,False</value>
+      <value>,TEXT_DeliveryCost,TEXT_DeliveryCost,System.String,Delivery_x0020_cost,False,False</value>
+      <value>,TEXT_TaxDeducted,TEXT_TaxDeducted,System.String,Tax_x0020_deducted,False,False</value>
+      <value>,TEXT_Discount,TEXT_Discount,System.String,Discount,False,False</value>
+      <value>,TEXT_Allowances,TEXT_Allowances,System.String,Allowances,False,False</value>
+      <value>,TEXT_Total,TEXT_Total,System.String,Total,False,False</value>
+      <value>,TEXT_Attention,TEXT_Attention,System.String,Attention,False,False</value>
+      <value>,TEXT_TrackingNumber,TEXT_TrackingNumber,System.String,Tracking_x0020_number,False,False</value>
+      <value>,TEXT_TrackingWebsite,TEXT_TrackingWebsite,System.String,Tracking_x0020_website,False,False</value>
+      <value>,TEXT_Address,TEXT_Address,System.String,Address,False,False</value>
+      <value>,TEXT_EMail,TEXT_EMail,System.String,Email,False,False</value>
+      <value>,TEXT_Phone,TEXT_Phone,System.String,Phone,False,False</value>
+      <value>,TEXT_Fax,TEXT_Fax,System.String,Fax,False,False</value>
+      <value>,TEXT_CustomerNumber,TEXT_CustomerNumber,System.String,Customer_x0020_number,False,False</value>
+      <value>,TEXT_Page,TEXT_Page,System.String,Page,False,False</value>
+      <value>,TEXT_Of,TEXT_Of,System.String,of,False,False</value>
+      <value>,TEXT_PartyIdentification,TEXT_PartyIdentification,System.String,Party_x0020_identification,False,False</value>
+    </Variables>
+    <Report isRef="0"/>
+  </Dictionary>
+  <Pages isList="true" count="1">
+    <Page1 isKey="true" Ref="21" type="Page">
+      <Name>Page1</Name>
+      <PageWidth>21</PageWidth>
+      <Brush>Transparent</Brush>
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <PageHeight>29.7</PageHeight>
+      <Conditions isList="true" count="0"/>
+      <Watermark isKey="true" Ref="22" type="Stimulsoft.Report.Components.StiWatermark">
+        <Font>Arial,100,Regular,Point</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+      <Margins>1,1,1,1</Margins>
+      <Interaction isKey="true" Ref="23" type="Stimulsoft.Report.Components.StiInteraction">
+        <DrillDownParameter1 isKey="true" Ref="24" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+        <DrillDownParameter2 isKey="true" Ref="25" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+        <DrillDownParameter3 isKey="true" Ref="26" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+      </Interaction>
+      <Guid>60bffe3326d34d9481a128e4ae40ae8a</Guid>
+      <Report isRef="0"/>
+      <Components isList="true" count="7">
+        <PageFooter isKey="true" Ref="27" type="PageFooterBand">
+          <Name>PageFooter</Name>
+          <Brush>Transparent</Brush>
+          <Border>None;Black;1;Solid;False;4;Black</Border>
+          <Conditions isList="true" count="0"/>
+          <Interaction isKey="true" Ref="28" type="Stimulsoft.Report.Components.StiInteraction">
+            <DrillDownParameter1 isKey="true" Ref="29" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+            <DrillDownParameter2 isKey="true" Ref="30" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+            <DrillDownParameter3 isKey="true" Ref="31" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+          </Interaction>
+          <MinHeight>0</MinHeight>
+          <MaxHeight>0</MaxHeight>
+          <Components isList="true" count="4">
+            <AttentionCaption isKey="true" Ref="32" type="Text">
+              <Text>{TEXT_Attention}</Text>
+              <Left>0.4</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>AttentionCaption</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Bold,Point</Font>
+              <Top>-0.2</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat isKey="true" Ref="33" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="34" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="35" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="36" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="37" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>0.3999999999999999,-0.19999999999999574,2,0.399999999999995</ClientRectangle>
+              <Parent isRef="27"/>
+              <Page isRef="21"/>
+            </AttentionCaption>
+            <Attention isKey="true" Ref="38" type="Text">
+              <Text>{Order.BuyerContactName}
+{IIF(Length(Order.BuyerPartyTelephone)&gt;0,TEXT_Phone + ": " + Order.BuyerPartyTelephone + "\n","")}{IIF(Length(Order.BuyerPartyTelefax)&gt;0,TEXT_Fax + ": " + Order.BuyerPartyTelefax + "\n","")}{IIF(Length(Order.BuyerPartyMail)&gt;0,TEXT_EMail + ": " + Order.BuyerPartyMail + "\n","")}{IIF(Length(Order.BuyerPartyNote)&gt;0,TEXT_Note + ": " + Order.BuyerPartyNote + "\n","")}</Text>
+              <Left>2.6</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>Attention</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Regular,Point</Font>
+              <Top>-0.2</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat isKey="true" Ref="39" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="40" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="41" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="42" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="43" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>2.6,-0.19999999999999574,6.800000000000001,1.7999999999999972</ClientRectangle>
+              <Parent isRef="27"/>
+              <Page isRef="21"/>
+            </Attention>
+            <DeliveryTracking isKey="true" Ref="44" type="Text">
+              <Text>{IIF(Length(Order.DeliveryTrackingID)&gt;0,TEXT_TrackingNumber+" #","")}{Order.DeliveryTrackingID}{IIF((Length(Order.DeliveryTrackingID)&gt;0)&amp;&amp;(Length(Order.DeliveryPartyWebsiteURI)&gt;0)," - ","")}{IIF(Length(Order.DeliveryPartyWebsiteURI)&gt;0,TEXT_TrackingWebsite+": ","")}{Order.DeliveryPartyWebsiteURI}</Text>
+              <Left>0.4</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>DeliveryTracking</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Regular,Point</Font>
+              <Top>2</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat isKey="true" Ref="45" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="46" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="47" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="48" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="49" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>0.3999999999999999,2,9,0.4000000000000057</ClientRectangle>
+              <Parent isRef="27"/>
+              <Page isRef="21"/>
+            </DeliveryTracking>
+            <CompanyContacts isKey="true" Ref="50" type="Text">
+              <Text>{Order.CompanyName}{IIF((Length(Order.CompanyName)&gt;0)&amp;&amp;(Length(Order.CompanyAddress)&gt;0),". -", "")}{Order.CompanyAddress}
+{Order.CompanyCity}{IIF(Length(Order.CompanyZip)&gt;0,", ","")}{Order.CompanyZip}{IIF(Length(Order.CompanyCountry)&gt;0,", ","")}{Order.CompanyCountry}
+{IIF(Length(Order.CompanyPostBox)&gt;0,TEXT_PostBox+": ","")}{Order.CompanyPostBox}
+{IIF(Length(Order.CompanyMail)&gt;0,TEXT_EMail+": ", "")}{Order.CompanyMail}{IIF(Length(Order.CompanyNumber)&gt;0," - "+TEXT_Phone+": ","")}{Order.CompanyNumber}{IIF(Length(Order.CompanyFax)&gt;0," - "+TEXT_Fax+" ","")}{Order.CompanyFax}{IIF(Length(Order.CompanyWebsite)&gt;0," - ","")}{Order.CompanyWebsite}</Text>
+              <Left>2</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>CompanyContacts</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Regular,Point</Font>
+              <Top>2.8</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <HorAlignment>Center</HorAlignment>
+              <TextFormat isKey="true" Ref="51" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="52" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="53" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="54" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="55" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>2,2.8000000000000007,15.000000000000004,2.3999999999999986</ClientRectangle>
+              <Parent isRef="27"/>
+              <Page isRef="21"/>
+            </CompanyContacts>
+          </Components>
+          <Parent isRef="21"/>
+          <Page isRef="21"/>
+          <ClientRectangle>0,22,19,5.699999999999999</ClientRectangle>
+        </PageFooter>
+        <PageHeader isKey="true" Ref="56" type="PageHeaderBand">
+          <Name>PageHeader</Name>
+          <Brush>Transparent</Brush>
+          <Border>None;Black;1;Solid;False;4;Black</Border>
+          <Conditions isList="true" count="0"/>
+          <Interaction isKey="true" Ref="57" type="Stimulsoft.Report.Components.StiInteraction">
+            <DrillDownParameter1 isKey="true" Ref="58" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+            <DrillDownParameter2 isKey="true" Ref="59" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+            <DrillDownParameter3 isKey="true" Ref="60" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+          </Interaction>
+          <MinHeight>0</MinHeight>
+          <MaxHeight>0</MaxHeight>
+          <Components isList="true" count="11">
+            <CompanyNameBig isKey="true" Ref="61" type="Text">
+              <Text>{Order.CompanyName}</Text>
+              <Left>3.2</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>CompanyNameBig</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,12,Bold,Point</Font>
+              <Top>1.4</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat isKey="true" Ref="62" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="63" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="64" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="65" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="66" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>3.2,1.3999999999999995,8.000000000000004,0.6000000000000028</ClientRectangle>
+              <Parent isRef="56"/>
+              <Page isRef="21"/>
+            </CompanyNameBig>
+            <LogoImage isKey="true" Ref="67" type="Image">
+              <Left>0.4</Left>
+              <Image>/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCABEAF8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKKKACs3xJ4x0zwhFE+pXsNmszbU3n7xqPxr4zsvAmgTahfSBY4x8qZ+aVuyj3r5X8feOr34ieIJL+9Y4PyxRZ+WJewArz8dj1QVlrJnzufZ/DARUYLmm+nZd3+h9d29xHdwJLE6yRyDcrKchh60+vmv4MfHS48A3KWOoNJcaQ5wOctbe49vavcvEPxX8PeF9Bi1K91S1itZ13RNvBMvso6k1vgcSsUrU173bqdOVZ3h8bR9onytbp9P+B5nRU3z0Mvl718wDO3POPpXyp8Zv8AgodZ2d2+naNd2OkN3nvJB5xHqF/h/GvIvCf7U1p4e8fWmuzeLra5mjmDz77ssJUJ+ZcdOma+ko5K3FutUjBro2r/AD10OueKrtxdDD1Jxf2lCVrd07an6FUV5tYftf8Awyv7KKYeN/DqCVA+1rxQVyOh96m/4a1+Gf8A0PPhr/wNSvAdWCduZfee6sqxr19jP/wF/wCR6HRXng/a0+GZP/I8+G+f+n1K7zTNTt9Z0+G7tJ4rm2uFDxyxMGSRT0II61UZxl8LuY18HXopOtBxv3TX5k9UvEPiC08LaRNfXsqw28C5Zj39h71NqWpQaRYS3NzIsMECl3djgKBXzJ8Z/i/P8S9XMUJaLSbZj5MfQyH+81cmNxkaEL9Xsj5vO85p4Cjfeb2X6vyKHxT+J138TNfNxIWis4iRbwZ4Qep9zXJ3d9DYx7pZFQfqalrlPF9s8Wql2JZJBlT6e1cPD+WQzXHexxFTlum/N26L+uh+URc8XXc60tXqyxqXjN5AVtl2D+83JNZDXct5cRmWR5MNxuYnHPaoafB/r0/3hX7ZlmTYPAR5cNBLz3b9XuevChCnFqCPjb4yk3HxY18yEuRdEAk5wK5ryE/uiul+L/8AyVbxB/19tXO1/PWYr/a6v+KX5s/004dbWU4VL/n1T/8ASEIEAHGR+NG0e/50tFcZ69xrINp6/nX7Gf8ABNB2f9iHwGWZnP2WXljk/wCvkr8dG6Gv2K/4Jnf8mQeA/wDr1l/9HyV7OSfxn6fqj8j8Zf8AkT0v+vi/9JkdN+1Fo2s6r4VgawDy2ELFruKP7zeh9wK+eAc19rsodSrAEEYIPQ14n8b/ANnn/XavoMXPLz2ijj3ZB/SuvM8DOT9tDXuv8j+L+Kchq1ZvG0G5d16dv8jxSqHiPTf7S01gBmSL5k/wq+QVYgggg4IIwQaK8jBYupha8MRS+KLuv689j8+pzcJKS6Hn9Pg/16f7wq94m03+z9SJUERy/Mv9RVGD/Xp/vCv6NwGMp4qhDE0tpK/9emx9LGanDmXVHxt8X/8Akq3iD/r7audrovi//wAlW8Qf9fbVztfzjmP+91f8UvzZ/pjw9/yKcL/16p/+kIKKKK4z1xG6Gv2K/wCCZ3/JkHgP/r1l/wDR8lfjq3Q1+xX/AATO/wCTIPAf/XrL/wCj5K9jJP479P1R+SeMv/Inpf8AXxf+kyPd6KKK+oP5qPKPjZ+z7H4lEuq6LGkOoAbpYBwtx7j0b+deA3FvJaXDxSo0UsZ2ujDBU+lfated/Gf4F2/j+3e9sQltq8a8HGFuPZvf3rxcflvPepS37dz4jiHhhVr4nBq0uq7+nn+Z8ueItN/tLTmCgmSP5kwOT7VyER2TLnjDDOe1fWHwV/Z3n0fVf7S8QQxiS3P7i33Bxn+8ccfhWP4s/YkTxF8Qru+h1VLPSbuQzGFY8yxk9VXtivsuC8zeEw8qGLdo3vH9V89/vPKy/IMasMpSju9uqXdn5YfF7whq8nxb1tI9Lv5mnuDJH5UJfepHUYrE/wCFd+If+gDrH/gI/wDhX7efD34KeHfhpaqunWEXnhdrXMqh5X/4Ee3tXUfZIv8AnlH/AN8ivlMfk9GpiJ1KU3aTb1S6u/c/q7KPGHE4bA0cNWwsW4RjG6m9eVJX+HrY/Bv/AIV34h/6AOsf+Aj/AOFH/Cu/EP8A0AdY/wDAR/8ACv3k+yRf88o/++RR9ki/55R/98iuP+w1/P8Ah/wT0f8AiNdX/oEX/gb/APkT8Gz8O/EJB/4kOsf+Aj/4V+vn/BOrQL/wx+xn4HstSs7iwvIrSQyQTpskTMzkZHuCD+Ne0fZIv+eUf/fIqQAAYHAFdmCy1YebnzX0sfJcYeIVTPsJDCSoKmoy5r81+jVtl3CiiivTPzkKKKKACiiigAooooAKKKKACiiigD//2Q==</Image>
+              <Name>LogoImage</Name>
+              <Top>0.4</Top>
+              <Brush>Transparent</Brush>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <ImageURL>{BaseUrl}{Order.CompanyLogoUrl}</ImageURL>
+              <Conditions isList="true" count="0"/>
+              <Interaction isKey="true" Ref="68" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="69" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="70" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="71" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Page isRef="21"/>
+              <Parent isRef="56"/>
+              <ClientRectangle>0.3999999999999999,0.40000000000000013,2.6,1.6000000000000012</ClientRectangle>
+            </LogoImage>
+            <CompanyName isKey="true" Ref="72" type="Text">
+              <Text>{Order.CompanyName}</Text>
+              <Left>11.4</Left>
+              <TextBrush>[104:104:104]</TextBrush>
+              <Name>CompanyName</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Bold,Point</Font>
+              <Top>0.2</Top>
+              <Border>None;[0:0:0];1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <HorAlignment>Right</HorAlignment>
+              <TextFormat isKey="true" Ref="73" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="74" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="75" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="76" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="77" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>11.4,0.20000000000000084,7.200000000000001,0.6000000000000008</ClientRectangle>
+              <Parent isRef="56"/>
+              <Page isRef="21"/>
+            </CompanyName>
+            <CompanyAddress isKey="true" Ref="78" type="Text">
+              <Text>{Order.CompanyAddress}
+{Order.CompanyCity}{IIF(Length(Order.CompanyZip)&gt;0,", ","")}{Order.CompanyZip}{IIF(Length(Order.CompanyCountry)&gt;0,", ","")}{Order.CompanyCountry}
+{IIF(Length(Order.CompanyPostBox)&gt;0,TEXT_PostBox+": ","")}{Order.CompanyPostBox}</Text>
+              <Left>11.4</Left>
+              <TextBrush>[104:104:104]</TextBrush>
+              <Name>CompanyAddress</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Regular,Point</Font>
+              <Top>0.8</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <HorAlignment>Right</HorAlignment>
+              <TextFormat isKey="true" Ref="79" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="80" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="81" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="82" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="83" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>11.4,0.8000000000000016,7.200000000000001,1.1999999999999997</ClientRectangle>
+              <Parent isRef="56"/>
+              <Page isRef="21"/>
+            </CompanyAddress>
+            <OrderNumber isKey="true" Ref="84" type="Text">
+              <Text>{TEXT_InvoiceNumber}: {Order.OrderId}</Text>
+              <Left>0.4</Left>
+              <TextBrush>[104:104:104]</TextBrush>
+              <Name>OrderNumber</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,10,Bold,Point</Font>
+              <Top>2.4</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat isKey="true" Ref="85" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="86" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="87" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="88" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="89" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>0.3999999999999999,2.4,5.800000000000004,0.6000000000000014</ClientRectangle>
+              <Parent isRef="56"/>
+              <Page isRef="21"/>
+            </OrderNumber>
+            <OrderDate isKey="true" Ref="90" type="Text">
+              <Text>{TEXT_Date}: {Order.IssueDate}</Text>
+              <Left>6.6</Left>
+              <TextBrush>[104:104:104]</TextBrush>
+              <Name>OrderDate</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,10,Bold,Point</Font>
+              <Top>2.4</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <HorAlignment>Center</HorAlignment>
+              <TextFormat isKey="true" Ref="91" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="92" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="93" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="94" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="95" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>6.599999999999999,2.4,5.800000000000002,0.6000000000000014</ClientRectangle>
+              <Parent isRef="56"/>
+              <Page isRef="21"/>
+            </OrderDate>
+            <Text3 isKey="true" Ref="96" type="Text">
+              <Text>{TEXT_Page} {PageNumber} {TEXT_Of} {TotalPageCount}</Text>
+              <Left>12.8</Left>
+              <TextBrush>[104:104:104]</TextBrush>
+              <Name>Text3</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,10,Bold,Point</Font>
+              <Top>2.4</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <HorAlignment>Right</HorAlignment>
+              <TextFormat isKey="true" Ref="97" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="98" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="99" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="100" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="101" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>12.800000000000002,2.4,5.799999999999999,0.6000000000000014</ClientRectangle>
+              <Parent isRef="56"/>
+              <Page isRef="21"/>
+            </Text3>
+            <BillToCaption isKey="true" Ref="102" type="Text">
+              <Text>{TEXT_BillTo}</Text>
+              <Left>0.4</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>BillToCaption</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Bold,Point</Font>
+              <Top>3.4</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat isKey="true" Ref="103" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="104" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="105" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="106" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="107" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>0.3999999999999999,3.400000000000001,2.0000000000000013,0.600000000000001</ClientRectangle>
+              <Parent isRef="56"/>
+              <Page isRef="21"/>
+            </BillToCaption>
+            <SendToCaption isKey="true" Ref="108" type="Text">
+              <Text>{TEXT_SendTo}</Text>
+              <Left>9.6</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>SendToCaption</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Bold,Point</Font>
+              <Top>3.4</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat isKey="true" Ref="109" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="110" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="111" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="112" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="113" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>9.600000000000001,3.400000000000001,2,0.600000000000001</ClientRectangle>
+              <Parent isRef="56"/>
+              <Page isRef="21"/>
+            </SendToCaption>
+            <BillTo isKey="true" Ref="114" type="Text">
+              <Text>{IIF(Length(Order.BuyerPartySupplierAssignedAccountId)&gt;0,TEXT_CustomerNumber+": ","")}{Order.BuyerPartySupplierAssignedAccountId}
+{Order.BuyerPartyName}
+{Order.BuyerPartyStreetName}
+{Order.BuyerPartyCityName}{IIF(Length(Order.BuyerPartyPostalZone)&gt;0,", ","")}{Order.BuyerPartyPostalZone}
+{Order.BuyerPartyCountry}
+{Order.BuyerPartyTelephone}
+{Order.BuyerPartyMail}
+
+{IIF(Length(Order.BuyerPartyPostalZone)&gt;0,TEXT_Note+": ","")}{Order.BuyerPartyNote}</Text>
+              <Left>2.6</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>BillTo</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Regular,Point</Font>
+              <Top>3.4</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat isKey="true" Ref="115" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="116" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="117" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="118" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="119" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>2.6,3.400000000000001,6.800000000000001,3.3999999999999964</ClientRectangle>
+              <Parent isRef="56"/>
+              <Page isRef="21"/>
+            </BillTo>
+            <SendTo isKey="true" Ref="120" type="Text">
+              <Text>{Order.DeliveryPartyName}
+{Order.DeliveryPartyStreetName}
+{Order.DeliveryPartyCityName}{IIF(Length(Order.DeliveryPartyPostalZone)&gt;0,", ","")}{Order.DeliveryPartyPostalZone}
+{Order.DeliveryPartyCountry}
+{Order.DeliveryPartyTelephone}
+{Order.DeliveryPartyMail}
+
+{IIF(Length(Order.DeliveryPartyNote)&gt;0,TEXT_Note+": ","")}{Order.DeliveryPartyNote}
+{IIF(Length(Order.FreightForwarderPartyIdentification)&gt;0,TEXT_PartyIdentification+": ","")}{Order.FreightForwarderPartyIdentification}</Text>
+              <Left>11.8</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>SendTo</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Regular,Point</Font>
+              <Top>3.4</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat isKey="true" Ref="121" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="122" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="123" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="124" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="125" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>11.8,3.400000000000001,6.800000000000001,3.3999999999999964</ClientRectangle>
+              <Parent isRef="56"/>
+              <Page isRef="21"/>
+            </SendTo>
+          </Components>
+          <Parent isRef="21"/>
+          <Page isRef="21"/>
+          <ClientRectangle>0,0.3999999999999999,19,7</ClientRectangle>
+        </PageHeader>
+        <Image1 isKey="true" Ref="126" type="Image">
+          <Left>-10</Left>
+          <Name>Image1</Name>
+          <Top>7.8</Top>
+          <Brush>Transparent</Brush>
+          <Border>None;Black;1;Solid;False;4;Black</Border>
+          <Conditions isList="true" count="0"/>
+          <Interaction isKey="true" Ref="127" type="Stimulsoft.Report.Components.StiInteraction">
+            <DrillDownParameter1 isKey="true" Ref="128" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+            <DrillDownParameter2 isKey="true" Ref="129" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+            <DrillDownParameter3 isKey="true" Ref="130" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+          </Interaction>
+          <ShiftMode>IncreasingSize</ShiftMode>
+          <MinSize>0,0</MinSize>
+          <MaxSize>0,0</MaxSize>
+          <Page isRef="21"/>
+          <Parent isRef="21"/>
+          <ClientRectangle>-10,7.800000000000004,2.5999999999999996,2.599999999999998</ClientRectangle>
+        </Image1>
+        <Header isKey="true" Ref="131" type="HeaderBand">
+          <Name>Header</Name>
+          <Brush>Transparent</Brush>
+          <Border>None;Black;1;Solid;False;4;Black</Border>
+          <Conditions isList="true" count="0"/>
+          <Interaction isKey="true" Ref="132" type="Stimulsoft.Report.Components.StiInteraction">
+            <DrillDownParameter1 isKey="true" Ref="133" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+            <DrillDownParameter2 isKey="true" Ref="134" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+            <DrillDownParameter3 isKey="true" Ref="135" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+          </Interaction>
+          <MinHeight>0</MinHeight>
+          <MaxHeight>0</MaxHeight>
+          <Components isList="true" count="7">
+            <OrderLineTotalPriceHeader isKey="true" Ref="136" type="Text">
+              <Text>{TEXT_TotalPrice}</Text>
+              <Left>16.6</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>OrderLineTotalPriceHeader</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Bold,Point</Font>
+              <Top>0.2</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <HorAlignment>Right</HorAlignment>
+              <VertAlignment>Center</VertAlignment>
+              <TextFormat isKey="true" Ref="137" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="138" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="139" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="140" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="141" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>16.599999999999998,0.1999999999999975,2.0000000000000036,0.7999999999999936</ClientRectangle>
+              <Parent isRef="131"/>
+              <Page isRef="21"/>
+            </OrderLineTotalPriceHeader>
+            <OrderLineUnitHeader isKey="true" Ref="142" type="Text">
+              <Text>{TEXT_UnitPrice}</Text>
+              <Left>14.4</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>OrderLineUnitHeader</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Bold,Point</Font>
+              <Top>0.2</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <HorAlignment>Right</HorAlignment>
+              <VertAlignment>Center</VertAlignment>
+              <TextFormat isKey="true" Ref="143" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="144" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="145" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="146" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="147" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>14.399999999999999,0.1999999999999975,2.0000000000000107,0.7999999999999936</ClientRectangle>
+              <Parent isRef="131"/>
+              <Page isRef="21"/>
+            </OrderLineUnitHeader>
+            <OrderLineTaxHeader isKey="true" Ref="148" type="Text">
+              <Text>{TEXT_Tax}</Text>
+              <Left>12.8</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>OrderLineTaxHeader</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Bold,Point</Font>
+              <Top>0.2</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <HorAlignment>Right</HorAlignment>
+              <VertAlignment>Center</VertAlignment>
+              <TextFormat isKey="true" Ref="149" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="150" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="151" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="152" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="153" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>12.799999999999997,0.1999999999999975,1.4000000000000021,0.7999999999999936</ClientRectangle>
+              <Parent isRef="131"/>
+              <Page isRef="21"/>
+            </OrderLineTaxHeader>
+            <OrderLineQuantityHeader isKey="true" Ref="154" type="Text">
+              <Text>{TEXT_Quantity}</Text>
+              <Left>11.2</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>OrderLineQuantityHeader</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Bold,Point</Font>
+              <Top>0.2</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <HorAlignment>Right</HorAlignment>
+              <VertAlignment>Center</VertAlignment>
+              <TextFormat isKey="true" Ref="155" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="156" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="157" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="158" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="159" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>11.2,0.1999999999999975,1.3999999999999986,0.7999999999999936</ClientRectangle>
+              <Parent isRef="131"/>
+              <Page isRef="21"/>
+            </OrderLineQuantityHeader>
+            <OrderLineNameDescriptionHeader isKey="true" Ref="160" type="Text">
+              <Text>{TEXT_Name}
+{TEXT_Description}</Text>
+              <Left>2.6</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>OrderLineNameDescriptionHeader</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Bold,Point</Font>
+              <Top>0.2</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Center</VertAlignment>
+              <TextFormat isKey="true" Ref="161" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="162" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="163" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="164" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="165" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>2.6,0.1999999999999975,8.400000000000002,0.7999999999999936</ClientRectangle>
+              <Parent isRef="131"/>
+              <Page isRef="21"/>
+            </OrderLineNameDescriptionHeader>
+            <OrderLineCodeHeader isKey="true" Ref="166" type="Text">
+              <Text>{TEXT_OrderLineCode}</Text>
+              <Left>0.4</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>OrderLineCodeHeader</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Bold,Point</Font>
+              <Top>0.2</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <VertAlignment>Center</VertAlignment>
+              <TextFormat isKey="true" Ref="167" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="168" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="169" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="170" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="171" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>0.3999999999999999,0.1999999999999975,2.0000000000000013,0.7999999999999936</ClientRectangle>
+              <Parent isRef="131"/>
+              <Page isRef="21"/>
+            </OrderLineCodeHeader>
+            <HorizontalLinePrimitiveTopHeader isKey="true" Ref="172" type="Stimulsoft.Report.Components.StiHorizontalLinePrimitive">
+              <Left>0.4</Left>
+              <Color>Black</Color>
+              <Name>HorizontalLinePrimitiveTopHeader</Name>
+              <Top>0.2</Top>
+              <Interaction isKey="true" Ref="173" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="174" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="175" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="176" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Guid>8E676D06D40248BA9F7E45413F932F2B</Guid>
+              <Parent isRef="131"/>
+              <ClientRectangle>0.3999999999999999,0.1999999999999975,18.200000000000003,0.025399999999999423</ClientRectangle>
+              <Page isRef="21"/>
+            </HorizontalLinePrimitiveTopHeader>
+          </Components>
+          <ClientRectangle>0,8.200000000000003,19,1.1999999999999975</ClientRectangle>
+          <Parent isRef="21"/>
+          <Page isRef="21"/>
+        </Header>
+        <OrderLines isKey="true" Ref="177" type="DataBand">
+          <Name>OrderLines</Name>
+          <Brush>Transparent</Brush>
+          <Border>None;Black;1;Solid;False;4;Black</Border>
+          <Conditions isList="true" count="0"/>
+          <СolumnDirection>AcrossThenDown</СolumnDirection>
+          <Filters isList="true" count="0"/>
+          <Sort isList="true" count="0"/>
+          <Interaction isKey="true" Ref="178" type="Stimulsoft.Report.Components.StiBandInteraction">
+            <DrillDownParameter1 isKey="true" Ref="179" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+            <DrillDownParameter2 isKey="true" Ref="180" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+            <DrillDownParameter3 isKey="true" Ref="181" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+          </Interaction>
+          <PrintIfDetailEmpty>True</PrintIfDetailEmpty>
+          <MinHeight>0</MinHeight>
+          <MaxHeight>0</MaxHeight>
+          <Page isRef="21"/>
+          <FilterMode>And</FilterMode>
+          <Parent isRef="21"/>
+          <DataSourceName>Order_OrderLines</DataSourceName>
+          <ClientRectangle>0,10.200000000000001,19,1.7999999999999883</ClientRectangle>
+          <Components isList="true" count="8">
+            <OrderLineTotalPrice isKey="true" Ref="182" type="Text">
+              <Text>{Order_OrderLines.OrderLineExtensionPrice}</Text>
+              <Left>16.6</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>OrderLineTotalPrice</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Regular,Point</Font>
+              <Top>0.2</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <HorAlignment>Right</HorAlignment>
+              <TextFormat isKey="true" Ref="183" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="184" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="185" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="186" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="187" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>16.599999999999998,0.1999999999999993,2.0000000000000036,0.5999999999999996</ClientRectangle>
+              <Parent isRef="177"/>
+              <Page isRef="21"/>
+            </OrderLineTotalPrice>
+            <OrderLineUnitPrice isKey="true" Ref="188" type="Text">
+              <Text>{Order_OrderLines.OrderLinePrice}</Text>
+              <Left>14.4</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>OrderLineUnitPrice</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Regular,Point</Font>
+              <Top>0.2</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <HorAlignment>Right</HorAlignment>
+              <TextFormat isKey="true" Ref="189" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="190" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="191" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="192" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="193" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>14.399999999999999,0.1999999999999993,2.0000000000000107,0.5999999999999996</ClientRectangle>
+              <Parent isRef="177"/>
+              <Page isRef="21"/>
+            </OrderLineUnitPrice>
+            <OrderLineTax isKey="true" Ref="194" type="Text">
+              <Text>{Order_OrderLines.OrderLineTotalTaxPercent}{IIF(Length(Order_OrderLines.OrderLineTotalTaxPercent)&gt;0," %","")}</Text>
+              <Left>12.8</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>OrderLineTax</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Regular,Point</Font>
+              <Top>0.2</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <HorAlignment>Right</HorAlignment>
+              <TextFormat isKey="true" Ref="195" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="196" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="197" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="198" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="199" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>12.799999999999997,0.1999999999999993,1.4000000000000021,0.5999999999999996</ClientRectangle>
+              <Parent isRef="177"/>
+              <Page isRef="21"/>
+            </OrderLineTax>
+            <OrderLineQuantity isKey="true" Ref="200" type="Text">
+              <Text>{Order_OrderLines.OrderLineQuantity}</Text>
+              <Left>11.2</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>OrderLineQuantity</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Regular,Point</Font>
+              <Top>0.2</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <HorAlignment>Right</HorAlignment>
+              <TextFormat isKey="true" Ref="201" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="202" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="203" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="204" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="205" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>11.2,0.1999999999999993,1.3999999999999986,0.5999999999999996</ClientRectangle>
+              <Parent isRef="177"/>
+              <Page isRef="21"/>
+            </OrderLineQuantity>
+            <OrderLineName isKey="true" Ref="206" type="Text">
+              <Text>{Order_OrderLines.OrderLineItemName}</Text>
+              <Left>2.6</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>OrderLineName</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Bold,Point</Font>
+              <Top>0.2</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat isKey="true" Ref="207" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="208" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="209" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="210" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="211" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>2.6,0.1999999999999993,8.4,0.5999999999999996</ClientRectangle>
+              <Parent isRef="177"/>
+              <Page isRef="21"/>
+            </OrderLineName>
+            <OrderLineCode isKey="true" Ref="212" type="Text">
+              <Text>{Order_OrderLines.OrderLineItemCode}</Text>
+              <Left>0.4</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>OrderLineCode</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Bold,Point</Font>
+              <Top>0.2</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat isKey="true" Ref="213" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="214" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="215" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="216" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="217" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>0.3999999999999999,0.1999999999999993,2.0000000000000013,0.5999999999999996</ClientRectangle>
+              <Parent isRef="177"/>
+              <Page isRef="21"/>
+            </OrderLineCode>
+            <OrderLineDescription isKey="true" Ref="218" type="Text">
+              <Text>{Order_OrderLines.OrderLineItemDescription}</Text>
+              <Left>2.6</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>OrderLineDescription</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Regular,Point</Font>
+              <Top>0.8</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat isKey="true" Ref="219" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="220" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="221" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="222" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="223" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>2.6,0.7999999999999989,8.400000000000002,0.8000000000000007</ClientRectangle>
+              <Parent isRef="177"/>
+              <Page isRef="21"/>
+            </OrderLineDescription>
+            <HorizontalLinePrimitiveSeparator isKey="true" Ref="224" type="Stimulsoft.Report.Components.StiHorizontalLinePrimitive">
+              <Left>0.4</Left>
+              <Color>Black</Color>
+              <Name>HorizontalLinePrimitiveSeparator</Name>
+              <Top>0</Top>
+              <Interaction isKey="true" Ref="225" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="226" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="227" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="228" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Guid>CB7369B5F522EABABCED454A93D3E227</Guid>
+              <Parent isRef="177"/>
+              <ClientRectangle>0.3999999999999999,-1.7763568394002505e-15,18.199999999999996,0.0254000000000012</ClientRectangle>
+              <Page isRef="21"/>
+            </HorizontalLinePrimitiveSeparator>
+          </Components>
+        </OrderLines>
+        <OrderSublines isKey="true" Ref="229" type="DataBand">
+          <Name>OrderSublines</Name>
+          <Brush>Transparent</Brush>
+          <Border>None;Black;1;Solid;False;4;Black</Border>
+          <Conditions isList="true" count="0"/>
+          <СolumnDirection>AcrossThenDown</СolumnDirection>
+          <Filters isList="true" count="0"/>
+          <Sort isList="true" count="0"/>
+          <Interaction isKey="true" Ref="230" type="Stimulsoft.Report.Components.StiBandInteraction">
+            <DrillDownParameter1 isKey="true" Ref="231" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+            <DrillDownParameter2 isKey="true" Ref="232" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+            <DrillDownParameter3 isKey="true" Ref="233" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+          </Interaction>
+          <MinHeight>0</MinHeight>
+          <MaxHeight>0</MaxHeight>
+          <Page isRef="21"/>
+          <FilterMode>And</FilterMode>
+          <Parent isRef="21"/>
+          <MasterComponent isRef="177"/>
+          <DataSourceName>Order_OrderLines_OrderLineSublines</DataSourceName>
+          <ClientRectangle>0,12.799999999999988,19,0.9999999999999964</ClientRectangle>
+          <DataRelationName>Order_OrderLines_OrderLineSublinesRelation</DataRelationName>
+          <Components isList="true" count="6">
+            <SublineName isKey="true" Ref="234" type="Text">
+              <Text>{Order_OrderLines_OrderLineSublines.SublineItemName}</Text>
+              <Left>2.6</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>SublineName</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Regular,Point</Font>
+              <Top>0.2</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat isKey="true" Ref="235" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="236" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="237" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="238" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="239" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>2.6,0.19999999999999396,8.400000000000002,0.6000000000000014</ClientRectangle>
+              <Parent isRef="229"/>
+              <Page isRef="21"/>
+            </SublineName>
+            <SublineCode isKey="true" Ref="240" type="Text">
+              <Text>{Order_OrderLines_OrderLineSublines.SublineItemCode}</Text>
+              <Left>0.4</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>SublineCode</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Regular,Point</Font>
+              <Top>0.2</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat isKey="true" Ref="241" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="242" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="243" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="244" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="245" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>0.3999999999999999,0.19999999999999396,2,0.6000000000000014</ClientRectangle>
+              <Parent isRef="229"/>
+              <Page isRef="21"/>
+            </SublineCode>
+            <SublineQuantity isKey="true" Ref="246" type="Text">
+              <Text>{Order_OrderLines_OrderLineSublines.SublineQuantity}</Text>
+              <Left>11.2</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>SublineQuantity</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Regular,Point</Font>
+              <Top>0.2</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <HorAlignment>Right</HorAlignment>
+              <TextFormat isKey="true" Ref="247" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="248" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="249" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="250" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="251" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>11.2,0.19999999999999396,1.4000000000000057,0.6000000000000014</ClientRectangle>
+              <Parent isRef="229"/>
+              <Page isRef="21"/>
+            </SublineQuantity>
+            <SublineTax isKey="true" Ref="252" type="Text">
+              <Text>{Order_OrderLines_OrderLineSublines.SubLineTotalTaxPercent}{IIF(Length(Order_OrderLines_OrderLineSublines.SubLineTotalTaxPercent)&gt;0," %","")}</Text>
+              <Left>12.8</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>SublineTax</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Regular,Point</Font>
+              <Top>0.2</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <HorAlignment>Right</HorAlignment>
+              <TextFormat isKey="true" Ref="253" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="254" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="255" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="256" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="257" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>12.799999999999997,0.19999999999999396,1.4000000000000021,0.6000000000000014</ClientRectangle>
+              <Parent isRef="229"/>
+              <Page isRef="21"/>
+            </SublineTax>
+            <SublineUnitPrice isKey="true" Ref="258" type="Text">
+              <Text>{Order_OrderLines_OrderLineSublines.SublinePrice}</Text>
+              <Left>14.4</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>SublineUnitPrice</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Regular,Point</Font>
+              <Top>0.2</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <HorAlignment>Right</HorAlignment>
+              <TextFormat isKey="true" Ref="259" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="260" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="261" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="262" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="263" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>14.399999999999999,0.19999999999999396,2.0000000000000107,0.6000000000000014</ClientRectangle>
+              <Parent isRef="229"/>
+              <Page isRef="21"/>
+            </SublineUnitPrice>
+            <SublineTotalPrice isKey="true" Ref="264" type="Text">
+              <Text>{Order_OrderLines_OrderLineSublines.SublineExtensionPrice}</Text>
+              <Left>16.6</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>SublineTotalPrice</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Regular,Point</Font>
+              <Top>0.2</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <HorAlignment>Right</HorAlignment>
+              <TextFormat isKey="true" Ref="265" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="266" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="267" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="268" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="269" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>16.599999999999998,0.19999999999999396,2.0000000000000036,0.6000000000000014</ClientRectangle>
+              <Parent isRef="229"/>
+              <Page isRef="21"/>
+            </SublineTotalPrice>
+          </Components>
+        </OrderSublines>
+        <ReportSummary isKey="true" Ref="270" type="ReportSummaryBand">
+          <Name>ReportSummary</Name>
+          <Brush>Transparent</Brush>
+          <Border>None;Black;1;Solid;False;4;Black</Border>
+          <Conditions isList="true" count="0"/>
+          <Interaction isKey="true" Ref="271" type="Stimulsoft.Report.Components.StiInteraction">
+            <DrillDownParameter1 isKey="true" Ref="272" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+            <DrillDownParameter2 isKey="true" Ref="273" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+            <DrillDownParameter3 isKey="true" Ref="274" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+          </Interaction>
+          <MinHeight>0</MinHeight>
+          <MaxHeight>0</MaxHeight>
+          <ClientRectangle>0,14.599999999999987,19,2.8000000000000043</ClientRectangle>
+          <Parent isRef="21"/>
+          <Components isList="true" count="11">
+            <Total isKey="true" Ref="275" type="Text">
+              <Text>{Order.AnticipatedMonetaryTotalPayableAmount}</Text>
+              <Left>15.8</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>Total</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,12,Regular,Point</Font>
+              <Top>2</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <HorAlignment>Right</HorAlignment>
+              <TextFormat isKey="true" Ref="276" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="277" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="278" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="279" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="280" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>15.799999999999997,2,2.8000000000000043,0.6000000000000014</ClientRectangle>
+              <Parent isRef="270"/>
+              <Page isRef="21"/>
+            </Total>
+            <Allowances isKey="true" Ref="281" type="Text">
+              <Text>{Order.AnticipatedMonetaryTotalAllowanceTotalAmount}</Text>
+              <Left>15.8</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>Allowances</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Regular,Point</Font>
+              <Top>1.4</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <HorAlignment>Right</HorAlignment>
+              <TextFormat isKey="true" Ref="282" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="283" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="284" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="285" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="286" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>15.800000000000008,1.3999999999999986,2.7999999999999936,0.40000000000000213</ClientRectangle>
+              <Parent isRef="270"/>
+              <Page isRef="21"/>
+            </Allowances>
+            <AfterTax isKey="true" Ref="287" type="Text">
+              <Text>{Order.AnticipatedMonetaryTotalTaxInclusiveAmount}</Text>
+              <Left>15.8</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>AfterTax</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Regular,Point</Font>
+              <Top>1</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <HorAlignment>Right</HorAlignment>
+              <TextFormat isKey="true" Ref="288" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="289" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="290" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="291" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="292" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>15.800000000000008,1,2.7999999999999936,0.3999999999999986</ClientRectangle>
+              <Parent isRef="270"/>
+              <Page isRef="21"/>
+            </AfterTax>
+            <TaxDeducted isKey="true" Ref="293" type="Text">
+              <Text>{Order.AnticipatedMonetaryTotalTaxExclusiveAmount}</Text>
+              <Left>15.8</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>TaxDeducted</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Regular,Point</Font>
+              <Top>0.6</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <HorAlignment>Right</HorAlignment>
+              <TextFormat isKey="true" Ref="294" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="295" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="296" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="297" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="298" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>15.800000000000008,0.5999999999999979,2.7999999999999936,0.40000000000000213</ClientRectangle>
+              <Parent isRef="270"/>
+              <Page isRef="21"/>
+            </TaxDeducted>
+            <BeforeTax isKey="true" Ref="299" type="Text">
+              <Text>{Order.AnticipatedMonetaryTotalLineExtensionAmount}</Text>
+              <Left>15.8</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>BeforeTax</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Regular,Point</Font>
+              <Top>0.2</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <HorAlignment>Right</HorAlignment>
+              <TextFormat isKey="true" Ref="300" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="301" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="302" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="303" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="304" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>15.800000000000008,0.1999999999999993,2.7999999999999936,0.3999999999999986</ClientRectangle>
+              <Parent isRef="270"/>
+              <Page isRef="21"/>
+            </BeforeTax>
+            <TotalCaption isKey="true" Ref="305" type="Text">
+              <Text>{TEXT_Total}</Text>
+              <Left>13.2</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>TotalCaption</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,12,Regular,Point</Font>
+              <Top>2</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat isKey="true" Ref="306" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="307" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="308" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="309" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="310" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>13.2,2,2.400000000000002,0.6000000000000014</ClientRectangle>
+              <Parent isRef="270"/>
+              <Page isRef="21"/>
+            </TotalCaption>
+            <AllowancesCaption isKey="true" Ref="311" type="Text">
+              <Text>{TEXT_Allowances}</Text>
+              <Left>13.2</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>AllowancesCaption</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Regular,Point</Font>
+              <Top>1.4</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat isKey="true" Ref="312" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="313" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="314" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="315" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="316" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>13.2,1.3999999999999986,2.400000000000002,0.40000000000000213</ClientRectangle>
+              <Parent isRef="270"/>
+              <Page isRef="21"/>
+            </AllowancesCaption>
+            <AfterTaxCaption isKey="true" Ref="317" type="Text">
+              <Text>{TEXT_AfterTax}</Text>
+              <Left>13.2</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>AfterTaxCaption</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Regular,Point</Font>
+              <Top>1</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat isKey="true" Ref="318" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="319" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="320" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="321" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="322" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>13.2,1,2.400000000000002,0.3999999999999986</ClientRectangle>
+              <Parent isRef="270"/>
+              <Page isRef="21"/>
+            </AfterTaxCaption>
+            <TaxDeductedCaption isKey="true" Ref="323" type="Text">
+              <Text>{TEXT_TaxDeducted}</Text>
+              <Left>13.2</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>TaxDeductedCaption</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Regular,Point</Font>
+              <Top>0.6</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat isKey="true" Ref="324" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="325" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="326" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="327" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="328" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>13.2,0.5999999999999979,2.400000000000002,0.40000000000000213</ClientRectangle>
+              <Parent isRef="270"/>
+              <Page isRef="21"/>
+            </TaxDeductedCaption>
+            <BeforeTaxCaption isKey="true" Ref="329" type="Text">
+              <Text>{TEXT_BeforeTax}</Text>
+              <Left>13.2</Left>
+              <TextBrush>Black</TextBrush>
+              <Name>BeforeTaxCaption</Name>
+              <Brush>Transparent</Brush>
+              <Font>Arial,8,Regular,Point</Font>
+              <Top>0.2</Top>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Conditions isList="true" count="0"/>
+              <TextFormat isKey="true" Ref="330" type="GeneralFormat"/>
+              <Margins>0,0,0,0</Margins>
+              <Interaction isKey="true" Ref="331" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="332" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="333" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="334" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <ClientRectangle>13.2,0.1999999999999993,2.400000000000002,0.3999999999999986</ClientRectangle>
+              <Parent isRef="270"/>
+              <Page isRef="21"/>
+            </BeforeTaxCaption>
+            <HorizontalLinePrimitiveEndingSeparator isKey="true" Ref="335" type="Stimulsoft.Report.Components.StiHorizontalLinePrimitive">
+              <Left>0.4</Left>
+              <Color>Black</Color>
+              <Name>HorizontalLinePrimitiveEndingSeparator</Name>
+              <Top>0</Top>
+              <Interaction isKey="true" Ref="336" type="Stimulsoft.Report.Components.StiInteraction">
+                <DrillDownParameter1 isKey="true" Ref="337" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter2 isKey="true" Ref="338" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+                <DrillDownParameter3 isKey="true" Ref="339" type="Stimulsoft.Report.Components.StiDrillDownParameter"/>
+              </Interaction>
+              <ShiftMode>IncreasingSize</ShiftMode>
+              <MinSize>0,0</MinSize>
+              <MaxSize>0,0</MaxSize>
+              <Guid>CB7369B5F522EABABCED454A93D3E227</Guid>
+              <Parent isRef="270"/>
+              <ClientRectangle>0.3999999999999999,1.2434497875801753e-14,18.199999999999992,0.025399999999999423</ClientRectangle>
+              <Page isRef="21"/>
+            </HorizontalLinePrimitiveEndingSeparator>
+          </Components>
+          <Page isRef="21"/>
+        </ReportSummary>
+      </Components>
+    </Page1>
+  </Pages>
+  <ReportName>Report</ReportName>
+  <ReportAlias>Report</ReportAlias>
+  <EngineVersion>EngineV2</EngineVersion>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReferencedAssemblies isList="true" count="9">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+    <value>System.Web.dll</value>
+  </ReferencedAssemblies>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0"/>
+  <AutoLocalizeReportOnRun>True</AutoLocalizeReportOnRun>
+  <PrinterSettings isKey="true" Ref="340" type="Stimulsoft.Report.Print.StiPrinterSettings"/>
+  <ReportGuid>2cd22c37c6aa4f19a4af03de6983cbc9</ReportGuid>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        
+        public Report()
+        {
+            this.InitializeComponent();
+        }
+        #region StiReport Designer generated code - do not modify#endregion StiReport Designer generated code - do not modify
+    }
+}</Script>
+  <ReportFile>OrderDetails.mrt</ReportFile>
+</StiSerializer>

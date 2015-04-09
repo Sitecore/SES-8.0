@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A52895E7-E0B2-48B1-A5C6-FCB17F684CE8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sitecore.Ecommerce.Data</RootNamespace>
+    <AssemblyName>Sitecore.Ecommerce.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\lib\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\lib\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Kernel">
+      <HintPath>..\..\..\lib\Sitecore.Kernel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IOrdersContext.cs" />
+    <Compile Include="Logging\EfLoggingProvider.cs" />
+    <Compile Include="LoggingModel.cs" />
+    <Compile Include="Migrations\201307181337499_InitialCreate.cs" />
+    <Compile Include="Migrations\201307181337499_InitialCreate.Designer.cs">
+      <DependentUpon>201307181337499_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201402131241368_DecimalScale.cs" />
+    <Compile Include="Migrations\201402131241368_DecimalScale.Designer.cs">
+      <DependentUpon>201402131241368_DecimalScale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="ModelConfiguration\AddressConfiguration.cs" />
+    <Compile Include="ModelConfiguration\AllowanceChargeConfiguration.cs" />
+    <Compile Include="ModelConfiguration\AmountConfiguration.cs" />
+    <Compile Include="ModelConfiguration\ItemConfiguration.cs" />
+    <Compile Include="ModelConfiguration\MeasureConfiguration.cs" />
+    <Compile Include="ModelConfiguration\MonetaryTotalConfiguration.cs" />
+    <Compile Include="ModelConfiguration\OrderModelInitializer.cs" />
+    <Compile Include="ModelConfiguration\PersonConfiguration.cs" />
+    <Compile Include="ModelConfiguration\ReservationTicketConfiguration.cs" />
+    <Compile Include="ModelConfiguration\StateConfiguration.cs" />
+    <Compile Include="ModelConfiguration\SubstateConfiguration.cs" />
+    <Compile Include="ModelConfiguration\SupplierPartyConfiguration.cs" />
+    <Compile Include="ModelConfiguration\CommunicationConfiguration.cs" />
+    <Compile Include="ModelConfiguration\Constants.cs" />
+    <Compile Include="ModelConfiguration\ContactConfiguration.cs" />
+    <Compile Include="ModelConfiguration\CustomerPartyConfiguration.cs" />
+    <Compile Include="ModelConfiguration\DeliveryConfiguration.cs" />
+    <Compile Include="ModelConfiguration\DespatchConfiguration.cs" />
+    <Compile Include="ModelConfiguration\LineItemConfiguration.cs" />
+    <Compile Include="ModelConfiguration\LocationConfiguration.cs" />
+    <Compile Include="ModelConfiguration\OrderConfiguration.cs" />
+    <Compile Include="ModelConfiguration\OrderedShipmentConfiguration.cs" />
+    <Compile Include="ModelConfiguration\OrderLineConfiguration.cs" />
+    <Compile Include="ModelConfiguration\PartyConfiguration.cs" />
+    <Compile Include="ModelConfiguration\PartyLegalEntityConfiguration.cs" />
+    <Compile Include="ModelConfiguration\PartyTaxSchemeConfiguration.cs" />
+    <Compile Include="ModelConfiguration\PaymentMeansConfiguration.cs" />
+    <Compile Include="ModelConfiguration\PriceConfiguration.cs" />
+    <Compile Include="ModelConfiguration\ShipmentConfiguration.cs" />
+    <Compile Include="ModelConfiguration\TaxCategoryConfiguration.cs" />
+    <Compile Include="ModelConfiguration\TaxSchemeConfiguration.cs" />
+    <Compile Include="ModelConfiguration\TaxSubTotalConfiguration.cs" />
+    <Compile Include="ModelConfiguration\TaxTotalConfiguration.cs" />
+    <Compile Include="OrderModel.cs" />
+    <Compile Include="OrderManagement\EfOrderRepository.cs" />
+    <Compile Include="OrderManagement\ProviderException.cs" />
+    <Compile Include="Util\DbContextUtil.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Sitecore.Ecommerce.Data.licenseheader" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sitecore.Ecommerce.Core\Sitecore.Ecommerce.Core.csproj">
+      <Project>{F76CB1D3-5DFA-487B-B6B2-02DC614AC781}</Project>
+      <Name>Sitecore.Ecommerce.Core</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201307181337499_InitialCreate.resx">
+      <DependentUpon>201307181337499_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201402131241368_DecimalScale.resx">
+      <DependentUpon>201402131241368_DecimalScale.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Migrations\Migration_InitialCreate_DecimalScale.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

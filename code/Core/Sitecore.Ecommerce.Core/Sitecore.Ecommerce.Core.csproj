@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F76CB1D3-5DFA-487B-B6B2-02DC614AC781}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sitecore.Ecommerce</RootNamespace>
+    <AssemblyName>Sitecore.Ecommerce.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\lib\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\lib\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="CommandTemplates\BranchLinkUpdater.cs" />
+    <Compile Include="CommandTemplates\UpdateBranchLinksCommand.cs" />
+    <Compile Include="Common\Address.cs" />
+    <Compile Include="Common\Amount.cs" />
+    <Compile Include="Common\Communication.cs" />
+    <Compile Include="Common\Contact.cs" />
+    <Compile Include="Common\IEntity.cs" />
+    <Compile Include="Common\Location.cs" />
+    <Compile Include="Common\Measure.cs" />
+    <Compile Include="Common\Party.cs" />
+    <Compile Include="Common\PartyLegalEntity.cs" />
+    <Compile Include="Common\PartyTaxScheme.cs" />
+    <Compile Include="Common\Period.cs" />
+    <Compile Include="Common\Person.cs" />
+    <Compile Include="Data\EntityEventArgs.cs" />
+    <Compile Include="Data\SaveEntityEventArgs.cs" />
+    <Compile Include="Logging\Constants.cs" />
+    <Compile Include="Logging\LogEntryDetails.cs" />
+    <Compile Include="Logging\LogEntry.cs" />
+    <Compile Include="Logging\LoggingProvider.cs" />
+    <Compile Include="Logging\Severity.cs" />
+    <Compile Include="OrderManagement\DefaultOrderCalculationStrategy.cs" />
+    <Compile Include="OrderManagement\DefaultOrderFactory.cs" />
+    <Compile Include="OrderManagement\InvalidStateConfigurationException.cs" />
+    <Compile Include="Logging\Logger.cs" />
+    <Compile Include="Logging\LoggingHandler.cs" />
+    <Compile Include="Logging\LogThisAttribute.cs" />
+    <Compile Include="OrderManagement\IOrderCalculationStrategy.cs" />
+    <Compile Include="OrderManagement\IOrderFactory.cs" />
+    <Compile Include="OrderManagement\OrderManagerRole.cs" />
+    <Compile Include="OrderManagement\Extensions\CoreExtensions.cs" />
+    <Compile Include="OrderManagement\OrderProcessing\IDynamicallyCalculated.cs" />
+    <Compile Include="OrderManagement\OrderProcessing\LineItemProcessing.cs" />
+    <Compile Include="OrderManagement\OrderProcessing\MonetaryTotalProcessing.cs" />
+    <Compile Include="OrderManagement\OrderProcessing\ProcessingOrder.cs" />
+    <Compile Include="OrderManagement\OrderProcessing\TaxSubTotalProcessing.cs" />
+    <Compile Include="OrderManagement\OrderProcessing\TaxTotalProcessing.cs" />
+    <Compile Include="OrderManagement\OrderProcessor.cs" />
+    <Compile Include="Data\Repository.cs" />
+    <Compile Include="Mail\MailServiceImpl.cs" />
+    <Compile Include="Mail\MailService.cs" />
+    <Compile Include="Mail\MessageBuilder.cs" />
+    <Compile Include="OrderManagement\ConfirmationMessageBuilder.cs" />
+    <Compile Include="OrderManagement\OrderConfirmation.cs" />
+    <Compile Include="OrderManagement\OrderLineFactory.cs" />
+    <Compile Include="OrderManagement\OrderProcessingStrategy.cs" />
+    <Compile Include="OrderManagement\OrderStateCode.cs" />
+    <Compile Include="OrderManagement\Orders\AllowanceCharge.cs" />
+    <Compile Include="OrderManagement\Orders\CustomerParty.cs" />
+    <Compile Include="OrderManagement\Orders\Delivery.cs" />
+    <Compile Include="OrderManagement\Orders\Despatch.cs" />
+    <Compile Include="OrderManagement\Orders\Item.cs" />
+    <Compile Include="OrderManagement\Orders\LineItem.cs" />
+    <Compile Include="OrderManagement\Orders\MonetaryTotal.cs" />
+    <Compile Include="OrderManagement\Orders\Order.cs" />
+    <Compile Include="OrderManagement\Orders\OrderedShipment.cs" />
+    <Compile Include="OrderManagement\Orders\OrderLine.cs" />
+    <Compile Include="OrderManagement\Orders\PaymentMeans.cs" />
+    <Compile Include="OrderManagement\Orders\Price.cs" />
+    <Compile Include="OrderManagement\Orders\ReservationTicket.cs" />
+    <Compile Include="OrderManagement\Orders\Shipment.cs" />
+    <Compile Include="OrderManagement\Orders\State.cs" />
+    <Compile Include="OrderManagement\Orders\Substate.cs" />
+    <Compile Include="OrderManagement\Orders\SupplierParty.cs" />
+    <Compile Include="OrderManagement\Orders\TaxCategory.cs" />
+    <Compile Include="OrderManagement\Orders\TaxScheme.cs" />
+    <Compile Include="OrderManagement\Orders\TaxSubTotal.cs" />
+    <Compile Include="OrderManagement\Orders\TaxTotal.cs" />
+    <Compile Include="OrderManagement\PlainMessageConfirmationBuilder.cs" />
+    <Compile Include="OrderManagement\ProcessingStrategy.cs" />
+    <Compile Include="OrderManagement\CoreOrderStateConfiguration.cs" />
+    <Compile Include="OrderManagement\SaveOrdersException.cs" />
+    <Compile Include="OrderManagement\SubstateCombinationSet.cs" />
+    <Compile Include="OrderManagement\VisitorOrderProcessorBase.cs" />
+    <Compile Include="OrderManagement\VisitorOrderManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\Constants.cs" />
+    <Compile Include="ShopContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.Unity, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.Interception.3.5.1404.0\lib\Net45\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration">
+      <HintPath>..\packages\Unity.Interception.3.5.1404.0\lib\Net45\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Kernel">
+      <HintPath>..\..\..\lib\Sitecore.Kernel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sitecore.Ecommerce.DomainModel\Sitecore.Ecommerce.DomainModel.csproj">
+      <Project>{40952670-D53D-44D8-B855-F84881D4F7B0}</Project>
+      <Name>Sitecore.Ecommerce.DomainModel</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Order plus lines.cd" />
+    <None Include="Order.cd" />
+    <None Include="packages.config" />
+    <None Include="Sitecore.Ecommerce.Core.licenseheader" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

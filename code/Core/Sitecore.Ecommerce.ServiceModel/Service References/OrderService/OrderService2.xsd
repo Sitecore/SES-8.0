@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--======================================================================================
+Copyright 2015 Sitecore Corporation A/S
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file 
+except in compliance with the License. You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the 
+License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, 
+either express or implied. See the License for the specific language governing permissions 
+and limitations under the License.
+======================================================================================-->
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Sitecore.Ecommerce.Search" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Sitecore.Ecommerce.Search" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:53125/OrderService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="Query">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:QueryElement">
+        <xs:sequence>
+          <xs:element name="FirstNode" nillable="true" type="tns:QueryNode" />
+          <xs:element name="LastNode" nillable="true" type="tns:QueryNode" />
+          <xs:element name="SearchRoot" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Query" nillable="true" type="tns:Query" />
+  <xs:complexType name="QueryElement">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="QueryElement" nillable="true" type="tns:QueryElement" />
+  <xs:complexType name="QueryNode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Element" nillable="true" type="tns:QueryElement" />
+      <xs:element minOccurs="0" name="IsFirst" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsLast" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NextNode" nillable="true" type="tns:QueryNode" />
+      <xs:element minOccurs="0" name="PreviousNode" nillable="true" type="tns:QueryNode" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="QueryNode" nillable="true" type="tns:QueryNode" />
+  <xs:complexType name="FieldQuery">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SubQuery">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FieldQuery" nillable="true" type="tns:FieldQuery" />
+  <xs:complexType name="SubQuery">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:QueryElement">
+        <xs:sequence>
+          <xs:element name="_x003C_Key_x003E_k__BackingField" nillable="true" type="xs:string" />
+          <xs:element name="_x003C_MatchVariant_x003E_k__BackingField" type="tns:MatchVariant" />
+          <xs:element name="_x003C_Value_x003E_k__BackingField" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SubQuery" nillable="true" type="tns:SubQuery" />
+  <xs:simpleType name="MatchVariant">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Exactly" />
+      <xs:enumeration value="Like" />
+      <xs:enumeration value="GreaterThan" />
+      <xs:enumeration value="LessThan" />
+      <xs:enumeration value="NotEquals" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MatchVariant" nillable="true" type="tns:MatchVariant" />
+  <xs:complexType name="Condition">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:QueryElement">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="QueryCondition" type="tns:QueryCondition" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Condition" nillable="true" type="tns:Condition" />
+  <xs:simpleType name="QueryCondition">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="And" />
+      <xs:enumeration value="Or" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="QueryCondition" nillable="true" type="tns:QueryCondition" />
+  <xs:complexType name="AttributeQuery">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SubQuery">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AttributeQuery" nillable="true" type="tns:AttributeQuery" />
+</xs:schema>

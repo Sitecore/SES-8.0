@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://BBS.EPayment" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Netaxept" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="Endpoint_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://BBS.EPayment" location="https://epayment-test.bbs.no/Netaxept.svc?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="Endpoint" type="i0:INetaxept">
+    <wsp:PolicyReference URI="#Endpoint_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Register">
+      <soap:operation soapAction="http://BBS.EPayment/INetaxept/Register" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MerchantTranslationExceptionFault">
+        <soap:fault use="literal" name="MerchantTranslationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SecurityExceptionFault">
+        <soap:fault use="literal" name="SecurityExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BBSExceptionFault">
+        <soap:fault use="literal" name="BBSExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AuthenticationExceptionFault">
+        <soap:fault use="literal" name="AuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UniqueTransactionIdExceptionFault">
+        <soap:fault use="literal" name="UniqueTransactionIdExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="GenericErrorFault">
+        <soap:fault use="literal" name="GenericErrorFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationExceptionFault">
+        <soap:fault use="literal" name="ValidationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Query">
+      <soap:operation soapAction="http://BBS.EPayment/INetaxept/Query" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AuthenticationExceptionFault">
+        <soap:fault use="literal" name="AuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="QueryExceptionFault">
+        <soap:fault use="literal" name="QueryExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Process">
+      <soap:operation soapAction="http://BBS.EPayment/INetaxept/Process" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="NotSupportedExceptionFault">
+        <soap:fault use="literal" name="NotSupportedExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="MerchantTranslationExceptionFault">
+        <soap:fault use="literal" name="MerchantTranslationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AuthenticationExceptionFault">
+        <soap:fault use="literal" name="AuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="GenericErrorFault">
+        <soap:fault use="literal" name="GenericErrorFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationExceptionFault">
+        <soap:fault use="literal" name="ValidationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BBSExceptionFault">
+        <soap:fault use="literal" name="BBSExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Batch">
+      <soap:operation soapAction="http://BBS.EPayment/INetaxept/Batch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AuthenticationExceptionFault">
+        <soap:fault use="literal" name="AuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="MerchantTranslationExceptionFault">
+        <soap:fault use="literal" name="MerchantTranslationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="GenericErrorFault">
+        <soap:fault use="literal" name="GenericErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Netaxept">
+    <wsdl:port name="Endpoint" binding="tns:Endpoint">
+      <soap:address location="https://epayment-test.bbs.no/Netaxept.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

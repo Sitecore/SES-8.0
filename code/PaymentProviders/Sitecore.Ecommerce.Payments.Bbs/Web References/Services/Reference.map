@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="https://epayment-test.bbs.no/Netaxept.svc?disco" filename="Netaxept.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="https://epayment-test.bbs.no/Netaxept.svc?wsdl=wsdl0" filename="Netaxept.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://epayment-test.bbs.no/Netaxept.svc?xsd=xsd1" filename="Netaxept.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://epayment-test.bbs.no/Netaxept.svc?xsd=xsd0" filename="Netaxept0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://epayment-test.bbs.no/Netaxept.svc?xsd=xsd2" filename="Netaxept1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="https://epayment-test.bbs.no/Netaxept.svc?wsdl" filename="Netaxept0.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

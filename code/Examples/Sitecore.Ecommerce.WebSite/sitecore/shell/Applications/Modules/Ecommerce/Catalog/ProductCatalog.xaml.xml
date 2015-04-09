@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!--======================================================================================
+Copyright 2015 Sitecore Corporation A/S
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file 
+except in compliance with the License. You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the 
+License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, 
+either express or implied. See the License for the specific language governing permissions 
+and limitations under the License.
+======================================================================================-->
+<xamlControls
+  xmlns:x="http://www.sitecore.net/xaml"
+  xmlns:ajax="http://www.sitecore.net/ajax"
+  xmlns:rest="http://www.sitecore.net/rest"
+  xmlns:r="http://www.sitecore.net/renderings"
+  xmlns:xmlcontrol="http://www.sitecore.net/xmlcontrols"
+  xmlns:p="http://schemas.sitecore.net/Visual-Studio-Intellisense"
+  xmlns:asp="http://www.sitecore.net/microsoft/webcontrols"
+  xmlns:html="http://www.sitecore.net/microsoft/htmlcontrols"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <Sitecore.Ecommerce.Shell.Applications.Catalogs.ProductCatalog x:inherits="Sitecore.Ecommerce.Shell.Applications.Catalogs.Views.ProductCatalogView, Sitecore.Ecommerce.Shell">
+    <x:register assembly="System.Web" namespace="System.Web.UI.HtmlControls" />
+    <x:register assembly="ComponentArt.Web.UI" namespace="ComponentArt.Web.UI" />
+    <x:register assembly="Sitecore.Kernel" namespace="Sitecore.Web.UI.WebControls.Ribbons" />
+    <Sitecore.Controls.HtmlPage runat="server" Overflow="visible">
+
+      <Stylesheet runat="server" Src="Content Manager.css" DeviceDependant="true" x:placeholder="Stylesheets" />
+      <Stylesheet runat="server" Src="Ribbon.css" DeviceDependant="true" x:placeholder="Stylesheets" />
+      <Stylesheet runat="server" Src="IDE.css" DeviceDependant="true" x:placeholder="Stylesheets" />
+      <Stylesheet runat="server" Src="Grid.css" DeviceDependant="true" />
+      <Stylesheet runat="server" Src="/sitecore/Shell/Applications/Modules/Ecommerce/Catalog/Catalog.css"  />
+      <Stylesheet runat="server">
+        .scSearchMethodArea {
+        border-top: 2px solid #666666;
+        background-color: F2F2F2;
+        padding: 4px 8px;
+        text-align: right;
+        }
+      </Stylesheet>
+
+      <AjaxScriptManager runat="server"/>
+      <ContinuationManager runat="server" />
+
+      <Script runat="server" Src="/sitecore/shell/Controls/Sitecore.Runtime.js"/>
+      <Script runat="server" Src="/sitecore/shell/controls/SitecoreKeyboard.js"/>
+      <Script runat="server" Src="/sitecore/shell/Applications/Content Manager/Content Editor.js"/>
+      <Script runat="server" Src="/sitecore/Shell/Applications/Modules/Ecommerce/Catalog/Catalog.js" />
+      <Script runat="server">
+        <![CDATA[
+        function beforeCallback() {
+          Grid.CallbackPrefix = Grid.CallbackPrefix + scCatalog.getSearchQuery();
+        }
+
+        function afterCallback() {
+          Grid.CallbackPrefix = Grid.CallbackPrefix.replace(scCatalog.getSearchQuery(), "");
+        }
+
+        function productsDoubleClick(item) {
+          scCatalog.gridRowDoubleClick(item);
+        }
+
+        function selectedProductsDoubleClick(item) {
+          scCatalog.selectedProductsDoubleClick(item);
+        }
+      ]]>
+      </Script>
+      <div style="overflow:scroll;height:100%;">
+      <table id="ContentEditor" width="100%" border="0" cellpadding="0" cellspacing="0" style="table-layout:fixed">
+        <tr>
+          <td>
+            <div runat="server" ID="RibbonPanel" style="display:none">
+              <Border ID="RibbonContainer" runat="server" style="display: none">
+                <Ribbon ID="Ribbon" runat="server" />
+              </Border>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="Page">
+              <table id="ContentEditor" width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td>
+                    <div id="Shadow">
+                      <GridPanel runat="server" Columns="3" autoHeight="false" class="GridPanel">
+
+                        <Border runat="server" Class="scSearchArea" GridPanel.ColSpan="3" Style="width:100%;">
+                          <MultiPage ID="SearchArea" runat="server">
+                            <PageViews>
+
+                              <PageView runat="server">
+                                <Border ID="TextBoxContainer" runat="server" Width="100%" Style="width:100%">
+                                  <Literal runat="server" Text="Search" Class="scTitle" Style="width: 50px;" />
+                                </Border>
+                                <Border ID="ChecklistContainer" runat="server" Class="scBorder" />
+                              </PageView>
+
+                              <PageView runat="server">
+                                <Border runat="server">
+                                  <Literal runat="server" Text="Search" Class="scTitle" Style="width: 50px;" />
+                                  <input type="text" value="Sitecore Query" class="scSearch Wide" />
+                                </Border>
+                              </PageView>
+
+                            </PageViews>
+                          </MultiPage>
+                        </Border>
+
+                        <Border runat="server" Class="scSearchMethodArea" GridPanel.ColSpan="3" Style="border:0">
+                          <GridPanel runat="server" Columns="1" Align="left">
+                            <HtmlButton ID="SearchButton" runat="server" class="scButton" onclick="javascript:Grid.scHandler.refresh(); return false;" />
+                          </GridPanel>
+                          <GridPanel runat="server" Columns="1" Align="Right">
+                            <Literal runat="server" Text="Display products by selecting:" Class="scTitle" Style="margin-right: 10px;" GridPanel.Style="width: 100%; text-align: right;" />
+                            <asp:DropDownList ID="SearchMethodList" runat="server" RepeatLayout="Flow" CssClass="scDropDownList" Width="200px"/>
+                          </GridPanel>
+                        </Border>
+                        
+                        <Grid ID="Grid" runat="server" GridPanel.ColSpan="1" Style="padding-top:-12px"
+                          ClientSideOnBeforeCallback="beforeCallback"
+                          ClientSideOnAfterCallback="afterCallback"
+                          ClientSideOnDoubleClick="productsDoubleClick"
+                          AutoFocusSearchBox="false"
+                          RunningMode="Callback"
+                          CssClass="Grid"
+                          GridPanel.VAlign="Top"
+
+                          ShowHeader="true"
+                          HeaderCssClass="GridHeader"
+                          AutoAdjustPageSize="true"
+                          FillContainer="false"
+                          FooterCssClass="GridFooter"
+
+                          GroupByCssClass="GroupByCell"
+                          GroupByTextCssClass="GroupByText"
+                          GroupBySortAscendingImageUrl="group_asc.gif"
+                          GroupBySortDescendingImageUrl="group_desc.gif"
+                          GroupBySortImageWidth="10"
+                          GroupBySortImageHeight="10"
+
+                          GroupingNotificationTextCssClass="GridHeaderText"
+                          GroupingPageSize="5"
+                          ManualPaging ="true"
+                          PageSize="10"
+                          PagerStyle="Slider"
+                          PagerTextCssClass="GridFooterText"
+                          PagerButtonWidth="41"
+                          PagerButtonHeight="22"
+                          PagerImagesFolderUrl="/sitecore/shell/themes/standard/componentart/grid/pager/"
+
+                          ShowSearchBox="false"
+                          SearchTextCssClass="GridHeaderText"
+                          SearchBoxCssClass="SearchBox"
+
+                          SliderHeight="20"
+                          SliderWidth="150"
+                          SliderGripWidth="9"
+                          SliderPopupOffsetX="20"
+                          SliderPopupClientTemplateId="SliderTemplate"
+          
+                          TreeLineImagesFolderUrl="/sitecore/shell/themes/standard/componentart/grid/lines/"
+                          TreeLineImageWidth="22"
+                          TreeLineImageHeight="19"
+
+                          PreExpandOnGroup="false"
+                          ImagesBaseUrl="/sitecore/shell/themes/standard/componentart/grid/"
+                          IndentCellWidth="22"
+
+                          LoadingPanelClientTemplateId="LoadingFeedbackTemplate"
+                          LoadingPanelPosition="MiddleCenter"
+                          AllowScroll="true"
+                          >
+
+                          <Levels>
+                            <GridLevel runat="server"
+                                AllowSorting="false"
+                                DataKeyField="scGridID"
+                                ShowTableHeading="false"
+                                ShowSelectorCells="false"
+                                RowCssClass="Row"
+                                ColumnReorderIndicatorImageUrl="reorder.gif"
+                                DataCellCssClass="DataCell"
+                                HeadingCellCssClass="HeadingCell"
+                                HeadingCellHoverCssClass="HeadingCellHover"
+                                HeadingCellActiveCssClass="HeadingCellActive"
+                                HeadingRowCssClass="HeadingRow"
+                                HeadingTextCssClass="HeadingCellText"
+                                SelectedRowCssClass="SelectedRow"
+                                GroupHeadingCssClass="GroupHeading"
+                                SortAscendingImageUrl="asc.gif"
+                                SortDescendingImageUrl="desc.gif"
+                                SortImageWidth="13"
+                                SortImageHeight="13">
+                            </GridLevel>
+                          </Levels>
+
+                          <ClientTemplates>
+                            <ClientTemplate ID="LoadingFeedbackTemplate" runat="server">
+                              <table cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                  <td style="font-size:10px;">
+                                    <asp:Literal Text="Loading..." runat="server" />;
+                                  </td>
+                                  <td>
+                                    <img src="/sitecore/shell/themes/standard/componentart/grid/spinner.gif" width="16" height="16" border="0" />
+                                  </td>
+                                </tr>
+                              </table>
+                            </ClientTemplate>
+
+                            <ClientTemplate ID="SliderTemplate" runat="server">
+                              <table class="SliderPopup" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                  <td>
+                                    <div style="padding:4px;font:8pt tahoma;white-space:nowrap;overflow:hidden">
+                                      ## DataItem.GetMember('Name').Value ##
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="height:14px;background-color:#666666;padding:1px 8px 1px 8px;color:white">
+                                    ## DataItem.PageIndex + 1 ## / ## Grid.PageCount ##
+                                  </td>
+                                </tr>
+                              </table>
+                            </ClientTemplate>
+                          </ClientTemplates>
+                        </Grid>
+
+                        <Border runat="server" Style="padding-left:12px;padding-right:12px;padding-top:0px;" GridPanel.ColSpan="1" GridPanel.Style="background-color: #F2F2F2;" Width="10%">
+                          <button class="scButton" onclick="javascript:scCatalog.addButtonClicked(); return false;">Add ></button>
+                          <asp:HiddenField ID="SelectedProductsField" runat="server" />
+                        </Border>
+
+                        <Grid ID="ProductsGrid" runat="server" GridPanel.ColSpan="1" Style="padding-top:-12px"
+                          ClientSideOnBeforeCallback="beforeCallback"
+                          ClientSideOnAfterCallback="afterCallback"
+                          ClientSideOnDoubleClick="selectedProductsDoubleClick"
+                          GridPanel.VAlign="Top"
+                          AutoFocusSearchBox="false"
+                          RunningMode="Callback"
+                          CssClass="Grid"
+
+                          ShowHeader="true"
+                          HeaderCssClass="GridHeader"
+                          AutoAdjustPageSize="false"
+                          FillContainer="false"
+                          FooterCssClass="GridFooter"
+
+                          GroupByCssClass="GroupByCell"
+                          GroupByTextCssClass="GroupByText"
+                          GroupBySortAscendingImageUrl="group_asc.gif"
+                          GroupBySortDescendingImageUrl="group_desc.gif"
+                          GroupBySortImageWidth="10"
+                          GroupBySortImageHeight="10"
+
+                          GroupingNotificationTextCssClass="GridHeaderText"
+                          GroupingPageSize="5"
+                          ManualPaging ="true"
+                          PageSize="10"
+                          PagerStyle="Slider"
+                          PagerTextCssClass="GridFooterText"
+                          PagerButtonWidth="41"
+                          PagerButtonHeight="22"
+                          PagerImagesFolderUrl="/sitecore/shell/themes/standard/componentart/grid/pager/"
+
+                          ShowSearchBox="false"
+                          SearchTextCssClass="GridHeaderText"
+                          SearchBoxCssClass="SearchBox"
+
+                          SliderHeight="20"
+                          SliderWidth="150"
+                          SliderGripWidth="9"
+                          SliderPopupOffsetX="20"
+                          SliderPopupClientTemplateId="SliderTemplate"
+                          SliderCssClass="sliderThing"
+          
+                          TreeLineImagesFolderUrl="/sitecore/shell/themes/standard/componentart/grid/lines/"
+                          TreeLineImageWidth="22"
+                          TreeLineImageHeight="19"
+
+                          PreExpandOnGroup="false"
+                          ImagesBaseUrl="/sitecore/shell/themes/standard/componentart/grid/"
+                          IndentCellWidth="22"
+
+                          LoadingPanelClientTemplateId="LoadingFeedbackTemplate"
+                          LoadingPanelPosition="MiddleCenter"
+                          AllowScroll="false"
+                          >
+                          <Levels>
+                            <GridLevel runat="server"
+                                AllowSorting="false"
+                                DataKeyField="scGridID"
+                                ShowTableHeading="false"
+                                ShowSelectorCells="false"
+                                RowCssClass="Row"
+                                ColumnReorderIndicatorImageUrl="reorder.gif"
+                                DataCellCssClass="DataCell"
+                                HeadingCellCssClass="HeadingCell"
+                                HeadingCellHoverCssClass="HeadingCellHover"
+                                HeadingCellActiveCssClass="HeadingCellActive"
+                                HeadingRowCssClass="HeadingRow"
+                                HeadingTextCssClass="HeadingCellText"
+                                SelectedRowCssClass="SelectedRow"
+                                GroupHeadingCssClass="GroupHeading"
+                                SortAscendingImageUrl="asc.gif"
+                                SortDescendingImageUrl="desc.gif"
+                                SortImageWidth="13"
+                                SortImageHeight="13">
+                            </GridLevel>
+                          </Levels>
+
+                          <ClientTemplates>
+                            <ClientTemplate ID="LoadingFeedbackTemplate" runat="server">
+                              <table cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                  <td style="font-size:10px;">
+                                    <asp:Literal Text="Loading..." runat="server" />;
+                                  </td>
+                                  <td>
+                                    <img src="/sitecore/shell/themes/standard/componentart/grid/spinner.gif" width="16" height="16" border="0" />
+                                  </td>
+                                </tr>
+                              </table>
+                            </ClientTemplate>
+
+                            <ClientTemplate ID="SliderTemplate" runat="server">
+                              <table class="SliderPopup" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                  <td>
+                                    <div style="padding:4px;font:8pt tahoma;white-space:nowrap;overflow:hidden">
+                                      ## DataItem.GetMember('Name').Value ##
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="height:14px;background-color:#666666;padding:1px 8px 1px 8px;color:white">
+                                    ## DataItem.PageIndex + 1 ## / ## Grid.PageCount ##
+                                  </td>
+                                </tr>
+                              </table>
+                            </ClientTemplate>
+                          </ClientTemplates>
+                        </Grid>
+
+                      </GridPanel>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <input id="saveProducts" type="hidden" />
+      </div>
+    </Sitecore.Controls.HtmlPage>
+  </Sitecore.Ecommerce.Shell.Applications.Catalogs.ProductCatalog>
+</xamlControls>

@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Sitecore.Ecommerce.Services.OrderRepositoryService" CodeBehind="OrderRepositoryService.svc.cs" %>

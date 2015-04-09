@@ -1,0 +1,755 @@
+﻿<!--======================================================================================
+Copyright 2015 Sitecore Corporation A/S
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file 
+except in compliance with the License. You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the 
+License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, 
+either express or implied. See the License for the specific language governing permissions 
+and limitations under the License.
+======================================================================================-->
+<project>
+  <Metadata>
+    <metadata>
+      <PackageName>Sitecore E-Commerce Services</PackageName>
+      <Author>Sitecore Corporation</Author>
+      <Version />
+      <Revision />
+      <License>&lt;p class=&quot;Default&quot; style=&quot;margin: 0cm 0cm 10pt; text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: Arial;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;Copyright 2015 Sitecore Corporation A/S&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;MsoNormal&quot; style=&quot;margin: 0cm 0cm 0pt;&quot;&gt;&lt;span lang=&quot;EN-GB&quot; style=&quot;font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;; font-size: 10pt;&quot;&gt;Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;MsoNormal&quot; style=&quot;margin: 0cm 1cm 0pt;&quot;&gt;&lt;span style=&quot;font-family: Arial; font-size: 13px;&quot;&gt;&lt;a href=&quot;http://www.apache.org/licenses/LICENSE-2.0&quot;&gt;http://www.apache.org/licenses/LICENSE-2.0&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;MsoNormal&quot; style=&quot;margin: 0.5cm 0cm 0pt;&quot;&gt;&lt;span style=&quot;font-family: Arial; font-size: 13px;&quot;&gt;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.&lt;/span&gt;&lt;/p&gt;</License>
+      <Comment />
+      <Attributes>folder=temp|files=Core\da-DK.xml;Core\de-DE.xml;Core\ja-JP.xml</Attributes>
+      <Readme>
+        ${project.fullname}
+-------------------------------------------------------------
+Date: ${readme.date}
+
+-------------------------------------------------------------
+Prerequisites:
+
+•  ${product.version.net}.
+•  ${product.version.sql}.
+•  ${product.version.ef}.
+
+•  ${product.version.cms.multiple}.
+
+-------------------------------------------------------------
+${product.name} runs on:
+
+•  ${product.version.cms.multiple}.
+
+-------------------------------------------------------------
+${product.name} has been tested on:
+
+•  ${product.version.cms}.
+
+-------------------------------------------------------------
+Lucene Search Engine:
+
+If you want to use Lucene Search with the example pages,
+you must:
+
+1.	Install the package with the core functionality.
+2.	Publish the entire website.
+3.	Implement the changes in the config files.
+4.	Rebuild the search indexes.
+5.	Rebuild the link databases.
+
+For more information about configuring Lucene search for
+${product.name}, see the E-Commerce Installation
+Guide.
+
+-------------------------------------------------------------
+Sitecore® is a registered trademark. All other brand and
+product names are the property of their respective holders.
+The contents of this document are the property of Sitecore.
+Copyright © 2001-${readme.year} Sitecore. All rights reserved.
+      </Readme>
+      <Publisher>Sitecore Corporation</Publisher>
+      <PostStep>Sitecore.Ecommerce.Install.Localization.LocalizationPostStep, Sitecore.Ecommerce.Kernel</PostStep>
+      <PackageID />
+    </metadata>
+  </Metadata>
+  <SaveProject>True</SaveProject>
+  <Sources>
+    <items>
+      <Database>master</Database>
+      <Root>{5FAA895F-E809-4364-8D39-EC391F29AE2F}</Root>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include>
+        <ItemNameFilter>
+          <Pattern>^((?!DIBS)(?!Amazon)(?!AuthorizeNet)(?!BBS)(?!EPay)(?!PayEx)(?!QuickPay)(?!PayPal).)*$</Pattern>
+          <FilterSearchType>Regex</FilterSearchType>
+        </ItemNameFilter>
+        <ItemDateFilter>
+          <FilterType>CreatedFilter</FilterType>
+          <NotOlderThan />
+          <ActionDateTo />
+          <ActionDateFrom />
+        </ItemDateFilter>
+        <ItemDateFilter>
+          <FilterType>ModifiedFilter</FilterType>
+          <NotOlderThan />
+          <ActionDateTo />
+          <ActionDateFrom />
+        </ItemDateFilter>
+        <ItemPublishFilter>
+          <PublishDate />
+          <CheckWorkflow>True</CheckWorkflow>
+        </ItemPublishFilter>
+        <ItemTemplateFilter>
+          <Templates />
+        </ItemTemplateFilter>
+        <ItemUserFilter>
+          <FilterType>Created</FilterType>
+          <Accounts />
+        </ItemUserFilter>
+        <ItemUserFilter>
+          <FilterType>Modified</FilterType>
+          <Accounts />
+        </ItemUserFilter>
+        <ItemLanguageFilter>
+          <Languages />
+        </ItemLanguageFilter>
+      </Include>
+      <Exclude />
+      <Name>System</Name>
+    </items>
+    <items>
+      <Database>master</Database>
+      <Root>{53032689-52E9-4985-B1C0-46921D7F1E39}</Root>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include>
+        <ItemNameFilter>
+          <Pattern />
+          <FilterSearchType>Simple</FilterSearchType>
+        </ItemNameFilter>
+        <ItemDateFilter>
+          <FilterType>CreatedFilter</FilterType>
+          <NotOlderThan />
+          <ActionDateTo />
+          <ActionDateFrom />
+        </ItemDateFilter>
+        <ItemDateFilter>
+          <FilterType>ModifiedFilter</FilterType>
+          <NotOlderThan />
+          <ActionDateTo />
+          <ActionDateFrom />
+        </ItemDateFilter>
+        <ItemPublishFilter>
+          <PublishDate />
+          <CheckWorkflow>True</CheckWorkflow>
+        </ItemPublishFilter>
+        <ItemTemplateFilter>
+          <Templates />
+        </ItemTemplateFilter>
+        <ItemUserFilter>
+          <FilterType>Created</FilterType>
+          <Accounts />
+        </ItemUserFilter>
+        <ItemUserFilter>
+          <FilterType>Modified</FilterType>
+          <Accounts />
+        </ItemUserFilter>
+        <ItemLanguageFilter>
+          <Languages />
+        </ItemLanguageFilter>
+      </Include>
+      <Exclude />
+      <Name>Templates</Name>
+    </items>
+    <xitems>
+      <Entries>
+        <x-item>/core/sitecore/system/Settings/Security/Profiles/Customer/{AC45E370-869B-4AEA-BC51-C4AFB248D498}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Ecommerce/{4FAC5CD0-2221-4077-A5FA-507328BCA8B0}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Ecommerce/Price-Matrix/{8F8F523C-A897-4F0F-B351-D6BC885E73F5}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>System (core)</Name>
+    </xitems>
+    <items>
+      <Database>core</Database>
+      <Root>{9D31F66A-D3BA-41F3-A7BB-0AC1FB8EE05F}</Root>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include>
+        <ItemNameFilter>
+          <Pattern />
+          <FilterSearchType>Simple</FilterSearchType>
+        </ItemNameFilter>
+        <ItemDateFilter>
+          <FilterType>CreatedFilter</FilterType>
+          <NotOlderThan />
+          <ActionDateTo />
+          <ActionDateFrom />
+        </ItemDateFilter>
+        <ItemDateFilter>
+          <FilterType>ModifiedFilter</FilterType>
+          <NotOlderThan />
+          <ActionDateTo />
+          <ActionDateFrom />
+        </ItemDateFilter>
+        <ItemPublishFilter>
+          <PublishDate />
+          <CheckWorkflow>True</CheckWorkflow>
+        </ItemPublishFilter>
+        <ItemTemplateFilter>
+          <Templates />
+        </ItemTemplateFilter>
+        <ItemUserFilter>
+          <FilterType>Created</FilterType>
+          <Accounts />
+        </ItemUserFilter>
+        <ItemUserFilter>
+          <FilterType>Modified</FilterType>
+          <Accounts />
+        </ItemUserFilter>
+        <ItemLanguageFilter>
+          <Languages />
+        </ItemLanguageFilter>
+      </Include>
+      <Exclude />
+      <Name>Templates (core)</Name>
+    </items>
+    <xfiles>
+      <Entries>
+        <x-item>/App_Config/Include/Sitecore.Ecommerce.config</x-item>
+        <x-item>/App_Config/Unity.config</x-item>
+        <x-item>/bin/EntityFramework.dll</x-item>
+        <x-item>/bin/Microsoft.Practices.Unity.Configuration.dll</x-item>
+        <x-item>/bin/Microsoft.Practices.Unity.Configuration.xml</x-item>
+        <x-item>/bin/Microsoft.Practices.Unity.dll</x-item>
+        <x-item>/bin/Microsoft.Practices.Unity.Interception.Configuration.dll</x-item>
+        <x-item>/bin/Microsoft.Practices.Unity.Interception.Configuration.xml</x-item>
+        <x-item>/bin/Microsoft.Practices.Unity.Interception.dll</x-item>
+        <x-item>/bin/Microsoft.Practices.Unity.Interception.xml</x-item>
+	<x-item>/bin/Microsoft.Practices.Unity.RegistrationByConvention.dll</x-item>
+        <x-item>/bin/Microsoft.Practices.Unity.RegistrationByConvention.xml</x-item>
+        <x-item>/bin/Microsoft.Practices.Unity.xml</x-item>
+	<x-item>/bin/System.Runtime.dll</x-item>
+        <x-item>/bin/Sitecore.Ecommerce.Core.dll</x-item>
+        <x-item>/bin/Sitecore.Ecommerce.Data.dll</x-item>
+        <x-item>/bin/Sitecore.Ecommerce.DomainModel.dll</x-item>
+        <x-item>/bin/Sitecore.Ecommerce.Kernel.dll</x-item>
+        <x-item>/bin/Sitecore.Ecommerce.Merchant.dll</x-item>
+        <x-item>/bin/Sitecore.Ecommerce.ServiceModel.dll</x-item>
+        <x-item>/bin/Sitecore.Ecommerce.Services.dll</x-item>
+        <x-item>/bin/Sitecore.Ecommerce.Shell.dll</x-item>
+        <x-item>/bin/Sitecore.Ecommerce.Visitor.dll</x-item>
+        <x-item>/sitecore/admin/ConvertPrices.aspx</x-item>
+        <x-item>/sitecore/shell/Override/RebuildSearchIndex.xml</x-item>
+        <x-item>/sitecore/shell/Themes/Standard/OrderManager.zip</x-item>
+        <x-item>/App_Data/SitecoreEcommerce_Orders.mdf</x-item>
+        <x-item>/App_Data/SitecoreEcommerce_Orders.ldf</x-item>
+        <x-item>/App_Data/SitecoreEcommerce_ActionLog.mdf</x-item>
+        <x-item>/App_Data/SitecoreEcommerce_ActionLog.ldf</x-item>
+        <x-item>/temp/Core/de-DE.xml</x-item>
+        <x-item>/temp/Core/ja-JP.xml</x-item>
+        <x-item>/temp/Core/da-DK.xml</x-item>
+      </Entries>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Files</Name>
+    </xfiles>
+    <xitems>
+      <Entries>
+        <x-item>/master/sitecore/system/Marketing Center/Goals/Checkout Completed/{4DF15824-0A2D-492C-93EC-218B090F7CEA}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Marketing Center/Goals/Product Reviewed/{9DEBCD5B-5F93-4E87-9E70-FFC677F9A7C2}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Page Events/Add To Shopping Cart/{BEED9460-6187-4A53-A38D-1858F2916645}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Page Events/Checkout Delivery Next/{8F6EAED4-679C-4146-94B1-487D5650E36B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Page Events/Checkout Delivery Option Selected/{84716EF2-EB36-486C-B3FC-1FA9837F6478}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Page Events/Checkout Next/{771ED810-D9EA-4B82-B064-E9FC7C5A0CE4}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Page Events/Checkout Notification Option Selected/{8A2FC82C-10B7-454A-B2C8-C52DFE32A2B5}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Page Events/Checkout Payment Method Selected/{2E3E7642-BA4E-47A5-B52D-2ABA88439372}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Page Events/Checkout Payment Next/{6DF17A35-5C10-492E-96A5-EA5F7EDC100D}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Page Events/Checkout Previous/{C1FB1D70-67FE-480E-A417-CD7A0B3C2744}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Page Events/Clicked Login Button/{6BAAE5FA-7D9A-4D80-9AF9-6676A30460F2}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Page Events/Clicked Login Link/{C559355F-CBCC-4B5E-B94D-E4275B582689}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Page Events/Go To Checkout/{E24BB407-F349-420E-8FCB-EF481C082F38}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Page Events/Go To Shopping Cart/{7E3E5014-F728-40FD-8D15-B7E67FF19D33}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Page Events/Product Removed/{06F2B96F-A863-4B1F-B3A7-166122B4A600}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Page Events/Shopping Cart Continue Shopping/{D60C7F43-20BC-4EF3-BEF0-5C296C347061}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Page Events/Shopping Cart Emptied/{33CAC411-BFA0-4D27-B034-900B99E19F11}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Page Events/Shopping Cart Item Removed/{B1758FFF-E860-40C4-B55A-7EF433C14B67}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Page Events/Shopping Cart Item Updated/{EFE59247-489B-4959-8532-08397A9C5BEA}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Page Events/Shopping Cart Updated/{19F4D2C5-D137-46B0-A93C-24FEE6CC71B0}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Page Events/Shopping Cart Viewed/{3FC2F1DA-0AB3-4112-AE68-5642B9922FE9}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Page Events/Tab Selected/{D32E13ED-843B-473A-8B77-46D3CBCB8A4E}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Page Events/User Clicked Item In List/{AF71CDE9-0B11-421F-BC5D-54BE22A7064B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Page Events/User Logged Out/{49A24930-0397-452B-BD13-16F37E101A7B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Page Events/User Login Failed/{53213232-50A3-4508-AC95-B9DE5DD74BD7}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Page Events/User Login Succeded/{122621D5-2A3F-44FD-A46C-E6721B13EC02}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Analytics</Name>
+    </xitems>
+    <accounts>
+      <Entries>
+        <x-item>roles:extranet\Customer</x-item>
+        <x-item>roles:sitecore\Order Manager Accounting</x-item>
+        <x-item>roles:sitecore\Order Manager Administrators</x-item>
+        <x-item>roles:sitecore\Order Manager Client Users</x-item>
+        <x-item>roles:sitecore\Order Manager Customer Service</x-item>
+        <x-item>roles:sitecore\Order Manager Everyone</x-item>
+        <x-item>roles:sitecore\Order Manager Log Viewers</x-item>
+        <x-item>roles:sitecore\Order Manager Packaging</x-item>
+        <x-item>roles:sitecore\Order Manager Processing</x-item>
+        <x-item>roles:sitecore\Order Manager Example Processing</x-item>
+        <x-item>roles:sitecore\Order Manager Sales</x-item>
+        <x-item>roles:sitecore\Order Manager Shipping</x-item>
+        <x-item>roles:sitecore\Sitecore Client Authoring</x-item>
+      </Entries>
+      <Converter>
+        <AccountToEntryConverter>
+          <Transforms />
+        </AccountToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Security Accounts</Name>
+    </accounts>
+    <items>
+      <Database>core</Database>
+      <Root>{CACDED79-AC9A-439E-8FDF-D69525BA62B5}</Root>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include>
+        <ItemNameFilter>
+          <Pattern />
+          <FilterSearchType>Simple</FilterSearchType>
+        </ItemNameFilter>
+        <ItemDateFilter>
+          <FilterType>CreatedFilter</FilterType>
+          <NotOlderThan />
+          <ActionDateTo />
+          <ActionDateFrom />
+        </ItemDateFilter>
+        <ItemDateFilter>
+          <FilterType>ModifiedFilter</FilterType>
+          <NotOlderThan />
+          <ActionDateTo />
+          <ActionDateFrom />
+        </ItemDateFilter>
+        <ItemPublishFilter>
+          <PublishDate />
+          <CheckWorkflow>True</CheckWorkflow>
+        </ItemPublishFilter>
+        <ItemTemplateFilter>
+          <Templates />
+        </ItemTemplateFilter>
+        <ItemUserFilter>
+          <FilterType>Created</FilterType>
+          <Accounts />
+        </ItemUserFilter>
+        <ItemUserFilter>
+          <FilterType>Modified</FilterType>
+          <Accounts />
+        </ItemUserFilter>
+        <ItemLanguageFilter>
+          <Languages />
+        </ItemLanguageFilter>
+      </Include>
+      <Exclude />
+      <Name>Applications</Name>
+    </items>
+    <items>
+      <Database>core</Database>
+      <Root>{FE99B0FF-6A5F-4D35-97A2-0501FFC11D6B}</Root>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include>
+        <ItemNameFilter>
+          <Pattern />
+          <FilterSearchType>Simple</FilterSearchType>
+        </ItemNameFilter>
+        <ItemDateFilter>
+          <FilterType>CreatedFilter</FilterType>
+          <NotOlderThan />
+          <ActionDateTo />
+          <ActionDateFrom />
+        </ItemDateFilter>
+        <ItemDateFilter>
+          <FilterType>ModifiedFilter</FilterType>
+          <NotOlderThan />
+          <ActionDateTo />
+          <ActionDateFrom />
+        </ItemDateFilter>
+        <ItemPublishFilter>
+          <PublishDate />
+          <CheckWorkflow>True</CheckWorkflow>
+        </ItemPublishFilter>
+        <ItemTemplateFilter>
+          <Templates />
+        </ItemTemplateFilter>
+        <ItemUserFilter>
+          <FilterType>Created</FilterType>
+          <Accounts />
+        </ItemUserFilter>
+        <ItemUserFilter>
+          <FilterType>Modified</FilterType>
+          <Accounts />
+        </ItemUserFilter>
+        <ItemLanguageFilter>
+          <Languages />
+        </ItemLanguageFilter>
+      </Include>
+      <Exclude />
+      <Name>Content Editor Editors</Name>
+    </items>
+    <items>
+      <Database>master</Database>
+      <Root>{1BA43F77-C46A-4F19-8F42-93C238BB1840}</Root>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include>
+        <ItemNameFilter>
+          <Pattern />
+          <FilterSearchType>Simple</FilterSearchType>
+        </ItemNameFilter>
+        <ItemDateFilter>
+          <FilterType>CreatedFilter</FilterType>
+          <NotOlderThan />
+          <ActionDateTo />
+          <ActionDateFrom />
+        </ItemDateFilter>
+        <ItemDateFilter>
+          <FilterType>ModifiedFilter</FilterType>
+          <NotOlderThan />
+          <ActionDateTo />
+          <ActionDateFrom />
+        </ItemDateFilter>
+        <ItemPublishFilter>
+          <PublishDate />
+          <CheckWorkflow>True</CheckWorkflow>
+        </ItemPublishFilter>
+        <ItemTemplateFilter>
+          <Templates />
+        </ItemTemplateFilter>
+        <ItemUserFilter>
+          <FilterType>Created</FilterType>
+          <Accounts />
+        </ItemUserFilter>
+        <ItemUserFilter>
+          <FilterType>Modified</FilterType>
+          <Accounts />
+        </ItemUserFilter>
+        <ItemLanguageFilter>
+          <Languages />
+        </ItemLanguageFilter>
+      </Include>
+      <Exclude />
+      <Name>System Settings Validation Rules</Name>
+    </items>
+    <files>
+      <Include>
+        <FileNameFilter>
+          <Pattern />
+          <AcceptDirectories>False</AcceptDirectories>
+        </FileNameFilter>
+        <FileDateFilter>
+          <FilterType>CreatedFilter</FilterType>
+          <ActionDateTo />
+          <ActionDateFrom />
+          <NotOlderThan />
+        </FileDateFilter>
+        <FileDateFilter>
+          <FilterType>ModifiedFilter</FilterType>
+          <ActionDateTo />
+          <ActionDateFrom />
+          <NotOlderThan />
+        </FileDateFilter>
+      </Include>
+      <Exclude />
+      <Name>Services</Name>
+      <Root>/sitecore modules/Shell/Ecommerce/Services</Root>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+    </files>
+    <items>
+      <Database>master</Database>
+      <Root>{D6073312-1078-4738-B238-3EEC0C880355}</Root>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include>
+        <ItemNameFilter>
+          <Pattern />
+          <FilterSearchType>Simple</FilterSearchType>
+        </ItemNameFilter>
+        <ItemDateFilter>
+          <FilterType>CreatedFilter</FilterType>
+          <NotOlderThan />
+          <ActionDateTo />
+          <ActionDateFrom />
+        </ItemDateFilter>
+        <ItemDateFilter>
+          <FilterType>ModifiedFilter</FilterType>
+          <NotOlderThan />
+          <ActionDateTo />
+          <ActionDateFrom />
+        </ItemDateFilter>
+        <ItemPublishFilter>
+          <PublishDate />
+          <CheckWorkflow>True</CheckWorkflow>
+        </ItemPublishFilter>
+        <ItemTemplateFilter>
+          <Templates />
+        </ItemTemplateFilter>
+        <ItemUserFilter>
+          <FilterType>Created</FilterType>
+          <Accounts />
+        </ItemUserFilter>
+        <ItemUserFilter>
+          <FilterType>Modified</FilterType>
+          <Accounts />
+        </ItemUserFilter>
+        <ItemLanguageFilter>
+          <Languages />
+        </ItemLanguageFilter>
+      </Include>
+      <Exclude />
+      <Name>Branches</Name>
+    </items>
+    <files>
+      <Include>
+        <FileNameFilter>
+          <Pattern />
+          <AcceptDirectories>False</AcceptDirectories>
+        </FileNameFilter>
+        <FileDateFilter>
+          <FilterType>CreatedFilter</FilterType>
+          <ActionDateTo />
+          <ActionDateFrom />
+          <NotOlderThan />
+        </FileDateFilter>
+        <FileDateFilter>
+          <FilterType>ModifiedFilter</FilterType>
+          <ActionDateTo />
+          <ActionDateFrom />
+          <NotOlderThan />
+        </FileDateFilter>
+      </Include>
+      <Exclude />
+      <Name>Shell Applications</Name>
+      <Root>/sitecore/shell/Applications/Modules/Ecommerce</Root>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+    </files>
+    <files>
+      <Include>
+        <FileNameFilter>
+          <Pattern />
+          <AcceptDirectories>False</AcceptDirectories>
+        </FileNameFilter>
+        <FileDateFilter>
+          <FilterType>CreatedFilter</FilterType>
+          <ActionDateTo />
+          <ActionDateFrom />
+          <NotOlderThan />
+        </FileDateFilter>
+        <FileDateFilter>
+          <FilterType>ModifiedFilter</FilterType>
+          <ActionDateTo />
+          <ActionDateFrom />
+          <NotOlderThan />
+        </FileDateFilter>
+      </Include>
+      <Exclude />
+      <Name>Reports</Name>
+      <Root>/sitecore modules/Shell/Ecommerce/Reports</Root>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms />
+        </FileToEntryConverter>
+      </Converter>
+    </files>
+    <xfiles>
+      <Entries>
+        <x-item>/sitecore/admin/ConvertOrders.aspx</x-item>
+      </Entries>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms />
+        </FileToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Tools</Name>
+    </xfiles>
+  </Sources>
+  <Converter>
+    <TrivialConverter>
+      <Transforms />
+    </TrivialConverter>
+  </Converter>
+  <Include />
+  <Exclude />
+  <Name />
+</project>

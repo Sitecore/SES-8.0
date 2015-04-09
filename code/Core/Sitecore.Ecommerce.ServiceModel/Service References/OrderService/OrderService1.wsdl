@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://www.sitecore.net/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sitecore.net/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.sitecore.net/Imports">
+      <xsd:import schemaLocation="http://localhost:53125/OrderService.svc?xsd=xsd0" namespace="http://www.sitecore.net/" />
+      <xsd:import schemaLocation="http://localhost:53125/OrderService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:53125/OrderService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Sitecore.Ecommerce.Services" />
+      <xsd:import schemaLocation="http://localhost:53125/OrderService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+      <xsd:import schemaLocation="http://localhost:53125/OrderService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Sitecore.Ecommerce.Search" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IOrderService_GenerateOrderNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateOrderNumber" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GenerateOrderNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateOrderNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_Create_InputMessage">
+    <wsdl:part name="parameters" element="tns:Create" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_Create_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_Get_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_Get_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetByQuery_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetByQuery" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetByQuery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetRangeByQuery_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRangeByQuery" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetRangeByQuery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRangeByQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCount" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_Save_InputMessage">
+    <wsdl:part name="parameters" element="tns:Save" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_Save_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IOrderService">
+    <wsdl:operation name="GenerateOrderNumber">
+      <wsdl:input wsaw:Action="http://www.sitecore.net/IOrderService/GenerateOrderNumber" message="tns:IOrderService_GenerateOrderNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.sitecore.net/IOrderService/GenerateOrderNumberResponse" message="tns:IOrderService_GenerateOrderNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Create">
+      <wsdl:input wsaw:Action="http://www.sitecore.net/IOrderService/Create" message="tns:IOrderService_Create_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.sitecore.net/IOrderService/CreateResponse" message="tns:IOrderService_Create_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get">
+      <wsdl:input wsaw:Action="http://www.sitecore.net/IOrderService/Get" message="tns:IOrderService_Get_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.sitecore.net/IOrderService/GetResponse" message="tns:IOrderService_Get_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetByQuery">
+      <wsdl:input wsaw:Action="http://www.sitecore.net/IOrderService/GetByQuery" message="tns:IOrderService_GetByQuery_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.sitecore.net/IOrderService/GetByQueryResponse" message="tns:IOrderService_GetByQuery_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRangeByQuery">
+      <wsdl:input wsaw:Action="http://www.sitecore.net/IOrderService/GetRangeByQuery" message="tns:IOrderService_GetRangeByQuery_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.sitecore.net/IOrderService/GetRangeByQueryResponse" message="tns:IOrderService_GetRangeByQuery_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCount">
+      <wsdl:input wsaw:Action="http://www.sitecore.net/IOrderService/GetCount" message="tns:IOrderService_GetCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.sitecore.net/IOrderService/GetCountResponse" message="tns:IOrderService_GetCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Save">
+      <wsdl:input wsaw:Action="http://www.sitecore.net/IOrderService/Save" message="tns:IOrderService_Save_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.sitecore.net/IOrderService/SaveResponse" message="tns:IOrderService_Save_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

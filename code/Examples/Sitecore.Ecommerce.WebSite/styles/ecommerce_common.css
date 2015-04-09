@@ -1,0 +1,3211 @@
+﻿/*======================================================================================
+Copyright 2015 Sitecore Corporation A/S
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file 
+except in compliance with the License. You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the 
+License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, 
+either express or implied. See the License for the specific language governing permissions 
+and limitations under the License.
+======================================================================================*/
+
+/*
+	--------------------------------------------
+	Global
+	--------------------------------------------
+*/
+
+html, body
+{
+  width: 100%;
+  height: 100%;
+}
+
+img
+{
+  margin: 0;
+}
+p
+{
+  voice-family: "\"}\"";
+  voice-family: inherit;
+}
+input
+{
+  voice-family: "\"}\"";
+  voice-family: inherit;
+}
+select
+{
+  voice-family: "\"}\"";
+  voice-family: inherit;
+}
+option
+{
+  voice-family: "\"}\"";
+  voice-family: inherit;
+}
+textarea
+{
+  voice-family: "\"}\"";
+  voice-family: inherit;
+}
+th
+{
+  voice-family: "\"}\"";
+  voice-family: inherit;
+}
+tb
+{
+  voice-family: "\"}\"";
+  voice-family: inherit;
+}
+div
+{
+  voice-family: "\"}\"";
+  voice-family: inherit;
+}
+h1, h2, h3, h4, h5, h6
+{
+  voice-family: "\"}\"";
+  voice-family: inherit;
+}
+
+p, div, span, label, ul, ol, li, dd, dt, dl
+{
+  margin: 0;
+  padding: 0;
+}
+
+hr
+{
+  background-color: #cccccc;
+  border: 0;
+  height: 1px;
+  border-color: #cccccc;
+}
+
+.pb_mc p, .pb_mc pre, .pb_mc ul li, .pb_mc table td, .pb_mc table th
+{
+  line-height: 1.5em;
+}
+
+
+/*	Headers 
+		-------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
+{
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
+{
+}
+
+h1
+{
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 15px;  
+}
+
+h2
+{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+div.module h2
+{
+  display: block;
+  font-size: 26px;
+  line-height: 26px;
+}
+
+h3
+{
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+/*	Links
+		--------------------------------------------*/
+a, a:focus, a:hover, a:active, a:visited
+{
+  outline: none;
+}
+a
+{
+  color: #cc0606;
+  text-decoration: none;
+}
+
+a:hover
+{
+}
+a img
+{
+  border: none;
+}
+/* Disable image borders on linked images */
+
+
+/*	Paragraphs
+		--------------------------------------------*/
+p
+{
+  margin-bottom: 8px; /*line-height: 1.5em; */
+}
+
+
+/*	Lists
+		--------------------------------------------*/
+.pb_mc ul
+{
+  margin-left: 5px;
+}
+
+ul.plain
+{
+  list-style: none;
+}
+
+ul li.ulHeader
+{
+  font-weight: 700;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+dl
+{
+}
+
+
+/*	Form
+		--------------------------------------------*/
+html > body input, html > body select
+{
+  border: 1px solid #dedede;
+}
+
+html > body input[type='image']
+{
+  border: 0;
+}
+
+/*	Table
+		--------------------------------------------*/
+table, td, th
+{
+  border: 1px solid #dedede;
+  border-collapse: collapse;
+}
+
+td, th
+{
+  padding: 4px;
+  line-height: 1.5em;
+}
+
+/*
+	--------------------------------------------
+	Main Page
+	--------------------------------------------
+*/
+
+body
+{
+  color: #444444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  margin: 0 0 10px 0;
+  padding: 0 0 10px 0;
+  text-align: center;
+  background: lightGrey; 
+}
+
+#body_inner
+{
+  width: 996px;
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  text-align: left;
+}
+
+#page_container
+{
+  margin: 0;
+  padding: 0;
+}
+
+#page_header
+{
+  height: 110px;
+  padding: 10px 0px 0px 0px;
+  margin: 0;
+  overflow: hidden;
+}
+
+#page_body
+{
+  clear: both;
+  padding: 8px;
+  margin: 0;
+  background: #fff;
+}
+
+#page_footer
+{
+  clear: both;
+  display: inline;
+  float: left;
+  width: 100%;
+  height: 100px;
+  margin: 0;
+  padding: 30px 0 1px 0;
+  color: #fff;
+  background: url(../images/ecommerce/body_bottom.gif) 0 0 no-repeat;
+}
+
+
+/*
+	--------------------------------------------
+	Rails Layout
+	--------------------------------------------
+*/
+
+div.pb_lc, div.pb_mc, div.pb_rc
+{
+  display: inline;
+  border: 0px;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+
+div.pb_lc
+{
+  float: left;
+  width: 168px;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+div.pb_mc
+{
+  float: left;
+  width: 644px;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+
+
+div.pb_rc
+{
+  float: left;
+  width: 168px;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+
+
+/*	mc - Columns
+		--------------------------------------------*/
+.pb_mc .container, .pb_mc .content, .pb_mc .content2, .pb_mc .content3, .pb_mc .content4
+{
+  display: inline;
+  float: left;
+  clear: both;
+  width: 100%;
+}
+
+.pb_mc .content .col, .pb_mc .content2 .col, .pb_mc .content2 .colRotator, .pb_mc .content2 .colDynamicHight, .pb_mc .content3 .col, .pb_mc .content4 .col
+{
+  display: inline;
+  font-size: 12px;
+  border: 1px solid #dedede;
+  overflow: hidden;
+  margin: 0px 0px 8px 8px;
+}
+
+.pb_mc .content .colRichText
+{
+  display: inline;
+  font-size: 12px;
+  overflow: hidden;
+  margin: 0px 0px 8px 8px;
+}
+
+
+.pb_mc .content .col, .pb_mc .content .colRichText
+{
+  float: left; 
+  width: 626px;
+}
+/* without border: 628 */
+
+.pb_mc .content2 .col
+{
+  float: left;
+  height: 250px;
+  width: 308px;
+}
+/* without border: 310 */
+
+.pb_mc .content2 .colRotator
+{
+  display: inline;
+  float: left;
+  width: 310px;
+  border: 0;
+}
+
+.colDynamicHight
+{
+  display: inline;
+  float: left;
+  width: 310px;
+  height: auto;
+  border: 0;
+}
+
+.pb_mc .content3 .col
+{
+  float: left;
+  height: 275px;
+  width: 202px;
+}
+/* without border: 204 */
+
+.pb_mc .content4 .col
+{
+  float: left;
+  height: 220px;
+  width: 149px;
+}
+/* without border: 151 */
+
+
+/*
+	--------------------------------------------
+	Header Specific Styles
+	--------------------------------------------
+*/
+
+/*	Login and language selection
+		--------------------------------------------*/
+
+ul#ph_login
+{
+  display: inline;
+  float: right;
+  list-style: none;
+}
+
+ul#ph_login li
+{
+  display: inline;
+  float: left;
+  text-align: right;
+}
+
+ul#ph_login li a
+{
+  display: block;
+  margin: 2px 8px;
+  font-size: 11px;
+  line-height: 1.5em;
+  color: black;
+  white-space: nowrap;
+}
+
+li.phLogin
+{
+  background: url(../images/ecommerce/two_colored_spacer.gif) right 0px repeat-y;
+}
+li.phDanish
+{
+}
+li.phEnglish
+{
+}
+
+li.phLogin a
+{
+  padding: 0px 0px 0px 15px;
+  background: url(../images/ecommerce/ico_key.gif) 0px 4px no-repeat;
+}
+
+li.phEnglish a
+{
+  padding: 0px 0px 0px 22px;
+  background: url(../images/ecommerce/flag_english.gif) 0px 2px no-repeat;
+}
+
+li.phDanish a
+{
+  padding: 0px 0px 0px 22px;
+  background: url(../images/ecommerce/flag_danish.gif) 0px 2px no-repeat;
+}
+
+
+/*	Logo
+		--------------------------------------------*/
+a#ph_logo
+{
+  display: inline;
+  float: left;
+  width: 208px;
+  padding-top: 30px;
+  padding-right: 30px;
+}
+
+
+
+/*	Primary Menu
+		--------------------------------------------*/
+#ph_menu
+{
+  display: inline;
+  float: left;
+  width: 550px;
+  overflow: hidden;
+  clear: none;
+  padding-top: 55px;
+}
+
+#ph_menu ul
+{
+  display: inline;
+  float: left;
+  clear: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#ph_menu ul li
+{
+  float: left;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  color: #fff;
+  background: #626262 url(../images/ecommerce/primary_menu_left2.gif) 0 0 no-repeat;
+}
+
+#ph_menu ul li a
+{
+  display: block;
+  padding: 11px 10px 10px 10px;
+  margin: 0px;
+  color: #fff;
+  font-weight: 700;
+  background: url(../images/ecommerce/primary_menu_right2.gif) right 0 no-repeat;
+}
+
+
+#ph_menu .first
+{
+}
+#ph_menu .last
+{
+}
+
+#ph_menu .current, #ph_menu .current a, #ph_menu a:hover
+{
+  color: #000;
+}
+
+#ph_menu .current
+{
+  background: #fff url(../images/ecommerce/primary_menu_hover_left2.gif) 0 0 no-repeat;
+}
+
+#ph_menu .current a
+{
+  background: url(../images/ecommerce/primary_menu_hover_right2.gif) right 0 no-repeat;
+}
+
+
+
+/*	Search
+		--------------------------------------------*/
+div#ph_search
+{
+  display: inline;
+  float: right;
+  padding-top: 30px;
+}
+
+
+table#tbl_search, table#tbl_search td
+{
+  padding: 0;
+  border: 0;
+}
+
+#tbl_search td
+{
+}
+#tbl_search td#td_search_frase
+{
+  width: 128px;
+}
+#tbl_search td#td_search_btn
+{
+  width: 52px;
+}
+
+div#ph_search input
+{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  font-size: 10px;
+  line-height: 12px;
+  background: #fff;
+}
+
+div#ph_search .searchFrase
+{
+  display: inline;
+  float: left;
+  width: 126px;
+  border: 1px solid #e9e9e9;
+  padding: 3px 4px;
+  font-size: 11px;
+  text-align: left;
+}
+
+div#ph_search .searchBtn
+{
+  display: inline;
+  float: left;
+  width: 52px;
+  height: 22px;
+  border: 0;
+  font-size: 11px; /*padding: 0 8px;*/
+  cursor: pointer;
+  background: url(../images/ecommerce/bg_btn_search.gif) right 0px no-repeat;
+}
+
+
+
+/*
+	--------------------------------------------
+	Footer Specific Styles
+	--------------------------------------------
+*/
+#page_footer .content, #page_footer .content2, #page_footer .content3, #page_footer .content4
+{
+  display: inline;
+  float: left;
+  clear: both;
+  width: 100%;
+}
+
+#page_footer .content .col, #page_footer .content2 .col, #page_footer .content3 .col, #page_footer .content4 .col
+{
+  display: inline;
+  font-size: 12px;
+  border: 0px solid #dedede;
+  overflow: hidden;
+  margin: 0px 0px 8px 8px;
+}
+
+#page_footer .content3 .col
+{
+  margin: 0px 0px 8px 6px;
+}
+
+
+
+#page_footer .content .col
+{
+  float: left;
+  width: 980px;
+}
+
+#page_footer .content2 .col
+{
+  float: left;
+  width: 486px;
+}
+
+#page_footer .content3 .col
+{
+  float: left;
+  width: 324px;
+}
+/* margin-left: 6 */
+
+#page_footer .content4 .col
+{
+  float: left;
+  width: 239px;
+}
+
+
+.noLabels .title
+{
+  display: none;
+}
+.noLabels .value
+{
+  float: left;
+  clear: both;
+  width: 100%;
+  font-weight: 700;
+}
+
+/*
+	--------------------------------------------
+	Body Specific Styles
+	--------------------------------------------
+*/
+.teaser
+{
+  font-weight: 700;
+}
+
+/* Prices
+		--------------------------------------------*/
+.priceMain, .priceTotal, .priceVat, .priceSale, .priceCurrent, .priceCurrentTotal, .priceOriginal
+{
+  white-space: nowrap;
+}
+
+
+
+/*	Boxes
+		--------------------------------------------*/
+div.boxShaddow1
+{
+   background: url(../images/ecommerce/box_shaddow_top_left2.jpg) 0 0 no-repeat;
+   margin-bottom: 8px;
+}
+
+div.boxShaddow1 .col dl 
+{
+   background: none;
+}
+ 
+div.boxShaddow1 .col dl dd, #dlProducts dd .ulProductList 
+{
+    background-color: White;
+    border-top: 1px solid #DEDEDE;
+    border-bottom: 1px solid #DEDEDE;
+}
+  
+div.boxShaddow1 dl
+{
+   background: url(../images/ecommerce/box_shaddow_top_right2.jpg) right 0 no-repeat;
+}
+
+div.boxShaddow1 dl dd
+{
+  padding: 16px 16px 0 16px;
+}
+
+div.boxShaddow1 dl dd.labels 
+{
+  padding: 0px 4px;
+}
+
+div.boxShaddow1 dl dd ul
+{
+  list-style: none;
+}
+
+
+div.boxShaddow1 dl dd.bottom
+{
+  display: block;
+  padding: 0;
+   background: url(../images/ecommerce/box_shaddow_bottom_left.png) 0 bottom no-repeat;
+}
+
+div.boxShaddow1 dl dd.bottom div
+{
+  height: 8px;
+  line-height: 8px;
+   background: url(../images/ecommerce/box_shaddow_bottom_right.png) right bottom no-repeat;
+}
+
+div.boxShaddow1 ul
+{
+  list-style: none;
+}
+
+
+
+
+
+/*	Left Column (pb_lc)
+		--------------------------------------------*/
+.pb_lc ul
+{
+  list-style: none;
+  margin-left: 0;
+}
+
+ul#lc_menu
+{
+  float: none;
+  margin-bottom: 10px;
+  background-color: #acacac;
+}
+
+#lc_menu li
+{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  float: left;
+  clear: left;
+  width: 100%;
+  border: 0;
+  background: #acacac url(../images/ecommerce/lc_menu_toplevel.gif) 0 0 repeat-x;
+}
+
+#lc_menu li li
+{
+  border: 0;
+}
+
+#lc_menu li a
+{
+  display: block;
+  padding: 5px;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  background: #acacac url(../images/ecommerce/lc_menu_toplevel.gif) 0 0 repeat-x;
+}
+
+#lc_menu li li a:hover
+{
+  background: #fff;
+  color: #000;
+}
+
+#lc_menu li.current
+{
+  background-color: #db4a4a;
+}
+#lc_menu li.current a
+{
+  background: #db4a4a url(../images/ecommerce/lc_menu_toplevel_current.gif) 0 0 repeat-x;
+}
+
+#lc_menu li.current li, #lc_menu li a:hover li
+{
+  background: #f9f9f9;
+}
+
+#lc_menu li.current ul li a, #lc_menu a:hover ul li a
+{
+  padding-left: 20px;
+  color: #666666;
+  background: url(../images/ecommerce/lc_menu_bullet.gif) 8px 8px no-repeat;
+}
+
+#pb_lc ul a:hover
+{
+}
+
+
+/*	Middle Column (pb_mc)
+		--------------------------------------------*/
+
+#pb_home_container
+{
+}
+#pb_shopping_cart_container
+{
+}
+#pb_product_container
+{
+}
+#pb_product_list_container
+{
+}
+
+
+
+/* Header with shaddow */
+.pb_mc #pb_header_shaddow, .pb_mc .content #pb_header_shaddow
+{
+  display: inline;
+  float: left;
+  clear: both;
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+  padding: 0 0 0 0;
+  margin: 0 0 8px 0;
+  background: url(../images/ecommerce/bg_header_h1.jpg) 8px bottom no-repeat;
+}
+
+#pb_header_shaddow h1
+{
+  display: inline;
+  float: left;
+  width: 440px;
+  margin: 12px 8px 0 22px;
+}
+
+#pb_header_shaddow .btnContainer
+{
+  display: inline;
+  float: left;
+  width: 166px;
+  margin: 12px 0 0 0;
+}
+
+
+/* Breadcrumb */
+#breadcrumb
+{
+  height: 20px;
+  margin: 0 8px 8px 8px;
+  padding: 12px 16px;
+  clear: both;
+  background: url(../images/ecommerce/bg_header_h1.jpg) 0 bottom no-repeat;
+}
+
+
+ul#breadcrumb
+{
+  margin: 0 0 0 0;
+  color: #a0a0a0;
+  font-size: 1.2em;
+  width: 800px;
+  float: left;
+}
+
+#breadcrumb ul li
+{
+  display: inline;
+  list-style-type: none;
+  padding-right: 5px;
+  padding-left: 0px;
+  margin: 0;
+}
+
+#breadcrumb ul li a, #breadcrumb ul li a:visited
+{
+  color: #a0a0a0;
+  padding-right: 5px;
+  text-decoration: none;
+}
+
+#breadcrumb ul li a:focus, #breadcrumb ul li a:hover
+{
+  color: #8b8b8b;
+  text-decoration: underline;
+}
+
+
+
+/* Date */
+.pb_mc .date
+{
+  text-align: right;
+  margin-bottom: 8px;
+}
+
+
+/* Text container */
+.pb_mc .colMargin10 .textContainer
+{
+  height: 80px;
+  overflow: auto;
+}
+/* Container to secure fixed height for header and ingress */
+
+.pb_mc .col .textContainer h2, .pb_mc .col1 .textContainer h2, .pb_mc .col2 .textContainer h2, .pb_mc .col3 .textContainer h2, .pb_mc .col4 .textContainer h2, .pb_mc .col .textContainer h2 a, .pb_mc .col1 .textContainer h2 a, .pb_mc .col2 .textContainer h2 a, .pb_mc .col3 .textContainer h2 a, .pb_mc .col4 .textContainer h2 a
+{
+  color: #000;
+  font-weight: 700;
+}
+
+.pb_mc .col4 .textContainer h2 a, .pb_mc .content4 .textContainer h2 a
+{
+  font-size: 14px;
+}
+
+
+.pb_mc .col .textContainer p, .pb_mc .col1 .textContainer p, .pb_mc .col2 .textContainer p, .pb_mc .col3 .textContainer p, .pb_mc .col4 .textContainer p
+{
+  color: #000;
+}
+
+.pb_mc .col .textContainer img, .pb_mc .col1 .textContainer img, .pb_mc .col2 .textContainer img, .pb_mc .col3 .textContainer img, .pb_mc .col4 .textContainer img
+{
+  display: block;
+  border: 0;
+  margin: 0;
+}
+
+
+
+/* Price container column */
+.pb_mc .colPriceContainer
+{
+  padding: 0 10px;
+  margin-bottom: 8px;
+}
+
+.pb_mc .colPriceContainer .priceMain
+{
+  width: 50%;
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+  float: left;
+}
+
+.pb_mc .content4 .colPriceContainer .priceMain
+{
+  padding-top: 4px;
+  font-size: 14px;
+}
+
+.pb_mc .colPriceContainer .btnContainer
+{
+  width: 50%;
+  float: right;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+/* Pager */
+.pb_mc .pagerSortingContainer
+{
+  display: inline;
+  float: left;
+  width: 612px;
+  margin: 8px;
+  padding: 8px;
+  clear: both;
+  background: url(../images/ecommerce/bg_pager.gif) 0 bottom repeat-x;
+}
+
+.pagerSortingContainer .pager
+{
+  display: inline;
+}
+
+.pager .pagerItem, .pager .pagerItemPrevious, .pager .pagerItemNext
+{
+  display: inline;
+  float: left;
+}
+
+.pager .pagerItemNext a.pagerLink, .pager .pagerItemPrevious a.pagerLink
+{
+}
+
+.pager .pagerItemNext a.pagerLink
+{
+  padding-right: 18px;
+  background: url(../images/ecommerce/btn_next.gif) right 9px no-repeat;
+}
+
+.pager .pagerItemPrevious a.pagerLink
+{
+  padding-left: 18px;
+  background: url(../images/ecommerce/btn_prev.gif) 0 9px no-repeat;
+}
+
+
+.pager a.pagerLink, .pager b
+{
+  display: block;
+  padding: 8px 4px;
+}
+
+.pagerSortingContainer .sorting
+{
+  float: right;
+  text-align: right;
+}
+
+.sorting select
+{
+  width: 100px;
+  margin-left: 8px;
+}
+
+
+
+/*	Lists 
+		--------------------------------------------*/
+/* Article list */
+.pb_mc ul.ulArticleList
+{
+  display: inline;
+  float: left;
+  margin: 0 8px 8px 8px;
+  padding: 0;
+  list-style: none;
+}
+
+.ulArticleList li
+{
+  display: inline;
+  float: left;
+  clear: both;
+  width: 612px;
+  padding: 16px 8px;
+  margin: 0;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.ulArticleList .colImage
+{
+  float: left;
+  width: 166px;
+}
+
+.ulArticleList .colText
+{
+  float: left;
+  width: 435px;
+  margin-left: 8px;
+}
+
+
+/* Product list */
+.pb_mc ul.ulProductList
+{
+  display: inline;
+  float: left;
+  margin: 0 8px 8px 8px;
+  padding: 0;
+  list-style: none;
+}
+
+.content .pb_mc ul.ulProductList, .content1 .pb_mc ul.ulProductList, .content2 .pb_mc ul.ulProductList, .content3 .pb_mc ul.ulProductList, .content4 .pb_mc ul.ulProductList, .colMargin8 .pb_mc ul.ulProductList, .colMargin10 .pb_mc ul.ulProductList
+{
+  margin: 0px;
+}
+
+
+
+.colProductNumber, .colImage, .colText, .colImageText, .colCount, /* Amount */ .colPrice, .colPriceCurrent, .colCtrlButtons
+{
+  overflow: hidden;
+}
+
+
+div.bottomNavigation
+{
+  display: inline;
+  float: left;
+  width: 100%;
+   margin: 20px 0;
+  padding: 0;
+}
+
+div.bottomNavigation .bottomNavigationFullWidth
+{
+  width: 100%;
+}
+
+div.bottomNavigation .bottomNavigationLeft
+{
+  text-align: left;
+  width: 70%;
+}
+
+div.bottomNavigation .bottomNavigationLeft .btnContainer,
+div.bottomNavigation .bottomNavigationLeft input
+{
+  background: url(../images/ecommerce/btn-checkout-wizard.gif) 0 0 no-repeat;
+  border: none;
+  width: 135px;
+  height: 25px;
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: 8pt;
+  font-family: Arial;
+}
+
+div.bottomNavigation .bottomNavigationLeft .btnContainer
+{
+  float: left;
+  padding-top: 5px;
+  text-align: center;
+}
+
+div.bottomNavigation .bottomNavigationLeft .btnContainer a
+{
+  color: Black;
+}
+
+div.bottomNavigation .bottomNavigationLeft input
+{
+  padding-bottom: 2px;
+}
+
+
+
+/* Product list */
+.ulProductList li
+{
+  display: inline;
+  float: left;
+  clear: both;
+  width: 612px;
+  padding: 16px 8px;
+  margin: 0;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.ulProductList li.ulHeader
+{
+  padding: 0 8px;
+}
+/*.ulProductList li.ulHeader div{ text-align: left;}*/
+
+
+/* All columns */
+.ulProductList .colProductNumber
+{
+  float: left;
+  width: 108px;
+}
+
+.ulProductList .colImage
+{
+  float: left;
+  width: 108px;
+}
+
+.paymentsMethodContainer .colimage
+{
+  border: 1px solid #E0E0E0;
+}
+
+.ulProductList .colText
+{
+  float: left;
+   width: 322px;
+}
+
+.ulProductList .colImageText
+{
+  float: left;
+  width: 450px;
+}
+
+.colText h2 a, .colImageText h2 a
+{
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.colText .inStock, .colImageText .inStock
+{
+  color: #c2c2c2;
+}
+
+.ulProductList .colCount
+{
+  float: left;
+  width: 50px;
+  text-align: center;
+}
+
+.ulProductList .colCount input
+{
+  text-align: center;
+  width: 30px;
+  border: 1px solid #dedede;
+}
+
+.ulProductList .colPriceCurrent
+{
+  float: left;
+  width: 0px;
+  text-align: right;
+}
+
+.ulProductList .priceMain
+{
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.ulProductList .priceOriginal
+{
+  color: #dedede;
+  text-decoration: line-through;
+  font-weight: 100;
+}
+
+.ulProductList .colPriceCurrentTotal
+{
+  float: right;
+  text-align: right;
+}
+
+.ulProductList .colControlButtons
+{
+  float: right;
+  width: 60px;
+  text-align: right;
+}
+
+
+#pb_product_list_container .rightAlignedContainer
+{
+  display: inline;
+  float: right;
+   width: 150px;
+  margin-top: -40px;
+}
+/* Container with price and buy button */
+
+#pb_product_list_container .ulHeader .rightAlignedContainer
+{
+  text-align: left;
+  margin: 0;
+}
+
+.leftAlignedContainer .colPrice
+{
+   float: left;
+   text-align: left;
+}
+
+.leftAlignedContainer .colControlButtons
+{
+   float: right;
+   width: 45px;
+   text-align: right;
+}
+
+.leftAlignedContainer .priceMain 
+{
+   font-size: 16px;
+   font-weight: 700;
+}
+
+.leftAlignedContainer .priceOriginal 
+{  
+   color: #DEDEDE;
+   font-weight: 100;
+   text-decoration: line-through;
+}
+
+.rightAlignedContainer .colPrice
+{
+  float: right;
+   width: 95px;
+  text-align: right;
+  padding-right: 8px;
+}
+
+
+.rightAlignedContainer .colControlButtons
+{
+  float: right;
+  width: 45px;
+  text-align: right;
+}
+
+.rightAlignedContainer .colControlButtons
+{
+  float: right;
+}
+
+.checkout_mc
+{
+float: left;
+   width: 644px;
+   padding: 0 0 0 0;
+   margin: 0 0 0 0;
+}
+
+
+/* ShoppingCart */
+
+#ShoppingCart_product_list .colImageText
+{
+  width: 350px;
+}
+#ShoppingCart_product_list .colText
+{
+  width: 242px;
+}
+
+#ShoppingCart_product_list .colCount
+{
+  width: 50px;
+}
+#ShoppingCart_product_list .colCount input
+{
+  width: 30px;
+}
+
+#ShoppingCart_product_list .colPriceCurrent
+{
+  width: 80px;
+}
+#ShoppingCart_product_list .colControlButtons
+{
+  width: 30px;
+  float: left;
+}
+
+#ShoppingCart_product_list .summary .colPriceContainer
+{
+  float: right;
+  width: 220px;
+  padding: 0;
+   margin-bottom: 8px;
+   text-align: right;
+}
+
+#ShoppingCart_product_list .summary .colPriceContainer .title
+{
+  float: left;
+  font-weight: 700;
+  color: #000;
+}
+
+#ShoppingCart_product_list .summary .colPriceContainer .priceTotal
+{
+  font-weight: 700;
+  color: #000;
+}
+
+#ShoppingCart_product_list .summary .colPriceContainer .vat
+{
+  float: left;
+  color: #959595;
+}
+
+
+
+/* review */
+#review_product_list li
+{
+  padding: 8px 0px;
+}
+
+#review_product_list .colImageText
+{
+  width: 480px;
+}
+#review_product_list .colText
+{
+  width: 370px;
+}
+
+#review_product_list .colCount
+{
+  width: 50px;
+}
+#review_product_list .colCount input
+{
+  width: 30px;
+}
+
+#review_product_list .colPriceCurrent
+{
+  width: 80px;
+}
+#review_product_list .colControlButtons
+{
+  width: 60px;
+}
+
+li.summary
+{
+  border: 0;
+}
+
+
+
+
+
+
+/* Product */
+#pb_product_container .pictureContainer
+{
+  float: left;
+  width: 250px;
+  text-align: center;
+  margin-right: 32px;
+}
+
+#pb_product_container .pictureContainer img
+{
+}
+
+#pb_product_container .pictureContainer .tbnContainer
+{
+  margin: 8px auto;
+}
+
+#pb_product_container .pictureContainer .tbnContainer img
+{
+  float: left;
+  border: 1px solid #dedede;
+  margin: 1px 0px 0px 1px;
+}
+
+/* Description container */
+#pb_product_container .descriptionContainer
+{
+  float: left;
+  width: 340px;
+  overflow: hidden;
+}
+
+#pb_product_container h1
+{
+  margin: 0;
+  color: #cc0606;
+}
+
+
+#pb_product_container h2
+{
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+/* Price container */
+#pb_product_container .priceAndBuyContainer
+{
+  display: inline;
+  float: left;
+  width: 340px;
+  margin: 16px 0;
+  padding: 8px 0;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+}
+
+#pb_product_container .priceAndBuyContainer .priceContainer
+{
+  display: inline;
+  float: left;
+  clear: left;
+  width: 160px;
+}
+
+#pb_product_container .priceContainer .priceMain
+{
+  float: left;
+  clear: left;
+  width: 150px;
+  margin-right: 16px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+#pb_product_container .priceContainer .priceOriginal
+{
+  float: left;
+  clear: left;
+  width: 150px;
+  color: #dedede;
+  text-decoration: line-through;
+  font-weight: 100;
+}
+
+#pb_product_container .colCount
+{
+  float: left;
+  padding-top: 8px;
+  width: 60px;
+  text-align: right;
+}
+
+#pb_product_container .colCount input
+{
+  width: 30px;
+  padding: 4px;
+  border: 1px solid #dedede;
+  text-align: center;
+}
+
+#pb_product_container .btnContainer
+{
+  text-align: right;
+  padding-right: 16px;
+  padding-top: 6px;
+}
+
+#pb_product_container .colStockAndDelivery
+{
+  display: inline;
+  float: right;
+  clear: both;
+  padding-right: 16px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+#pb_product_container .colStockAndDelivery span
+{
+}
+#pb_product_container .colStockAndDelivery span.header
+{
+  font-weight: 700;
+}
+
+
+/* Details container */
+#pb_product_container .detailsContainer
+{
+  display: inline;
+  float: left;
+  clear: both;
+  width: 100%;
+  margin: 16px 0;
+}
+
+#pb_product_container .title
+{
+  float: left;
+  clear: both;
+  width: 120px;
+}
+
+#pb_product_container .value
+{
+  float: left;
+  width: 120px;
+  text-align: left;
+}
+
+
+/* check out */
+#pb_check_out_container .teaser
+{
+  margin: 0 10px;
+}
+
+#pb_check_out_container dl, #pb_check_out_container dt, #pb_check_out_container dd
+{
+  display: block;
+  float: none;
+  width: auto;  
+}
+
+
+
+#pb_check_out_container dt
+{
+  padding: 4px 8px 8px 8px;
+  background: url(../images/ecommerce/bg_pager.gif) 0 bottom repeat-x;
+  font-weight: 700;
+}
+
+#pb_check_out_container dt, #dlProducts dt 
+{
+    background: none;
+    padding: 0 0 2px 0;
+ }
+
+.check_out_container_div
+{
+   height: 248px;
+   overflow-x: hidden;
+   overflow-y: auto;
+}
+
+#pb_check_out_container dd
+{
+}
+
+#pb_check_out_container .content2 > .col:first-child 
+{
+    margin-right: 12px;
+}
+
+#pb_check_out_container input
+{
+  clear: both;
+}
+
+#pb_check_out_container .title
+{
+  display: inline;
+  font-weight: 700;
+  margin: 2px 0px;
+}
+
+#pb_check_out_container .value
+{
+  display: inline;
+  font-weight: 100;
+  margin: 2px 0px;
+  overflow: hidden;
+}
+
+
+
+#pb_check_out_container .content2 .col, #pb_check_out_container .content3 .col
+{
+  overflow: hidden;
+  padding-bottom: 8px;
+}
+
+#pb_check_out_container content2 .col dl
+{
+  height: 180px;
+}
+#pb_check_out_container content3 .col dl
+{
+  height: 180px;
+}
+
+
+/* Just in case */
+#pb_check_out_container .noLabels .title
+{
+  display: none;
+}
+
+
+/* 1 column */
+#pb_check_out_container .content .noLabels .value
+{
+  float: left;
+  clear: both;
+  width: 100%;
+  font-weight: 700;
+}
+
+#pb_check_out_container .content .labels .title
+{
+  float: left;
+  width: 150px;
+}
+
+#pb_check_out_container .content .labels .value
+{
+  float: left;
+  width: 60%;
+}
+
+
+
+/* 2 column */
+#pb_check_out_container .content2 
+{
+    overflow: hidden;
+}
+  
+#pb_check_out_container .content2 .col 
+{
+  float: left;
+  width: 292px;
+}
+
+#pb_check_out_container .content2 .title
+{
+  float: left;
+  width: 100px;
+}
+
+#pb_check_out_container .content2 .col .value
+{
+  float: left;
+  width: 120px;
+}
+
+/* 3 column */
+#pb_check_out_container .content3 .col .title, #pb_check_out_container .col3 .title
+{
+  float: left;
+  clear: left;
+  width: 80px;
+}
+
+#pb_check_out_container .content3 .col .value, #pb_check_out_container .col3 .value
+{
+  float: left;
+  width: 100px;
+}
+
+
+#pb_check_out_container ul
+{
+  display: inline;
+  width: 100%;
+  float: left;
+}
+
+div.content li.option
+{
+  width:50%;
+}
+
+div.content2 li.option
+{
+  width:100%;
+}
+
+#pb_check_out_container li.option
+{
+  display: inline;
+  float: left;
+  margin-bottom: 5px;
+}
+
+li.option .colRadio
+{
+  float: left;
+  height: 34px;
+  padding-top: 14px;
+}
+
+li.option .colRadio input
+{
+  border: 0;
+}
+
+li.option .colImage
+{
+  float: left;
+  width: 48px;
+  border: 1px solid #DEDEDE;
+  margin-right:5px;
+  margin-left:5px;
+}
+
+li.option .colText
+{
+  float: left;
+}
+
+li.option .colText .colTextDescription
+{
+  color: GrayText;
+}
+
+li.option .colImageText
+{
+  float: left;
+  width: 212px;
+}
+
+li.option .colImageTextPrice
+{
+  float: left;
+  width: 267px;
+}
+
+li.option .colText p, li.option .colImageText p, li.option .colImageTextPrice p
+{
+  line-height: 1.2em;
+}
+
+li.option .colPrice
+{
+  float: right;
+  clear: right;
+  width: 52px;
+  font-weight: 700;
+}
+
+
+/* 1 col */
+.content li.option .colImageText
+{
+  width: 530px;
+}
+.content li.option .colImageTextPrice
+{
+  width: 585px;
+}
+
+
+/* 3 col */
+.content3 li.option .colText
+{
+  width: 70px;
+}
+.content3 li.option .colImageText
+{
+  width: 126px;
+}
+.content3 li.option .colImageTextPrice
+{
+  width: 160px;
+}
+.content3 li.option .colPrice
+{
+  width: 30px;
+}
+
+#pb_check_out_container li.trackingOption
+{
+  display: inline;
+  float: left;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+li.trackingOption .colRadio
+{
+  float: left;
+  width: 25px;
+}
+
+li.trackingOption .colRadio input
+{
+  border: 0;
+}
+
+
+li.trackingOption .colText
+{
+  float: left;
+  width: 45px;
+}
+
+
+li.trackingOption .colTextInput
+{
+  float: left;
+  width: 100px;
+  text-align: left;
+}
+
+.content li.trackingOption .colTextInput
+{
+  width: 200px;
+}
+.content2 li.trackingOption .colTextInput
+{
+  width: 180px;
+}
+
+.colTextInput input
+{
+  width: 80%;
+  padding: 4px;
+  margin-right: 4px;
+  text-align: left;
+  border: 1px solid #e3e3e3;
+}
+
+#pb_check_out_container #dlProducts
+{
+}
+
+#pb_check_out_container #dlProducts dd
+{
+  margin: 0;
+  padding: 0;
+}
+
+#dlProducts dd .ulProductList
+{
+  margin: 0;
+}
+
+
+
+
+/*	Right Column (pb_rc)
+		--------------------------------------------*/
+
+.pb_rc ul.icons
+{
+  display: inline;
+  float: left;
+  clear: both;
+  width: 100%;
+  list-style: none;
+  margin-bottom: 8px;
+}
+
+.pb_rc ul.icons li
+{
+  display: inline;
+  float: right;
+  clear: none;
+  width: 50px;
+}
+
+.pb_rc ul.icons li a
+{
+  display: block;
+  padding: 4px 4px 4px 20px;
+  font-size: 11px;
+  text-transform: lowercase;
+}
+
+
+/*	Icons and links
+		--------------------------------------------*/
+
+/* Print */
+.pb_rc a#icon_email
+{
+  background: url(../images/buttons/icon_email.gif) 0 4px no-repeat;
+}
+.pb_rc a#icon_print
+{
+  background: url(../images/buttons/icon_print.gif) 0 1px no-repeat;
+}
+.pb_rc a#icon_rss
+{
+  background: url(../images/logos/rss.gif) 0 4px no-repeat;
+}
+
+
+/* Small shopping ShoppingCart */
+dl.shoppingShoppingCartSmall div.title
+{
+  float: left;
+}
+
+dl.shoppingShoppingCartSmall div.editShoppingCart, div.amountInShoppingCartStatus, div.showPriceInfo
+{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.pb_rc dl.shoppingShoppingCartSmall
+{
+  background: url(../images/ecommerce/ico_basket_small.gif) right bottom no-repeat;
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+  color: #0d1112;
+   position: relative;
+}
+
+.pb_rc dl.shoppingShoppingCartSmall dt, .pb_rc dl.shoppingShoppingCartSmall dt a
+{
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 5px;
+  background: #db4a4a url(../images/ecommerce/lc_menu_toplevel_current.gif) 0 0 repeat-x;
+}
+
+.pb_rc dl.shoppingShoppingCartSmall dt a
+{
+  padding-left: 20px;
+  background: url(../images/ecommerce/ico_basket_small.gif) 4px 6px no-repeat;
+}
+
+.pb_rc dl.shoppingShoppingCartSmall dd
+{
+  border-left: 1px solid #e3e3e3;
+  border-right: 1px solid #e3e3e3;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  background: #fff url(../images/ecommerce/rc_basket_dd.gif) right bottom no-repeat;
+}
+
+
+.pb_rc dl.shoppingShoppingCartSmall dd li
+{
+  padding: 4px 8px;
+  clear: both;
+}
+
+.shoppingShoppingCartSmall .countInfoText, .shoppingShoppingCartSmall .priceMain, .shoppingShoppingCartSmall .deleteRow
+{
+  overflow: hidden;
+}
+
+
+.shoppingShoppingCartSmall .countInfoText
+{
+  float: left;
+  width: 70px;
+  white-space: nowrap;
+  text-align: left;
+  font-size: 11px;
+}
+
+.shoppingShoppingCartSmall .priceMain
+{
+  width: 60px;
+  text-align: right;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.shoppingShoppingCartSmall .deleteRow
+{
+  float: right;
+  width: 18px;
+  text-align: right;
+}
+
+
+.pb_rc dl.shoppingShoppingCartSmall dd li.summary
+{
+  border-top: 1px solid #e3e3e3;
+}
+
+.pb_rc li.summary .title
+{
+  float: left;
+  font-weight: 700;
+}
+
+.shoppingShoppingCartSmall .priceTotal
+{
+  font-weight: 700;
+  white-space: nowrap;
+  text-align: right;
+  padding-right: 18px;
+  float: right;
+}
+
+.pb_rc li.summary .btnContainer
+{
+  margin-top: 10px;
+}
+
+
+
+/*
+	-----------------------------------------------------
+	Tab system
+	-----------------------------------------------------
+*/
+#tab_area
+{
+  display: inline;
+  float: left;
+  clear: both;
+  width: 628px;
+  overflow: hidden;
+  margin: 0px 8px 8px 8px;
+  padding: 0;
+}
+
+
+/*	The tab bar itself
+		----------------------------------------------------- */
+
+ul#tab_controls
+{
+  display: inline;
+  float: left;
+  clear: both;
+  width: 100%;
+  height: 41px;
+  margin: 0;
+  padding: 0;
+  background: url(../images/backgrounds/tab_bar.gif) right bottom repeat-x;
+}
+
+ul#tab_controls li
+{
+  display: inline;
+  float: left;
+  margin-left: 4px;
+  height: 42px;
+  list-style: none;
+}
+
+ul#tab_controls li a, ul#tab_controls li span
+{
+  color: #666666;
+  display: block;
+  font-weight: bold;
+  height: 41px;
+  line-height: 41px;
+  outline: none;
+  overflow: hidden;
+  text-align: center;
+  width: 120px;
+  background-image: url(../images/buttons/tab.gif);
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+
+ul#tab_controls li a:hover
+{
+  color: #e9242c;
+  background-position: 0 -41px;
+}
+
+ul#tab_controls li.current span, ul#tab_controls li.current a, ul#tab_controls li.current a:hover
+{
+  color: #e9242c;
+  background-position: 0 -82px;
+}
+
+/*	The changing content of the tabbed area
+		----------------------------------------------------- */
+
+div.tabContentContainer
+{
+  display: inline;
+  float: left;
+  width: 100%;
+}
+
+div.tabContent
+{
+  display: inline;
+  float: left;
+  clear: both;
+  width: 610px;
+  border: 1px solid #cccccc;
+  border-top: 0;
+  padding: 12px 8px 24px 8px;
+}
+
+
+div.tabContent .even th, div.tabContent .odd th
+{
+  white-space: nowrap;
+}
+
+div.tabContent td, div.tabContent td
+{
+  vertical-align: top;
+}
+
+div.tabContent .even td, div.tabContent .even th
+{
+}
+
+div.tabContent .odd td, div.tabContent .odd th
+{
+  background: #ececec;
+}
+
+
+div.tabContent #tab_content_specifications
+{
+}
+div.tabContent #tab_content_accessories
+{
+}
+div.tabContent #tab_content_resources
+{
+}
+div.tabContent #tab_content_reviews
+{
+}
+
+div.tabContent #tab_content_specifications, div.tabContent #tab_content_accessories, div.tabContent #tab_content_resources, div.tabContent #tab_content_reviews
+{
+  display: inline;
+  float: left;
+  clear: both;
+  width: 610px;
+  margin: 0;
+  border: 0;
+}
+
+/* Specifications */
+
+/* Accessories*/
+#tab_content_accessories ul.ulProductList
+{
+  display: inline;
+  float: left;
+  clear: both;
+  width: 610px;
+  margin: 0;
+  padding: 0;
+}
+
+#tab_content_accessories ul.ulProductList li
+{
+  width: 100%;
+  padding: 8px 0;
+  margin: 0;
+}
+
+#tab_content_accessories .colImage
+{
+  width: 150px;
+  margin-right: 8px;
+}
+
+#tab_content_accessories .colText
+{
+  width: 445px;
+}
+
+
+/* Resources*/
+dl.dlResources
+{
+}
+dl.dlResources dt
+{
+  padding: 8px 8px 0px 8px;
+}
+dl.dlResources dd
+{
+  padding: 0px 8px 8px 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #dedede;
+}
+
+/* Reviews */
+ul.form
+{
+  list-style: none;
+}
+
+#tab_content_reviews .title
+{
+  width: 170px;
+}
+
+
+
+/* =============================
+				rate
+=============================*/
+.scoreSelected
+{
+  background-image: url(../images/buttons/starSelected.gif);
+}
+.score
+{
+  background-image: url(../images/buttons/star.gif);
+}
+
+#rating_score span
+{
+  background-repeat: no-repeat;
+  display: block;
+  height: 17px;
+  cursor: pointer;
+  margin: 0px;
+  outline: hidden;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+
+#page_rating span.title
+{
+  clear: none;
+  float: left;
+  font-size: 16px;
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+/* =============================
+	Top N pages
+===============================*/
+div.itempage
+{
+  padding: 10px 0 0 0;
+  font-size: 12px;
+}
+
+#TopNPages a
+{
+  color: #666666;
+}
+
+#TopNPages a:hover
+{
+  color: #e9242c;
+}
+.LanguageSwitcher
+{
+  color: #666666;
+  background-color: #0A0A0A; /*	width:170px;*/
+}
+.inputField
+{
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 12px;
+  border: 1px solid #666666;
+  width: 350px;
+}
+/* =============================
+	Most Visited Products
+===============================*/
+#MostVisitedPages a
+{
+  color: #666666;
+}
+
+#MostVisitedPages a:hover
+{
+  color: #e9242c;
+}
+
+
+
+
+/*
+	--------------------------------------------
+	Ratings
+	--------------------------------------------
+*/
+
+.rating
+{
+  background-image: url(../images/buttons/stars.gif);
+  background-repeat: no-repeat;
+  display: block;
+  height: 14px;
+  outline: hidden;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 81px;
+}
+
+.score0
+{
+  background-position: 0 0;
+}
+.score1
+{
+  background-position: 0 -31px;
+}
+.score2
+{
+  background-position: 0 -61px;
+}
+.score3
+{
+  background-position: 0 -91px;
+}
+.score4
+{
+  background-position: 0 -121px;
+}
+.score5
+{
+  background-position: 0 -151px;
+}
+
+/*
+	--------------------------------------------
+	Forms module override
+	--------------------------------------------
+*/
+
+/*	Error summary
+		--------------------------------------------*/
+div.errorSummary, .pb_mc .scfValidationSummary, .pb_mc .scfError
+{
+  display: inline;
+  float: left;
+  clear: both;
+  width: 626px;
+  margin: 0 8px 8px 8px;
+  padding: 16px 0;
+  border: 1px solid red;
+  background: url(../images/ecommerce/bg_error_summary.gif) 0 bottom repeat-x;
+}
+
+div.errorSummary ul, .pb_mc .scfValidationSummary ul, .pb_mc .scfError ul
+{
+  display: inline;
+  float: left;
+  clear: both;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background: url(../images/ecommerce/ico-error.gif) 20px 4px no-repeat;
+}
+
+div.errorSummary ul li, .pb_mc .scfValidationSummary li, .pb_mc .scfError li
+{
+  display: inline;
+  float: left;
+  clear: both;
+  padding: 6px 65px;
+  margin: 0;
+  font-weight: 700;
+  color: red;
+}
+
+
+/* Form section
+		--------------------------------------------*/
+/*.pb_mc .scfTitleBorder{
+			display: inline;
+			float: left;
+			clear: both;
+			width: 628px;
+			margin: 0 8px 8px 8px;} */
+
+.pb_mc .scfForm
+{
+  width: 636px;  
+}
+
+.pb_mc .scfTitleBorder, .pb_mc .scfIntroBorder
+{
+  padding-left: 8px;
+  padding-bottom: 8px;
+}
+
+
+
+.pb_mc .scfSectionBorderCol2
+{
+  display: inline;
+  float: left;
+  clear: none;
+  width: 50%;
+}
+
+.pb_mc .scfSectionBorder
+{
+  clear: left;
+}
+
+.pb_mc .scfSubmitButtonBorder
+{
+  display: inline;
+  float: left;
+  clear: both;
+  width: 626px;
+  margin: 0 8px 8px 8px;
+  text-align: right;
+}
+
+.pb_mc .scfSubmitButtonBorder input
+{
+  display: inline;  
+}
+
+.pb_mc input.scfSubmitButton
+{
+  float: right;
+}
+
+#pb_check_out_container input.scfSubmitButton
+{
+  clear: none;
+}
+
+.pb_mc .scfLegendAsDiv
+{
+  padding: 4px 8px 8px 8px;
+  font-size: 12px;
+  border: 0;
+  background: url(../images/ecommerce/bg_pager.gif) 0 bottom repeat-x;
+}
+
+.pb_mc .scfSectionBorderAsFieldSet
+{
+  margin: 0 0px 8px 8px;
+  padding: 0;
+  border: 0px;
+  border: 1px solid #dedede;
+}
+
+
+.checkout_mc .scfSectionBorderAsFieldSet
+{
+   margin: 0 0px 8px 8px; 
+}
+ 
+
+.checkout_mc #pb_header_shaddow
+{
+   background: transparent url(../images/ecommerce/bg_header_h1.jpg) no-repeat scroll 8px bottom;
+   clear: both;
+   display: inline;
+   float: left;
+   height: 60px;
+   margin: 0pt 0pt 8px;
+   overflow: hidden;
+   padding: 0pt;
+   width: 100%;
+}
+.btnContinueAndPay
+{
+    border: none;
+    width: 149px;
+    height: 34px;
+    background: url(../images/ecommerce/red_Continue_and_Pay.png) 0 bottom no-repeat;
+}
+
+.btnContinueAndPayDisabled
+{
+    border: none;
+    width: 149px;
+    height: 34px;
+    background: url(../images/ecommerce/red_Continue_and_Pay_dis.png) 0 bottom no-repeat;
+}
+
+.formsTable
+{
+   border-width: 0px;
+   width: 100%;
+}
+.formsTable td
+{
+   border: 0px;
+   vertical-align: top;
+}
+
+.singleColumnForm
+{
+   border-width: 0px;
+   vertical-align: top;
+}
+.singleColumnForm .scfSectionBorderAsFieldSet
+{  
+   width:90%;
+   border-width: 0px;
+   margin: 0px;
+   padding:0px;   
+}
+.singleColumnForm .scfSingleLineTextLabel,
+.singleColumnForm .scfEmailLabel,
+.singleColumnForm .scfDropListLabel,
+.singleColumnForm .scfConfirmPasswordLabel
+{
+  width: 15%;
+}
+.singleColumnForm .scfSingleLineGeneralPanel,
+.singleColumnForm .scfEmailGeneralPanel,
+.singleColumnForm .scfDropListBorder .scfDropListGeneralPanel,
+.singleColumnForm .scfConfirmPasswordGeneralPanel
+{
+  width: 80%;
+}
+
+.singleColumnForm .scfForm
+{
+   margin: 10px 10px 10px 10px;
+}
+.singleColumnForm select
+{
+   margin: 0px 0px 0px 0px;
+}
+
+.singleColumnForm .scfForm .scfSubmitButtonBorder 
+{
+   text-align: right;  
+   padding: 12px 0 0 0;
+}
+
+.singleColumnForm .scfSubmitButtonBorder input
+{
+   margin-right:10px;
+   background-image: url(../images/ecommerce/btn-checkout-wizard.gif);
+   border: 0px none;
+   height: 25px;
+   margin-right: 10px;
+   width: 135px;
+}
+
+.leftColumnForm
+{
+   width: 70%;
+   border-width: 0px;
+   vertical-align: top;
+}
+.leftColumnForm .scfSectionBorderAsFieldSet
+{  
+   border-width: 0px;
+   margin: 0px;
+   width: 300px;
+   padding:0px;   
+}
+
+.leftColumnForm .scfForm
+{
+   margin: 10px 10px 10px 10px;
+}
+.leftColumnForm select
+{
+   margin: 0px 0px 0px 0px;
+}
+
+.rightColumnForm .scfSectionBorderAsFieldSet
+{
+   width: 250px;
+   border-width: 0px;
+}
+
+.rightColumnForm
+{
+   width: 300px;
+   border-width: 0px;
+   vertical-align: top;
+}
+
+.rightColumnForm .scfSectionUsefulInfo
+{
+   display:block;
+   text-align: right;
+}
+
+.rightColumnForm .priceTotal
+{
+   font-size:15px;
+   font-weight:700;
+}
+
+.rightColumnForm .colPriceContainer
+{
+   padding-top: 15px;
+}
+
+.leftColumnForm .scfCheckboxBorder input
+{
+   border: none;
+}
+
+.createAccountContainer
+{
+   width: 300px;
+   height: 90px;
+   border: solid 3px #DEDEDE;
+   text-align: center;
+   vertical-align: middle;
+   background-color: White;
+}
+
+.createAccountContainer input
+{
+   background: url(../images/ecommerce/btn_green_large.png) 0 0 no-repeat;
+   border: 0px none;   
+   height: 36px;   
+   width: 149px;
+   font: bold 10pt Arial;
+   padding: 0 0 4px 10px;
+   color: White;
+}
+
+.OrderNumberCaption
+{
+   margin-bottom: 16px;
+   font-weight: 700;
+   font-size: medium;
+}
+
+.CardTypeCaption
+{
+   margin-bottom: 10px;
+   font-weight: 300;
+}
+
+.confirmationHeader .colMargin8NoTopMargin
+{
+   float: left;
+}
+
+.confirmationHeader
+{
+}
+.confirmationForm
+{
+   width: 100%;
+   height: 100%;
+   background-color: #EFEFEF;
+   border-width: 0px;
+}
+.confirmationForm td
+{
+   border: none;
+}
+
+.paymentsMethodContainer
+{
+   padding: 4px 0px 8px;
+}
+
+.confirmationForm dt
+{
+   background: none;
+}
+.disabledInput .scfSingleLineTextBox
+{
+   background-color: white;
+   border-color: white;
+   color: Black;
+}
+
+.checkoutHeader
+{
+   background-color: #F3F3F3;
+   
+   margin-bottom: 0pt;
+   text-align: center;
+}
+.checkoutHeader img
+{
+   margin-top:8px;
+   margin-bottom:8px; 
+}
+
+.paymentForm
+{
+}
+.paymentTitle
+{
+   font-weight: 700;
+}
+#paymentsContainer
+{
+   height:130px;
+   margin-top: 10px;
+   border-top: 1px solid #E0E0E0;
+   border-bottom: 1px solid #E0E0E0;
+}
+#paymentsContainer table
+{
+   border:0px;
+   padding-bottom: 5px;
+}
+#paymentsContainer td
+{
+   border:0px;
+}
+
+#paymentsContainer input
+{
+   border-width:2px;
+   width: 90%;   
+}
+
+#paymentsContainer .half
+{
+   width:45%;   
+}
+
+#paymentsContainer .third
+{
+   width:30%;
+}
+
+.paymentDesciption table
+{
+   border:0px;   
+}
+
+#paymentsContainer .paymentDescription 
+{
+   border:0px;
+   vertical-align:middle;   
+}
+
+table.paymentDescription {
+    margin-top: -7px;
+}
+
+*+html .ie7_table_fix {
+    margin-top: -25px;
+}
+
+.leftColumn
+{
+   text-align:right;
+   font-weight: 700;
+   width: 100px; 
+} 
+
+#ShippingAdressForm .boxShaddow1
+{
+   width:350px;    
+}
+
+#ShippingAdressForm table
+{
+   border:none;    
+}
+
+#ShippingAdressForm td
+{
+   border:none;    
+}
+
+#ShippingAdressForm input
+{
+   width:150px;
+}
+
+#ShippingAdressForm select
+{
+   width:150px;
+}
+
+#worningUp
+{
+   background: url(../images/ecommerce/worningUp.gif) 0 0 no-repeat;
+}
+
+/*
+#rightColumn, .scfSubmitButtonBorder
+{  
+   margin-top: 10px;
+   margin-right: 20px;
+   margin-left: 30px;
+   margin-bottom: 10px;
+}
+*/
+.checkout_mc .scfSubmitButtonBorder 
+{
+   text-align: right;  
+   padding: 4px 0 0 0;
+}
+
+.checkout_mc .scfDropListLabel, .checkout_mc .scfEmailLabel, .checkout_mc .scfMultipleLineTextLabel, .checkout_mc .scfSingleLineTextLabel, .checkout_mc .scfPasswordLabel, .checkout_mc .scfNumberLabel, .checkout_mc .scfDateLabel, .checkout_mc .scfRadioButtonListLabel, .checkout_mc .scfCheckBoxListLabel, .checkout_mc .scfListBoxLabel, .checkout_mc .scfFileUploadLabel, .checkout_mc .scfDateSelectorLabel, .checkout_mc .scfCreditCardLabel, .checkout_mc .scfConfirmPasswordLabel, .checkout_mc .scfCaptchaLabel
+{
+   text-align: right;
+}
+
+.checkout_mc .scfEmailGeneralPanel, .checkout_mc .scfMultipleLineGeneralPanel, .checkout_mc .scfSingleLineGeneralPanel, .checkout_mc .scfPasswordGeneralPanel, .checkout_mc .scfNumberGeneralPanel, .checkout_mc .scfDateGeneralPanel, .checkout_mc .scfRadioButtonListGeneralPanel, .checkout_mc .scfCheckBoxListGeneralPanel, .checkout_mc .scfFileUploadGeneralPanel, .checkout_mc .scfDateSelectorGeneralPanel, .checkout_mc .scfCreditCardGeneralPanel, .checkout_mc .scfConfirmPasswordGeneralPanel, .scfCaptchaGeneralPanel
+{
+   float:right;
+   padding:0px;
+}
+
+.checkout_mc .scfValidator
+{
+   text-align: right;
+}
+
+.checkout_mc .scfDropListGeneralPanel
+{
+   float: right;
+   width:60%;      
+}
+
+.checkout_mc .scfValidatorRequired, .scfRequired 
+{
+   float:right;
+   margin-right: 5px;
+}
+
+.pb_rc .btnContainer,
+.checkout_mc .bottomNavigationRight .btnContainer
+{
+  background: url(../images/ecommerce/btn_red_large.png) 0 0 no-repeat;
+  height: 34px;
+  width: 149px;
+  padding: 8px 0 0 8px;
+  text-align: center;
+}
+
+.btnContainer .btnMedium
+{
+  background: url(../images/ecommerce/btn_red_medium.png) 0 0 no-repeat;
+  border: none;
+  font-size: 13pt;
+  font-weight: bold;
+  font-family: Calibri;
+  color: White;
+  width: 90px;
+  height: 34px;
+  padding-bottom: 6px;
+}
+
+.btnContainer .btnSmall,
+.colControlButtons .btnSmall
+{
+  background: url(../images/ecommerce/btn_red_small.png) 0 0 no-repeat;
+  border: none;
+  font-size: 10pt;
+  font-weight: bold;
+  font-family: Calibri;
+  color: White;
+  width: 42px;
+  height: 26px;
+  padding-bottom: 4px;
+}
+
+.checkout_mc .bottomNavigationRight .btnContainer
+{
+  float: right;
+}
+
+.pb_rc .btnContainer a,
+.checkout_mc .bottomNavigationRight .btnContainer a
+{
+  font-size: 9pt;
+  font-weight: bold;
+  font-family: Arial;
+  color: White;
+}
+
+.content .scfSubmitButtonBorder input,
+.leftColumnForm .scfSubmitButtonBorder input
+{
+  background: url(../images/ecommerce/btn_red_large.png) 0 0 no-repeat;
+  border: none;
+  font-size: 9pt;
+  font-weight: bold;
+  font-family: Arial;
+  color: White;
+  height: 34px;
+  width: 149px;
+  padding: 0 0 4px 12px;
+}
+
+.leftColumnForm .scfSubmitButtonBorder input
+{
+  margin-right: 15px;
+  margin-top: 10px; 
+}
+
+.checkout_mc .bottomNavigationRight .btnContainer.disabled,
+.leftColumnForm .scfSubmitButtonBorder.disabled input
+{
+  background: url(../images/ecommerce/btn_red_large_dis.png) 0 0 no-repeat;
+}
+
+.rightColumnForm .scfSubmitButtonBorder {
+  padding-bottom: 12px;
+}
+  
+.rightColumnForm .scfSubmitButtonBorder input
+{
+   background: url(../images/ecommerce/btn-checkout-wizard.gif) 0 0 no-repeat;
+   border: none;
+   font-size: 9pt;
+   height: 25px;
+   width: 135px;
+   margin-right: 10px;
+   padding: 0 0 4px 0;
+}
+
+.termsOfCond input
+{
+   border: none;
+}
+
+.scfSectionBorderCol2 .scfSectionBorderAsFieldSet
+{
+  height: 340px;
+}
+
+.pc_mc .scfSectionLegend
+{
+  font-weight: bold;
+  text-decoration: none;
+  color: #666666;
+}
+
+.pb_mc .scfSectionUsefulInfo
+{
+  display: block;
+  width: 90%;
+  padding: 4px 8px 0px 8px;
+}
+
+.pb_mc .scfSectionContent
+{
+  margin: 8px 0;
+}
+
+.pb_mc .scfDropListLabel, .pb_mc .scfEmailLabel, .pb_mc .scfMultipleLineTextLabel, .pb_mc .scfSingleLineTextLabel, .pb_mc .scfPasswordLabel, .pb_mc .scfConfirmPasswordLabel, .pb_mc .scfNumberLabel, .pb_mc .scfDateLabel, .pb_mc .scfRadioButtonListLabel, .pb_mc .scfCheckBoxListLabel, .pb_mc .scfListBoxLabel, .pb_mc .scfFileUploadLabel, .pb_mc .scfDateSelectorLabel
+{
+  display: inline;
+  margin-left: 8px;
+}
+
+.pb_mc .scfEmailTextBox, .pb_mc .scfSingleLineTextBox, .pb_mc .scfPasswordTextBox, .pb_mc .scfNumberTextBox, .pb_mc .scfDateTextBox, .pb_mc .scfRadioButtonList, .pb_mc .scfListBox, .pb_mc .scfCheckBoxList, .pb_mc .scfFileUpload
+{
+  display: inline;
+  margin-bottom: 2px;
+}
+
+.pb_mc .scfListBox, .pb_mc .scfDropList
+{
+  margin-left: 0px;
+}
+
+.pb_mc .scfCheckbox
+{
+  margin-left: 8px;
+}
+
+.pb_mc .scfValidatorRequired, .pb_mc .scfRequired
+{
+  margin-right: 8px;
+}
+
+
+#pb_check_out_container .scfListBoxGeneralPanel, #pb_check_out_container .scfDropListGeneralPanel
+{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+#pb_check_out_container .scfEmailGeneralPanel, #pb_check_out_container .scfMultipleLineGeneralPanel, #pb_check_out_container .scfSingleLineGeneralPanel, #pb_check_out_container .scfPasswordGeneralPanel, #pb_check_out_container .scfConfirmPasswordGeneralPanel, #pb_check_out_container .scfNumberGeneralPanel, #pb_check_out_container .scfDateGeneralPanel, #pb_check_out_container .scfRadioButtonListGeneralPanel, #pb_check_out_container .scfCheckBoxListGeneralPanel, #pb_check_out_container .scfFileUploadGeneralPanel, #pb_check_out_container .scfDateSelectorGeneralPanel
+{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+
+
+
+
+
+/*
+	--------------------------------------------
+	Eye Droppers
+	--------------------------------------------
+*/
+
+.textsmall
+{
+  font-size: 11px;
+}
+.textmedium
+{
+  font-size: 12px;
+}
+
+.errorMessageRed
+{
+  color: red;
+}
+.errorMessageWhite
+{
+  color: white;
+}
+
+div.center
+{
+  text-align: center;
+}
+div.left
+{
+  text-align: left;
+}
+div.right
+{
+  text-align: right;
+}
+
+.twoColoredSpacerLeft
+{
+  background: url(../images/ecommerce/two_colored_spacer.gif) left 0px repeat-y;
+}
+.twoColoredSpacerRight
+{
+  background: url(../images/ecommerce/two_colored_spacer.gif) right 0px repeat-y;
+}
+
+div.colMargin8
+{
+  display: block;
+  margin: 8px;
+}
+div.colMargin8NoTopMargin
+{
+  display: block;
+  float: none;
+  margin: 0 8px 8px 8px;
+}
+
+div.colMargin10
+{
+  display: block;
+  float: none;
+  margin: 10px;
+}
+
+
+/*
+	--------------------------------------------
+	Clear Class
+	--------------------------------------------
+*/
+
+div.wrapper
+{
+  float: none;
+  clear: both;
+  margin-top: 3px;
+  padding-bottom: 2px;
+  height: 48;
+}
+
+div.clear, div.clear10
+{
+  clear: both;
+  height: 1px;
+  line-height: 1px;
+  font-size: 1px;
+  overflow: hidden;
+}
+
+div.clear10
+{
+  height: 10px;
+}
+
+
+.clearfix:after
+{
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clearfix
+{
+  display: inline-block;
+}
+html[xmlns] .clearfix
+{
+  display: block;
+}
+* html .clearfix
+{
+  height: 1%;
+}
+
+
+/*
+	--------------------------------------------
+	IE Image Fix
+	--------------------------------------------
+*/
+
+img.fix
+{
+  display: block;
+  margin: 0;
+}
+
+div.scfSingleLineTextBorder, div.scfDropListBorder, div.scfEmailBorder, div.scfPasswordBorder 
+{
+  margin: 0;
+}

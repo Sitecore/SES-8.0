@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="90c13938-3b73-48c9-8b37-d3840b8e962d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/sitecore modules/shell/ecommerce/services/OrderIDGeneratorService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="OrderIDGeneratorService.xsd" MetadataType="Schema" ID="4831e71f-ad03-4087-87cd-b2c5f4217e4c" SourceId="1" SourceUrl="http://localhost/sitecore modules/shell/ecommerce/services/OrderIDGeneratorService.svc?xsd=xsd2" />
+    <MetadataFile FileName="OrderIDGeneratorService.disco" MetadataType="Disco" ID="fbe4ac26-e299-4ce6-9c48-01e52472fcd9" SourceId="1" SourceUrl="http://localhost/sitecore modules/shell/ecommerce/services/OrderIDGeneratorService.svc?disco" />
+    <MetadataFile FileName="OrderIDGeneratorService1.xsd" MetadataType="Schema" ID="596b09db-f22f-4fe0-99df-61af31753c21" SourceId="1" SourceUrl="http://localhost/sitecore modules/shell/ecommerce/services/OrderIDGeneratorService.svc?xsd=xsd0" />
+    <MetadataFile FileName="OrderIDGeneratorService.wsdl" MetadataType="Wsdl" ID="fe53a1fc-2503-4efa-95f3-d5bb084be81b" SourceId="1" SourceUrl="http://localhost/sitecore modules/shell/ecommerce/services/OrderIDGeneratorService.svc?wsdl" />
+    <MetadataFile FileName="OrderIDGeneratorService2.xsd" MetadataType="Schema" ID="65bd43a8-4c56-4ae2-8244-6c65d98e9e52" SourceId="1" SourceUrl="http://localhost/sitecore modules/shell/ecommerce/services/OrderIDGeneratorService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

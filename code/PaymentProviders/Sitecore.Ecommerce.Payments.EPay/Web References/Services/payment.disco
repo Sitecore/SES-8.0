@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://ssl.ditonlinebetalingssystem.dk/remote/payment.asmx?wsdl" docRef="https://ssl.ditonlinebetalingssystem.dk/remote/payment.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="https://ssl.ditonlinebetalingssystem.dk/remote/payment.asmx" xmlns:q1="https://ssl.ditonlinebetalingssystem.dk/remote/payment" binding="q1:PaymentSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="https://ssl.ditonlinebetalingssystem.dk/remote/payment.asmx" xmlns:q2="https://ssl.ditonlinebetalingssystem.dk/remote/payment" binding="q2:PaymentSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

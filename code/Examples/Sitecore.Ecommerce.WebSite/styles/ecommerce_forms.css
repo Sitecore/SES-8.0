@@ -1,0 +1,295 @@
+﻿/*======================================================================================
+Copyright 2015 Sitecore Corporation A/S
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file 
+except in compliance with the License. You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the 
+License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, 
+either express or implied. See the License for the specific language governing permissions 
+and limitations under the License.
+======================================================================================*/
+
+/* Form */
+.scfForm{
+	height: 100%;
+	width: 100%;
+	text-align: left;	
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	line-height: 1.4em;	
+	background: red;}
+
+/* Form Title*/
+.scfTitleBorder{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	color: #000000;
+	font-family: Arial,Tahoma,Helvetica,sans-serif;
+	font-size: 1.8em;
+	line-height: 1.1em;
+	margin: 5px 0pt;
+	text-decoration: none;
+	font-weight: bold; 
+	background: blue;}
+
+/* Form Introduction*/
+.scfIntroBorder{
+	background: yellow;}
+
+/* Form Footer*/
+.scfFooterBorder{
+	background: yellow;}
+
+/* Submit Button*/
+.scfSubmitButtonBorder{
+	border: 1px solid green;
+	text-align: right;
+	padding-right: 8px;
+}
+
+.scfSubmitButton
+{
+}
+
+/* Error */
+.scfError
+{
+}
+
+/* Validation */
+.scfValidationSummary
+{
+}
+
+.scfValidatorRequired,
+.scfRequired
+{
+	margin: 0px 0px;
+	float : right;
+}
+
+.scfValidator
+{
+	margin: 0px;
+	display:block;
+}
+
+/* Forms section*/
+.scfSectionBorderAsFieldSet
+{
+	padding: 0 px 15px 15px 15px;
+	border: 0px;
+	border-top: solid 2px;
+	margin:0px 30px;
+}
+
+.scfSectionLegend
+{
+	padding: 7px 13px 8px 13px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.scfSectionBorder
+{
+	margin:0px;
+	padding: 0px;
+	width: 100%;
+}
+
+.scfSectionContent
+{
+	width: 100%;
+	float: left;
+}
+
+.scfSectionUsefulInfo
+{
+	width: 100%;
+	/*padding: 5px 0px 0px 20px;*/
+	vertical-align:top;
+	display:inline;
+}
+
+/* Form fields */
+/* Checkbox */
+
+.scfCheckboxBorder
+{
+	clear:left;
+	text-align: left;
+	display: block;
+	margin: 5px 0px;
+	width: 100%;
+}
+
+.scfCheckbox
+{
+	width: 90%;
+	display: block;
+	padding:0px 0px;
+	margin:0px;	
+}
+
+.scfCheckboxUsefulInfo
+{
+	font-size:0.9em;
+	display: block;
+	width:90%;	
+	padding:0px 3px;
+}
+
+/* Label */
+.scfLabel
+{
+	width: 100%;
+	display: block;
+}
+
+.scfListBoxGeneralPanel,
+.scfDropListGeneralPanel
+{
+	margin: 0px 3px;
+	width: 61%;
+	display: block;
+	float:left;
+}
+
+.scfListBox,
+.scfDropList
+{
+	width:100%;
+	margin:0px;
+	margin-left:3px;
+}
+
+.scfMultipleLineTextBox
+{
+	width:100%;
+	margin:0px;
+}
+
+
+.scfDropListBorder,
+.scfEmailBorder,
+.scfMultipleLineTextBorder,
+.scfSingleLineTextBorder,
+.scfPasswordBorder,
+.scfNumberBorder,
+.scfDateBorder,
+.scfRadioButtonListBorder,
+.scfListBoxBorder,
+.scfCheckBoxListBorder,
+.scfFileUploadBorder,
+.scfDateSelectorBorder
+{
+	clear:left;	
+	text-align: left;
+	display: block;
+	margin: 5px 0px;
+	width: 100%;
+	vertical-align: top;
+}
+
+.scfEmailTextBox,
+.scfSingleLineTextBox,
+.scfPasswordTextBox,
+.scfNumberTextBox,
+.scfDateTextBox,
+.scfRadioButtonList,
+.scfListBox,
+.scfCheckBoxList,
+.scfFileUpload
+{
+	width:100%;
+	margin:0px;
+}
+
+.scfDropListLabel,
+.scfEmailLabel,
+.scfMultipleLineTextLabel,
+.scfSingleLineTextLabel,
+.scfPasswordLabel,
+.scfNumberLabel,
+.scfDateLabel,
+.scfRadioButtonListLabel,
+.scfCheckBoxListLabel,
+.scfListBoxLabel,
+.scfFileUploadLabel,
+.scfDateSelectorLabel
+{
+	padding: 3px 0px;
+	width: 30%;
+	display: block;
+	float: left;
+}
+
+.scfEmailGeneralPanel,
+.scfMultipleLineGeneralPanel,
+.scfSingleLineGeneralPanel,
+.scfPasswordGeneralPanel,
+.scfNumberGeneralPanel,
+.scfDateGeneralPanel,
+.scfRadioButtonListGeneralPanel,
+.scfCheckBoxListGeneralPanel,
+.scfFileUploadGeneralPanel,
+.scfDateSelectorGeneralPanel
+{
+	margin: 0px 3px;
+	width: 60%;
+	display: block;
+	float:left;
+}
+
+.scfDropListUsefulInfo,
+.scfEmailUsefulInfo,
+.scfMultipleLineTextUsefulInfo,
+.scfSingleLineTextUsefulInfo,
+.scfPasswordUsefulInfo,
+.scfNumberUsefulInfo,
+.scfDateUsefulInfo,
+.scfRadioButtonListUsefulInfo,
+.scfListBoxUsefulInfo,
+.scfCheckBoxListUsefulInfo,
+.scfFileUploadUsefulInfo,
+.scfDateSelectorUsefulInfo
+{
+	padding-left:3px;
+	font-size:0.9em;
+	width:100%;	
+	display:block;
+	float:left;
+}
+
+.scfDateSelectorDay,
+.scfDateSelectorMonth,
+.scfDateSelectorYear
+{
+	width:33%;
+	margin:0px;
+}
+
+ul
+{
+	margin : 0px;
+	padding : 0px;
+}
+
+
+
+/* custom */
+.halfAvailableWidth{
+	float:left;	
+	text-align: left;
+	display: inline;
+	margin: 5px 0px;
+	width: 50%;
+	vertical-align: top;}
+
+.thirdAvailableWidth{
+	float:left;	
+	text-align: left;
+	display: inline;
+	margin: 5px 0px;
+	width: 33%;
+	vertical-align: top; }

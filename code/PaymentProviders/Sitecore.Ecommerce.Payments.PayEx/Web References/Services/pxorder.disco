@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://test-external.payex.com/pxorder/pxorder.asmx?wsdl" docRef="https://test-external.payex.com/pxorder/pxorder.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="https://test-external.payex.com/pxorder/pxorder.asmx" xmlns:q1="http://external.payex.com/PxOrder/" binding="q1:PxOrderSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="https://test-external.payex.com/pxorder/pxorder.asmx" xmlns:q2="http://external.payex.com/PxOrder/" binding="q2:PxOrderSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

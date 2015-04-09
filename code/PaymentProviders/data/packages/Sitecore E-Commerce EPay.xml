@@ -1,0 +1,125 @@
+﻿<!--======================================================================================
+Copyright 2015 Sitecore Corporation A/S
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file 
+except in compliance with the License. You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the 
+License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, 
+either express or implied. See the License for the specific language governing permissions 
+and limitations under the License.
+======================================================================================-->
+<project>
+  <Metadata>
+    <metadata>
+      <PackageName>Sitecore E-Commerce EPay</PackageName>
+      <Author>Sitecore Corporation</Author>
+      <Version />
+      <Revision />
+      <License>&lt;p class=&quot;Default&quot; style=&quot;margin: 0cm 0cm 10pt; text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: Arial;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;Copyright 2015 Sitecore Corporation A/S&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;MsoNormal&quot; style=&quot;margin: 0cm 0cm 0pt;&quot;&gt;&lt;span lang=&quot;EN-GB&quot; style=&quot;font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;; font-size: 10pt;&quot;&gt;Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;MsoNormal&quot; style=&quot;margin: 0cm 1cm 0pt;&quot;&gt;&lt;span style=&quot;font-family: Arial; font-size: 13px;&quot;&gt;&lt;a href=&quot;http://www.apache.org/licenses/LICENSE-2.0&quot;&gt;http://www.apache.org/licenses/LICENSE-2.0&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;MsoNormal&quot; style=&quot;margin: 0.5cm 0cm 0pt;&quot;&gt;&lt;span style=&quot;font-family: Arial; font-size: 13px;&quot;&gt;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.&lt;/span&gt;&lt;/p&gt;</License>
+      <Comment />
+      <Attributes />
+      <Readme>
+         Sitecore E-Commerce EPay ${product.version.epay}
+-------------------------------------------------------------
+Date: ${readme.date}
+
+-------------------------------------------------------------
+Prerequisites:
+
+•  ${project.fullname.multiple}.
+
+-------------------------------------------------------------
+Post installation steps:
+
+•  Copy the payment options that you need from
+   "/sitecore/system/Modules/Ecommerce/Payment Options"
+   to Webshop Business Settings/Payment Options.
+•  Configure the payment system credentials and settings.
+•  Publish the content
+•  Register the payment system alias in Unity.config:
+   &lt;alias alias="EPayPaymentProvider" type="Sitecore.Ecommerce.Payments.EPay.EPayPaymentProvider, Sitecore.Ecommerce.Payments.EPay"/&gt;
+•  Register the payment system in the container section of
+   Unity.config:
+   &lt;register type="PaymentProvider" mapTo="EPayPaymentProvider" name="EPay" /&gt;
+
+By default the payment system is configured to work as
+reservable payment provider. Set the "instantcapture"
+setting to "1" to make the one work without ticket
+reservation:
+&lt;setting id="instantcapture"&gt;1&lt;/setting&gt;
+
+For more information about payment options, see the Payment
+Method Reference Guide.
+
+-------------------------------------------------------------
+Sitecore® is a registered trademark. All other brand and
+product names are the property of their respective holders.
+The contents of this document are the property of Sitecore.
+Copyright © 2001-${readme.year} Sitecore. All rights reserved.
+      </Readme>
+      <Publisher>Sitecore Corporation</Publisher>
+      <PostStep />
+      <PackageID />
+    </metadata>
+  </Metadata>
+  <SaveProject>True</SaveProject>
+  <Sources>
+    <xfiles>
+      <Entries>
+        <x-item>/bin/Sitecore.Ecommerce.Payments.EPay.dll</x-item>
+        <x-item>/bin/Sitecore.Ecommerce.Payments.EPay.config</x-item>
+      </Entries>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Files</Name>
+    </xfiles>
+    <xitems>
+      <Entries>
+        <x-item>/master/sitecore/media library/Images/Ecommerce/Payment Options/EPay/{8AFE5C35-DC48-4011-BE89-C9D0A5E6226C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Ecommerce/Payment Options/EPay/{D463F191-0C74-4C4A-89F1-9877D4E72159}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Items</Name>
+    </xitems>
+  </Sources>
+  <Converter>
+    <TrivialConverter>
+      <Transforms />
+    </TrivialConverter>
+  </Converter>
+  <Include />
+  <Exclude />
+  <Name />
+</project>

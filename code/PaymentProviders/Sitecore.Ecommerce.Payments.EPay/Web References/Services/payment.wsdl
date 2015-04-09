@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="https://ssl.ditonlinebetalingssystem.dk/remote/payment" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="https://ssl.ditonlinebetalingssystem.dk/remote/payment" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://ssl.ditonlinebetalingssystem.dk/remote/payment">
+      <s:element name="getPbsError">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="merchantnumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="language" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pbsresponsecode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pbsresponsestring" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="epayresponse" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPbsErrorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getPbsErrorResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="pbsresponsestring" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="epayresponse" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEpayError">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="merchantnumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="language" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="epayresponsecode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="epayresponsestring" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="epayresponse" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEpayErrorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getEpayErrorResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="epayresponsestring" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="epayresponse" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="capture">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="merchantnumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="transactionid" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="group" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pbsResponse" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="epayresponse" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="captureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="captureResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="pbsResponse" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="epayresponse" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="move_as_captured">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="merchantnumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="transactionid" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="group" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="epayresponse" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="move_as_capturedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="move_as_capturedResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="epayresponse" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="delete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="merchantnumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="transactionid" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="group" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="epayresponse" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="deleteResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="epayresponse" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="credit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="merchantnumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="transactionid" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="group" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pbsresponse" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="epayresponse" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="creditResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="creditResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="pbsresponse" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="epayresponse" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getcardtype">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="merchantnumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardnumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cardtypeid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardname" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="epayresponse" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getcardtypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getcardtypeResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="cardtypeid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardname" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="epayresponse" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="gettransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="merchantnumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="transactionid" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="transactionInformation" type="tns:TransactionInformationType" />
+            <s:element minOccurs="1" maxOccurs="1" name="epayresponse" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TransactionInformationType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="group" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="authamount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="currency" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="cardtypeid" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="capturedamount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="creditedamount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="orderid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="authdate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="captureddate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="deleteddate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="crediteddate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="status" type="tns:TransactionStatus" />
+          <s:element minOccurs="0" maxOccurs="1" name="history" type="tns:ArrayOfTransactionHistoryInfo" />
+          <s:element minOccurs="1" maxOccurs="1" name="transactionid" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="cardholder" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="mode" type="tns:PayMode" />
+          <s:element minOccurs="1" maxOccurs="1" name="msc" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="fraudStatus" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FraudMessage" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="fee" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="splitpayment" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="acquirer" type="tns:AcquirerType" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="TransactionStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="PAYMENT_UNDEFINED" />
+          <s:enumeration value="PAYMENT_NEW" />
+          <s:enumeration value="PAYMENT_CAPTURED" />
+          <s:enumeration value="PAYMENT_DELETED" />
+          <s:enumeration value="PAYMENT_INSTANT_CAPTURE_FAILED" />
+          <s:enumeration value="PAYMENT_SUBSCRIPTION_INI" />
+          <s:enumeration value="PAYMENT_RENEW" />
+          <s:enumeration value="PAYMENT_EUROLINE_WAIT_CAPTURE" />
+          <s:enumeration value="PAYMENT_EUROLINE_WAIT_CREDIT" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfTransactionHistoryInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TransactionHistoryInfo" nillable="true" type="tns:TransactionHistoryInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TransactionHistoryInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="transactionHistoryID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="logonID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="eventMsg" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="created" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="PayMode">
+        <s:restriction base="s:string">
+          <s:enumeration value="MODE_PRODUCTION" />
+          <s:enumeration value="MODE_TEST" />
+          <s:enumeration value="MODE_EPAY" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="AcquirerType">
+        <s:restriction base="s:string">
+          <s:enumeration value="UNKNOWN" />
+          <s:enumeration value="PBS" />
+          <s:enumeration value="EUROLINE" />
+          <s:enumeration value="DANSKE_BANK" />
+          <s:enumeration value="NORDEA" />
+          <s:enumeration value="EWIRE" />
+          <s:enumeration value="SWEDBANK" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="gettransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="gettransactionResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="transactionInformation" type="tns:TransactionInformationType" />
+            <s:element minOccurs="1" maxOccurs="1" name="epayresponse" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="gettransactionlist">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="merchantnumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="tns:TransactionStatus" />
+            <s:element minOccurs="1" maxOccurs="1" name="searchdatestart" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="searchdateend" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="searchorderid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="searchgroup" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="transactionInformationAry" type="tns:ArrayOfTransactionInformationType" />
+            <s:element minOccurs="1" maxOccurs="1" name="epayresponse" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTransactionInformationType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TransactionInformationType" nillable="true" type="tns:TransactionInformationType" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="gettransactionlistResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="gettransactionlistResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="transactionInformationAry" type="tns:ArrayOfTransactionInformationType" />
+            <s:element minOccurs="1" maxOccurs="1" name="epayresponse" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getcardinfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="merchantnumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardno_prefix" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="currency" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="acquirer" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fee" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cardtype" type="tns:CardType" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardtypetext" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="epayresponse" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="CardType">
+        <s:restriction base="s:string">
+          <s:enumeration value="ALL" />
+          <s:enumeration value="DANKORT" />
+          <s:enumeration value="VISA_DANKORT" />
+          <s:enumeration value="VISA_ELECTRON_FOREIGN" />
+          <s:enumeration value="MASTERCARD" />
+          <s:enumeration value="MASTERCARD_FOREIGN" />
+          <s:enumeration value="VISA_ELECTRON" />
+          <s:enumeration value="JCB" />
+          <s:enumeration value="DINERS" />
+          <s:enumeration value="MAESTRO" />
+          <s:enumeration value="AMERICAN_EXPRESS" />
+          <s:enumeration value="UNKNOWN" />
+          <s:enumeration value="EDK" />
+          <s:enumeration value="DINERS_FOREIGN" />
+          <s:enumeration value="AMERICAN_EXPRESS_FOREIGN" />
+          <s:enumeration value="MAESTRO_FOREIGN" />
+          <s:enumeration value="FORBRUGSFORENINGEN" />
+          <s:enumeration value="EWIRE" />
+          <s:enumeration value="VISA" />
+          <s:enumeration value="IKANO" />
+          <s:enumeration value="OTHERS" />
+          <s:enumeration value="NORDEA_SOLO" />
+          <s:enumeration value="DANSKE_BANK" />
+          <s:enumeration value="BG_BANK" />
+          <s:enumeration value="LIC_MASTERCARD" />
+          <s:enumeration value="LIC_MASTERCARD_FOREIGN" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="getcardinfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getcardinfoResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="acquirer" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fee" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cardtype" type="tns:CardType" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardtypetext" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="epayresponse" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="renew">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="merchantnumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="transactionid" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="group" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pbsResponse" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="epayresponse" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="renewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="renewResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="pbsResponse" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="epayresponse" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getPbsErrorSoapIn">
+    <wsdl:part name="parameters" element="tns:getPbsError" />
+  </wsdl:message>
+  <wsdl:message name="getPbsErrorSoapOut">
+    <wsdl:part name="parameters" element="tns:getPbsErrorResponse" />
+  </wsdl:message>
+  <wsdl:message name="getEpayErrorSoapIn">
+    <wsdl:part name="parameters" element="tns:getEpayError" />
+  </wsdl:message>
+  <wsdl:message name="getEpayErrorSoapOut">
+    <wsdl:part name="parameters" element="tns:getEpayErrorResponse" />
+  </wsdl:message>
+  <wsdl:message name="captureSoapIn">
+    <wsdl:part name="parameters" element="tns:capture" />
+  </wsdl:message>
+  <wsdl:message name="captureSoapOut">
+    <wsdl:part name="parameters" element="tns:captureResponse" />
+  </wsdl:message>
+  <wsdl:message name="move_as_capturedSoapIn">
+    <wsdl:part name="parameters" element="tns:move_as_captured" />
+  </wsdl:message>
+  <wsdl:message name="move_as_capturedSoapOut">
+    <wsdl:part name="parameters" element="tns:move_as_capturedResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteSoapIn">
+    <wsdl:part name="parameters" element="tns:delete" />
+  </wsdl:message>
+  <wsdl:message name="deleteSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="creditSoapIn">
+    <wsdl:part name="parameters" element="tns:credit" />
+  </wsdl:message>
+  <wsdl:message name="creditSoapOut">
+    <wsdl:part name="parameters" element="tns:creditResponse" />
+  </wsdl:message>
+  <wsdl:message name="getcardtypeSoapIn">
+    <wsdl:part name="parameters" element="tns:getcardtype" />
+  </wsdl:message>
+  <wsdl:message name="getcardtypeSoapOut">
+    <wsdl:part name="parameters" element="tns:getcardtypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="gettransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:gettransaction" />
+  </wsdl:message>
+  <wsdl:message name="gettransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:gettransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="gettransactionlistSoapIn">
+    <wsdl:part name="parameters" element="tns:gettransactionlist" />
+  </wsdl:message>
+  <wsdl:message name="gettransactionlistSoapOut">
+    <wsdl:part name="parameters" element="tns:gettransactionlistResponse" />
+  </wsdl:message>
+  <wsdl:message name="getcardinfoSoapIn">
+    <wsdl:part name="parameters" element="tns:getcardinfo" />
+  </wsdl:message>
+  <wsdl:message name="getcardinfoSoapOut">
+    <wsdl:part name="parameters" element="tns:getcardinfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="renewSoapIn">
+    <wsdl:part name="parameters" element="tns:renew" />
+  </wsdl:message>
+  <wsdl:message name="renewSoapOut">
+    <wsdl:part name="parameters" element="tns:renewResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PaymentSoap">
+    <wsdl:operation name="getPbsError">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Converts an error from PBS to a string description. If the returning value is false check for error codes in the pbsresponse and epayresponse reference attributes for information about errors from ePay or PBS.</wsdl:documentation>
+      <wsdl:input message="tns:getPbsErrorSoapIn" />
+      <wsdl:output message="tns:getPbsErrorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getEpayError">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Converts an errorcode from ePay to a string. If the returning value is false check for error codes in the pbsresponse and epayresponse reference attributes for information about errors from ePay or PBS.</wsdl:documentation>
+      <wsdl:input message="tns:getEpayErrorSoapIn" />
+      <wsdl:output message="tns:getEpayErrorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="capture">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">To capture a payment. If the returning value is false check for error codes in the pbsresponse and epayresponse reference attributes for information about errors from ePay or PBS.</wsdl:documentation>
+      <wsdl:input message="tns:captureSoapIn" />
+      <wsdl:output message="tns:captureSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="move_as_captured">
+      <wsdl:input message="tns:move_as_capturedSoapIn" />
+      <wsdl:output message="tns:move_as_capturedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="delete">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">To delete a payment. If the returning value is false check for error codes in the epayresponse reference attribute for information about errors from ePay or PBS.</wsdl:documentation>
+      <wsdl:input message="tns:deleteSoapIn" />
+      <wsdl:output message="tns:deleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="credit">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">To credit a payment. If the returning value is false check for error codes in the pbsresponse and epayresponse reference attributes for information about errors from ePay or PBS.</wsdl:documentation>
+      <wsdl:input message="tns:creditSoapIn" />
+      <wsdl:output message="tns:creditSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getcardtype">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">To calculate a card type. If the returning value is false check for error code in the epayresponse reference attribute for information about errors from ePay. The cardtype returned are defined when logged on to the www.epay.dk website.</wsdl:documentation>
+      <wsdl:input message="tns:getcardtypeSoapIn" />
+      <wsdl:output message="tns:getcardtypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="gettransaction">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns information about a transaction by its transactionid. If the returning value is false check for error code in the epayresponse reference attribute for information about errors from ePay.</wsdl:documentation>
+      <wsdl:input message="tns:gettransactionSoapIn" />
+      <wsdl:output message="tns:gettransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="gettransactionlist">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a list of TransactionInformationType objects with information of transactions. If the returning value is false check for error code in the epayresponse reference attribute for information about errors from ePay.</wsdl:documentation>
+      <wsdl:input message="tns:gettransactionlistSoapIn" />
+      <wsdl:output message="tns:gettransactionlistSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getcardinfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a list of TransactionInformationType objects with information of transactions. If the returning value is false check for error code in the epayresponse reference attribute for information about errors from ePay.</wsdl:documentation>
+      <wsdl:input message="tns:getcardinfoSoapIn" />
+      <wsdl:output message="tns:getcardinfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="renew">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">To renew an EWIRE payment. If the returning value is false check for error codes in the pbsresponse (EWIRE result) and epayresponse reference attributes for information about errors from ePay or EWIRE.</wsdl:documentation>
+      <wsdl:input message="tns:renewSoapIn" />
+      <wsdl:output message="tns:renewSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PaymentSoap" type="tns:PaymentSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getPbsError">
+      <soap:operation soapAction="https://ssl.ditonlinebetalingssystem.dk/remote/payment/getPbsError" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEpayError">
+      <soap:operation soapAction="https://ssl.ditonlinebetalingssystem.dk/remote/payment/getEpayError" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="capture">
+      <soap:operation soapAction="https://ssl.ditonlinebetalingssystem.dk/remote/payment/capture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="move_as_captured">
+      <soap:operation soapAction="https://ssl.ditonlinebetalingssystem.dk/remote/payment/move_as_captured" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delete">
+      <soap:operation soapAction="https://ssl.ditonlinebetalingssystem.dk/remote/payment/delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="credit">
+      <soap:operation soapAction="https://ssl.ditonlinebetalingssystem.dk/remote/payment/credit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getcardtype">
+      <soap:operation soapAction="https://ssl.ditonlinebetalingssystem.dk/remote/payment/getcardtype" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gettransaction">
+      <soap:operation soapAction="https://ssl.ditonlinebetalingssystem.dk/remote/payment/gettransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gettransactionlist">
+      <soap:operation soapAction="https://ssl.ditonlinebetalingssystem.dk/remote/payment/gettransactionlist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getcardinfo">
+      <soap:operation soapAction="https://ssl.ditonlinebetalingssystem.dk/remote/payment/getcardinfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="renew">
+      <soap:operation soapAction="https://ssl.ditonlinebetalingssystem.dk/remote/payment/renew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PaymentSoap12" type="tns:PaymentSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getPbsError">
+      <soap12:operation soapAction="https://ssl.ditonlinebetalingssystem.dk/remote/payment/getPbsError" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEpayError">
+      <soap12:operation soapAction="https://ssl.ditonlinebetalingssystem.dk/remote/payment/getEpayError" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="capture">
+      <soap12:operation soapAction="https://ssl.ditonlinebetalingssystem.dk/remote/payment/capture" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="move_as_captured">
+      <soap12:operation soapAction="https://ssl.ditonlinebetalingssystem.dk/remote/payment/move_as_captured" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delete">
+      <soap12:operation soapAction="https://ssl.ditonlinebetalingssystem.dk/remote/payment/delete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="credit">
+      <soap12:operation soapAction="https://ssl.ditonlinebetalingssystem.dk/remote/payment/credit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getcardtype">
+      <soap12:operation soapAction="https://ssl.ditonlinebetalingssystem.dk/remote/payment/getcardtype" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gettransaction">
+      <soap12:operation soapAction="https://ssl.ditonlinebetalingssystem.dk/remote/payment/gettransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gettransactionlist">
+      <soap12:operation soapAction="https://ssl.ditonlinebetalingssystem.dk/remote/payment/gettransactionlist" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getcardinfo">
+      <soap12:operation soapAction="https://ssl.ditonlinebetalingssystem.dk/remote/payment/getcardinfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="renew">
+      <soap12:operation soapAction="https://ssl.ditonlinebetalingssystem.dk/remote/payment/renew" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Payment">
+    <wsdl:port name="PaymentSoap" binding="tns:PaymentSoap">
+      <soap:address location="https://ssl.ditonlinebetalingssystem.dk/remote/payment.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PaymentSoap12" binding="tns:PaymentSoap12">
+      <soap12:address location="https://ssl.ditonlinebetalingssystem.dk/remote/payment.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

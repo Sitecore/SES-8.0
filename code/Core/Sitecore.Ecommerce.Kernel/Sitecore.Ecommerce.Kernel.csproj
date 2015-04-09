@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9C45A6F1-560E-4688-BEC7-3E2F927CFF9A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sitecore.Ecommerce</RootNamespace>
+    <AssemblyName>Sitecore.Ecommerce.Kernel</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\lib\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\lib\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Lucene.Net">
+      <HintPath>..\..\..\lib\Lucene.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.Interception.3.5.1404.0\lib\Net45\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration">
+      <HintPath>..\packages\Unity.Interception.3.5.1404.0\lib\Net45\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Client, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\Sitecore.Client.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sitecore.Kernel, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\Sitecore.Kernel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sitecore.Logging, Version=1.2.0.30715, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\Sitecore.Logging.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Stimulsoft.Base, Version=2009.3.600.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\Stimulsoft.Base.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Stimulsoft.Report, Version=2009.3.600.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\Stimulsoft.Report.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstractions\Sites\SiteContextFactoryWrapper.cs" />
+    <Compile Include="Catalogs\VirtualProductResolverArgs.cs" />
+    <Compile Include="Collections\PropertyComparer.cs" />
+    <Compile Include="Configurations\CompanyMasterData.cs" />
+    <Compile Include="Configurations\ShopIoCConfigurationProvider.cs" />
+    <Compile Include="ShopContextSwitcher.cs" />
+    <Compile Include="Data\Mapping\Converters\DirectMappingEntityMemberConverter.cs" />
+    <Compile Include="Pipelines\InsertRenderings\GetItem.cs" />
+    <Compile Include="Pipelines\Loader\ConfigureShopContainers.cs" />
+    <Compile Include="Prices\DefaultTotalsFactory.cs" />
+    <Compile Include="ShopContextExtensions.cs" />
+    <Compile Include="Configurations\ShoppingCartSettings.cs" />
+    <Compile Include="Configurations\BusinessCatalogSettings.cs" />
+    <Compile Include="Configurations\DesignSettings.cs" />
+    <Compile Include="Configurations\GeneralSettings.cs" />
+    <Compile Include="Addresses\Country.cs" />
+    <Compile Include="Configurations\ShoppingCartSpotSettings.cs" />
+    <Compile Include="Consts.cs" />
+    <Compile Include="Abstractions\Globalization\TranslateWrapper.cs" />
+    <Compile Include="Abstractions\Install\InstallerWrapper.cs" />
+    <Compile Include="Currencies\StrictCurrencyConverter.cs" />
+    <Compile Include="Exceptions\CurrencyConversionException.cs" />
+    <Compile Include="Install\Localization\JobManagerWrapper.cs" />
+    <Compile Include="Install\Localization\LanguageManagerWrapper.cs" />
+    <Compile Include="Install\Localization\LocalizationInstaller.cs" />
+    <Compile Include="Install\Localization\LocalizationPostStep.cs" />
+    <Compile Include="Install\OrderManagerInstallationPostStep.cs" />
+    <Compile Include="Install\SequencedInstallationPostStep.cs" />
+    <Compile Include="Install\SequencedInstaller.cs" />
+    <Compile Include="Install\UnifiedPackageInstaller.cs" />
+    <Compile Include="Install\Upgrade\CreateRolesPostStep.cs" />
+    <Compile Include="OrderManagement\ItemBasedOrderIDGenerator.cs" />
+    <Compile Include="OrderManagement\NumericOrderIDGenerationStrategy.cs" />
+    <Compile Include="Pipelines\HttpRequest\CreateRequestContainer.cs" />
+    <Compile Include="Pipelines\HttpRequest\DisposeRequestContainer.cs" />
+    <Compile Include="Abstractions\Pipelines\PipelineWrapper.cs" />
+    <Compile Include="Report\OrderLineReportModel.cs" />
+    <Compile Include="Report\OrderReportModel.cs" />
+    <Compile Include="Report\StiReportConfirmationBuilder.cs" />
+    <Compile Include="Report\StiReportFactory.cs" />
+    <Compile Include="Report\StiReportHelper.cs" />
+    <Compile Include="Report\StiReportTranslator.cs" />
+    <Compile Include="Report\SublineReportModel.cs" />
+    <Compile Include="Security\Accounts\ContextUser.cs" />
+    <Compile Include="Security\Accounts\UserWrapper.cs" />
+    <Compile Include="Crypto.cs" />
+    <Compile Include="Currencies\Currency.cs" />
+    <Compile Include="Data\Convertors\Convertor.cs" />
+    <Compile Include="Data\Convertors\OrderConvertor.cs" />
+    <Compile Include="Data\Convertors\KeyValuePairConvertor.cs" />
+    <Compile Include="Data\Convertors\OrderLinesConvertor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\Convertors\ShoppingCartConvertor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\Convertors\ShoppingCartLineConvertor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\Mapping\Converters\ConvertibleEntityMemberConverter.cs" />
+    <Compile Include="Data\Mapping\FieldBasedEntityMemberConverter.cs" />
+    <Compile Include="Data\Mapping\FieldNamingPolicy.cs" />
+    <Compile Include="Data\Fields\FieldTypeKeys.cs" />
+    <Compile Include="Data\Mapping\Converters\BooleanEntityMemberConverter.cs" />
+    <Compile Include="Data\Mapping\Converters\DateTimeEntityMemberConverter.cs" />
+    <Compile Include="Data\Mapping\IRequiresEntityMemberType.cs" />
+    <Compile Include="Data\Mapping\IRequiresStorageObject.cs" />
+    <Compile Include="Data\Mapping\ItemBasedEntityMapper.cs" />
+    <Compile Include="Data\Mapping\MappingItemMatcher.cs" />
+    <Compile Include="Data\Mapping\EntityMemberConverterLookupTable.cs" />
+    <Compile Include="Data\Mapping\EntityToItemMapper.cs" />
+    <Compile Include="Data\Mapping\ItemToEntityMapper.cs" />
+    <Compile Include="Data\PrefixHolder.cs" />
+    <Compile Include="Data\Mapping\Converters\ProductSpecificationEntityMemberConverter.cs" />
+    <Compile Include="Data\SiteIndependentDatabaseSwitcher.cs" />
+    <Compile Include="Data\StructuresStorage.cs" />
+    <Compile Include="Mails\MailTemplate.cs" />
+    <Compile Include="Orders\OrderItemEventHandler.cs" />
+    <Compile Include="Orders\Statuses\Authorized.cs" />
+    <Compile Include="Orders\Statuses\Captured.cs" />
+    <Compile Include="Payments\OnlinePaymentProvider.cs" />
+    <Compile Include="Payments\DefaultPaymentProviderFactory.cs" />
+    <Compile Include="Payments\PaymentUrlResolver.cs" />
+    <Compile Include="Pipelines\CustomerCreated\ConfigureSecurity.cs" />
+    <Compile Include="Pipelines\CustomerCreated\LogIn.cs" />
+    <Compile Include="Pipelines\CustomerCreated\SendNotification.cs" />
+    <Compile Include="Pipelines\GetConfiguration\GetFromResolver.cs" />
+    <Compile Include="Pipelines\OrderCreated\SendMailToAdmin.cs" />
+    <Compile Include="Pipelines\OrderCreated\SendMailToClient.cs" />
+    <Compile Include="Currencies\CurrencyConverter.cs" />
+    <Compile Include="IIoCContainer.cs" />
+    <Compile Include="IoCContainer.cs" />
+    <Compile Include="Prices\PriceCalculatorFactoryImpl.cs" />
+    <Compile Include="Prices\DefaultPriceCalculator.cs" />
+    <Compile Include="Prices\PriceExtensions.cs" />
+    <Compile Include="Products\ItemProductFactory.cs" />
+    <Compile Include="Products\ProductPrice.cs" />
+    <Compile Include="Products\ProductStock.cs" />
+    <Compile Include="Products\ProductStockManager.cs" />
+    <Compile Include="Search\CompositeSearchProvider.cs" />
+    <Compile Include="Security\CustomerMembership.cs" />
+    <Compile Include="Services\ServiceClientArgs.cs" />
+    <Compile Include="Shippings\NotificationOption.cs" />
+    <Compile Include="Payments\OfflinePaymentProvider.cs" />
+    <Compile Include="Payments\OnlinePaymentProviderBase.cs" />
+    <Compile Include="Payments\PaymentProviderBase.cs" />
+    <Compile Include="Payments\TransactionConstants.cs" />
+    <Compile Include="Payments\TransactionData.cs" />
+    <Compile Include="Pipelines\Loader\ConfigureEntities.cs" />
+    <Compile Include="Pipelines\Loader\InitializeContainerProviderBase.cs" />
+    <Compile Include="Pipelines\Loader\RegisterEcommerceProviders.cs" />
+    <Compile Include="Prices\Totals.cs" />
+    <Compile Include="ShopConfiguration.cs" />
+    <Compile Include="ShopContextFactory.cs" />
+    <Compile Include="StructuredData\QueryResult.cs" />
+    <Compile Include="Texts.cs" />
+    <Compile Include="Unity\TypeTrackingExtension.cs" />
+    <Compile Include="Unity\UnityIoCContainerExtensions.cs" />
+    <Compile Include="Update\PriceToInvariantConverter.cs" />
+    <Compile Include="Update\UpdatePostStep.cs" />
+    <Compile Include="Users\CustomerManager.cs" />
+    <Compile Include="Data\EntityProvider.cs" />
+    <Compile Include="Mails\Mail.cs" />
+    <Compile Include="Data\DataMapper.cs" />
+    <Compile Include="Orders\OrderManager.cs" />
+    <Compile Include="Products\Product.cs" />
+    <Compile Include="Prices\ProductPriceManager.cs" />
+    <Compile Include="Products\ProductRepository.cs" />
+    <Compile Include="CheckOuts\CheckOut.cs" />
+    <Compile Include="Carts\ShoppingCart.cs" />
+    <Compile Include="Carts\ShoppingCartManager.cs" />
+    <Compile Include="Users\CustomerInfo.cs" />
+    <Compile Include="Sections\SectionFactory.cs" />
+    <Compile Include="Sections\SectionTableRow.cs" />
+    <Compile Include="Orders\Order.cs" />
+    <Compile Include="Payments\PaymentSystem.cs" />
+    <Compile Include="Unity\ClearSiteSettingsCacheEventHandler.cs" />
+    <Compile Include="Unity\QueryableContainerExtension.cs" />
+    <Compile Include="Utils\BusinessCatalogUtil.cs" />
+    <Compile Include="Utils\ExpressionSerializer.cs" />
+    <Compile Include="Utils\PropertyUtil.cs" />
+    <Compile Include="Validators\DictionaryValidator.cs" />
+    <Compile Include="Context.cs" />
+    <Compile Include="Exceptions\NavigateLinkNotFoundException.cs" />
+    <Compile Include="Addresses\AddressInfo.cs" />
+    <Compile Include="Shippings\ShippingProvider.cs" />
+    <Compile Include="Utils\TypeUtil.cs" />
+    <Compile Include="Utils\ItemUtil.cs" />
+    <Compile Include="Addresses\VatRegion.cs" />
+    <Compile Include="Xsl\ListNodeIterator.cs" />
+    <Compile Include="PriceMatrix\Category.cs" />
+    <Compile Include="PriceMatrix\CategoryItem.cs" />
+    <Compile Include="Web\UI\HtmlControls\Price.cs" />
+    <Compile Include="Data\Fields\PriceField.cs" />
+    <Compile Include="PriceMatrix\PriceMatrix.cs" />
+    <Compile Include="PriceMatrix\IPriceMatrixItem.cs" />
+    <Compile Include="PriceMatrix\QuantityPrice.cs" />
+    <Compile Include="PriceMatrix\Validators.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StructuredData\EnableStructuredDataModule.cs" />
+    <Compile Include="StructuredData\StructuredTree.cs" />
+    <Compile Include="Utils\ValidationUtil.cs" />
+    <Compile Include="Xsl\XslExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sitecore.Ecommerce.Core\Sitecore.Ecommerce.Core.csproj">
+      <Project>{F76CB1D3-5DFA-487B-B6B2-02DC614AC781}</Project>
+      <Name>Sitecore.Ecommerce.Core</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Sitecore.Ecommerce.DomainModel\Sitecore.Ecommerce.DomainModel.csproj">
+      <Project>{40952670-D53D-44D8-B855-F84881D4F7B0}</Project>
+      <Name>Sitecore.Ecommerce.DomainModel</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Carts\ShoppingCartLine.cs" />
+    <Compile Include="Catalogs\CatalogProductResolveStrategyBase.cs" />
+    <Compile Include="Catalogs\CodeProductUrlProcessor.cs" />
+    <Compile Include="Catalogs\NameAndCodeProductUrlProcessor.cs" />
+    <Compile Include="Catalogs\NameProductUrlProcessor.cs" />
+    <Compile Include="Catalogs\ProductListCatalogResolveStrategy.cs" />
+    <Compile Include="Catalogs\ProductUriLine.cs" />
+    <Compile Include="Catalogs\ProductUrlProcessor.cs" />
+    <Compile Include="Catalogs\QueryCatalogProductResolveStrategy.cs" />
+    <Compile Include="Catalogs\VirtualProductResolver.cs" />
+    <Compile Include="Catalogs\VirtualProductResolverCleaner.cs" />
+    <Compile Include="Data\OrderMappingRule.cs" />
+    <Compile Include="Data\OrderLineMappingRule.cs" />
+    <Compile Include="Data\EntityAttribute.cs" />
+    <Compile Include="Data\FieldMappingRule.cs" />
+    <Compile Include="Data\IDataMapper.cs" />
+    <Compile Include="Data\IMappingRule.cs" />
+    <Compile Include="Install\RebuildLinkDatabasePostStep.cs" />
+    <Compile Include="Install\PublishIndexItemsPostStep.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Install\RegisterPageEventsPostStep.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Install\InstallationPostStep.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Orders\OrderLine.cs" />
+    <Compile Include="Orders\Statuses\Completed.cs" />
+    <Compile Include="Orders\Statuses\Closed.cs" />
+    <Compile Include="Orders\Statuses\Held.cs" />
+    <Compile Include="Orders\Statuses\OrderStatusBase.cs" />
+    <Compile Include="Orders\Statuses\Processing.cs" />
+    <Compile Include="Orders\Statuses\Pending.cs" />
+    <Compile Include="Orders\Statuses\Canceled.cs" />
+    <Compile Include="Orders\Statuses\NewOrder.cs" />
+    <Compile Include="Payments\PaymentSettingsReader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Pipelines\GetConfiguration\ConfigurationPipelineArgs.cs" />
+    <Compile Include="Pipelines\GetConfiguration\GetConfigurationProcessor.cs" />
+    <Compile Include="Pipelines\GetConfiguration\GetFromContextSite.cs" />
+    <Compile Include="Pipelines\GetConfiguration\GetFromWebSite.cs" />
+    <Compile Include="Pipelines\GetConfiguration\GetFromLinkManager.cs" />
+    <Compile Include="Pipelines\HttpRequest\ProductResolver.cs" />
+    <Compile Include="Pipelines\PaymentStarted\StartPayment.cs" />
+    <Compile Include="Data\EntityHelper.cs" />
+    <Compile Include="Products\ProductCategory.cs" />
+    <Compile Include="Search\LuceneAnalyzer.cs" />
+    <Compile Include="Search\AttributeQuery.cs" />
+    <Compile Include="Search\BuiltinFields.cs" />
+    <Compile Include="Search\Condition.cs" />
+    <Compile Include="Search\DatabaseCrawler.cs" />
+    <Compile Include="Search\DatabaseSearchProvider.cs" />
+    <Compile Include="Search\FastQueryBuilder.cs" />
+    <Compile Include="Search\FastQuerySearchProvider.cs" />
+    <Compile Include="Search\FieldQuery.cs" />
+    <Compile Include="Search\ISearchProvider.cs" />
+    <Compile Include="Search\LuceneIndexRebuilder.cs" />
+    <Compile Include="Search\LuceneQueryBuilder.cs" />
+    <Compile Include="Search\LuceneSearchContext.cs" />
+    <Compile Include="Search\LuceneSearchProvider.cs" />
+    <Compile Include="Search\MatchVariant.cs" />
+    <Compile Include="Search\Query.cs" />
+    <Compile Include="Search\QueryCondition.cs" />
+    <Compile Include="Search\QueryElement.cs" />
+    <Compile Include="Search\QueryNode.cs" />
+    <Compile Include="Search\SitecoreQueryBuilder.cs" />
+    <Compile Include="Search\SitecoreQuerySearchProvider.cs" />
+    <Compile Include="Search\StringQueryBuilder.cs" />
+    <Compile Include="Search\SubQuery.cs" />
+    <Compile Include="Search\VirtualProductsCrawler.cs" />
+    <Compile Include="IoCContainerExtensions.cs" />
+    <Compile Include="Utils\MainUtil.cs" />
+    <Compile Include="Utils\ProductRepositoryUtil.cs" />
+    <Compile Include="Utils\SiteUtils.cs" />
+    <Compile Include="Validators\Interception\EmailValueAttribute.cs" />
+    <Compile Include="Validators\Interception\NotNullValueAttribute.cs" />
+    <Compile Include="Web\UI\WebControls\MaskedTextBox.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Sitecore.Ecommerce.Kernel.licenseheader" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

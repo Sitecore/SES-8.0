@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Ecommerce.Payments.AuthorizeNet", "Sitecore.Ecommerce.Payments.AuthorizeNet\Sitecore.Ecommerce.Payments.AuthorizeNet.csproj", "{6A777C3A-5C34-4AB7-BD48-2D17E7C89944}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Ecommerce.Payments.Bbs", "Sitecore.Ecommerce.Payments.Bbs\Sitecore.Ecommerce.Payments.Bbs.csproj", "{C2118274-39C5-425C-B51B-CE567DDEB1CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Ecommerce.Payments.Dibs", "Sitecore.Ecommerce.Payments.Dibs\Sitecore.Ecommerce.Payments.Dibs.csproj", "{9DC6D07F-7A2E-4161-9539-961371A969F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Ecommerce.Payments.EPay", "Sitecore.Ecommerce.Payments.EPay\Sitecore.Ecommerce.Payments.EPay.csproj", "{36B8BC9E-0F7E-4430-AEC7-00B54E937D71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Ecommerce.Payments.PayEx", "Sitecore.Ecommerce.Payments.PayEx\Sitecore.Ecommerce.Payments.PayEx.csproj", "{770CE443-D6A5-466C-8ADE-74A922435621}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Ecommerce.Payments.QuickPay", "Sitecore.Ecommerce.Payments.QuickPay\Sitecore.Ecommerce.Payments.QuickPay.csproj", "{17C187C7-09A9-41D7-8C50-68F4D746B49D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A777C3A-5C34-4AB7-BD48-2D17E7C89944}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A777C3A-5C34-4AB7-BD48-2D17E7C89944}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A777C3A-5C34-4AB7-BD48-2D17E7C89944}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A777C3A-5C34-4AB7-BD48-2D17E7C89944}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2118274-39C5-425C-B51B-CE567DDEB1CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2118274-39C5-425C-B51B-CE567DDEB1CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2118274-39C5-425C-B51B-CE567DDEB1CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2118274-39C5-425C-B51B-CE567DDEB1CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DC6D07F-7A2E-4161-9539-961371A969F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DC6D07F-7A2E-4161-9539-961371A969F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DC6D07F-7A2E-4161-9539-961371A969F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DC6D07F-7A2E-4161-9539-961371A969F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36B8BC9E-0F7E-4430-AEC7-00B54E937D71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36B8BC9E-0F7E-4430-AEC7-00B54E937D71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36B8BC9E-0F7E-4430-AEC7-00B54E937D71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36B8BC9E-0F7E-4430-AEC7-00B54E937D71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{770CE443-D6A5-466C-8ADE-74A922435621}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{770CE443-D6A5-466C-8ADE-74A922435621}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{770CE443-D6A5-466C-8ADE-74A922435621}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{770CE443-D6A5-466C-8ADE-74A922435621}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17C187C7-09A9-41D7-8C50-68F4D746B49D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17C187C7-09A9-41D7-8C50-68F4D746B49D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17C187C7-09A9-41D7-8C50-68F4D746B49D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17C187C7-09A9-41D7-8C50-68F4D746B49D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

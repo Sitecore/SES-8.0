@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BA534F05-D14E-490B-AC3D-1FA3809ABB40}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sitecore.Ecommerce.Apps</RootNamespace>
+    <AssemblyName>Sitecore.Ecommerce.Apps</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\lib\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\lib\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.Unity, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.5\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Client.Extensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\Sitecore.Client.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sitecore.Kernel">
+      <HintPath>..\..\..\lib\Sitecore.Kernel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sitecore.Speak">
+      <HintPath>..\..\..\lib\Sitecore.Speak.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sitecore.Speak.WebSite">
+      <HintPath>..\..\..\lib\Sitecore.Speak.WebSite.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Stimulsoft.Base">
+      <HintPath>..\..\..\lib\Stimulsoft.Base.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Stimulsoft.Report">
+      <HintPath>..\..\..\lib\Stimulsoft.Report.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Web">
+      <HintPath>..\..\..\lib\Stimulsoft.Report.Web.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sitecore.Ecommerce.Core">
+      <HintPath>..\..\..\lib\Sitecore.Ecommerce.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sitecore.Ecommerce.DomainModel">
+      <HintPath>..\..\..\lib\Sitecore.Ecommerce.DomainModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sitecore.Ecommerce.Kernel">
+      <HintPath>..\..\..\lib\Sitecore.Ecommerce.Kernel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sitecore.Ecommerce.Merchant">
+      <HintPath>..\..\..\lib\Sitecore.Ecommerce.Merchant.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EcommerceQueryParser.cs" />
+    <Compile Include="SpeakFreeTextSearchExtractor.cs" />
+    <Compile Include="OrderManagement\ContextStrategies\OnSmartPanelAllowanceChargeStrategy.cs" />
+    <Compile Include="OrderManagement\ContextStrategies\SmartPanelEntityResolvingStrategy.cs" />
+    <Compile Include="OrderManagement\DataSources\ActionLogDataSourceRepository.cs" />
+    <Compile Include="OrderManagement\DataSources\AllowanceChargeDataSourceRepository.cs" />
+    <Compile Include="OrderManagement\DataSources\ChargeDataSourceRepository.cs" />
+    <Compile Include="OrderManagement\DataSources\ContextSwitcherDataSourceBase.cs" />
+    <Compile Include="OrderManagement\DataSources\CountryDataSourceRepository.cs" />
+    <Compile Include="OrderManagement\DataSources\DataSourceRepository.cs" />
+    <Compile Include="OrderManagement\DataSources\DiscountDataSourceRepository.cs" />
+    <Compile Include="OrderManagement\DataSources\LastIncomingOrdersDataSourceRepository.cs" />
+    <Compile Include="OrderManagement\DataSources\LastOrdersReadyForCaptureDataSourceRepository.cs" />
+    <Compile Include="OrderManagement\DataSources\OrderDetailsDataSource.cs" />
+    <Compile Include="OrderManagement\DataSources\OrderDataSourceRepository.cs" />
+    <Compile Include="OrderManagement\DataSources\OrderLineModelDataSourceRepository.cs" />
+    <Compile Include="OrderManagement\DataSources\OrderListModelDataSourceRepository.cs" />
+    <Compile Include="OrderManagement\DataSources\ProductLineModelDataSourceRepository.cs" />
+    <Compile Include="OrderManagement\DataSources\QueryableOrderListModelDataSourceRepository.cs" />
+    <Compile Include="OrderManagement\DataSources\SingleOrderListModelDataSourceRepository.cs" />
+    <Compile Include="OrderManagement\DataSources\StateModelDataSourceRepository.cs" />
+    <Compile Include="OrderManagement\Install\OrderManagerPostStep.cs" />
+    <Compile Include="OrderManagement\Install\ResetClonedDetailListHeadersPostStep.cs" />
+    <Compile Include="OrderManagement\Install\ResetSampleUserPaswordPostStep.cs" />
+    <Compile Include="OrderManagement\Models\OrderLineModel.cs" />
+    <Compile Include="OrderManagement\Models\OrderListModel.cs" />
+    <Compile Include="OrderManagement\Models\OrderModelExtensions.cs" />
+    <Compile Include="OrderManagement\Models\ProductLineModel.cs" />
+    <Compile Include="OrderManagement\PageExtensions.cs" />
+    <Compile Include="OrderManagement\PredefinedFilter.cs" />
+    <Compile Include="OrderManagement\Presenters\CreateOrderActionPresenter.cs" />
+    <Compile Include="OrderManagement\Presenters\RemoveOrderLineActionPresenter.cs" />
+    <Compile Include="OrderManagement\Presenters\OrderTaskFlowButtonsPresenter.cs" />
+    <Compile Include="OrderManagement\Models\MerchantOrderStateConfigurationAdapter.cs" />
+    <Compile Include="OrderManagement\Models\StateModel.cs" />
+    <Compile Include="OrderManagement\Presenters\OrderStateListPresenter.cs" />
+    <Compile Include="OrderManagement\Presenters\PrintOrderPresenter.cs" />
+    <Compile Include="OrderManagement\Presenters\SmartPanelRemoveOrderLineActionPresenter.cs" />
+    <Compile Include="OrderManagement\OrderStateListValidator.cs" />
+    <Compile Include="OrderManagement\ProductPriceService.cs" />
+    <Compile Include="OrderManagement\StateUnlocalizer.cs" />
+    <Compile Include="OrderManagement\Views\ICreateOrderActionView.cs" />
+    <Compile Include="OrderManagement\Views\RemoveOrderLineActionView.cs" />
+    <Compile Include="OrderManagement\Views\IRemoveOrderLineActionView.cs" />
+    <Compile Include="OrderManagement\Views\IOrderStateListView.cs" />
+    <Compile Include="OrderManagement\Mixins\IChangesObservable.cs" />
+    <Compile Include="OrderManagement\Views\IOrderTaskFlowButtonsView.cs" />
+    <Compile Include="OrderManagement\Views\IPrintOrderView.cs" />
+    <Compile Include="OrderManagement\Views\SmartPanelRemoveOrderLineActionView.cs" />
+    <Compile Include="Pipelines\HttpRequest\MerchantShopResolver.cs" />
+    <Compile Include="Pipelines\Loader\ConfigureUnityContainer.cs" />
+    <Compile Include="Security\UserProfileExtensions.cs" />
+    <Compile Include="SpeakDateTimeExtractor.cs" />
+    <Compile Include="SpeakExpressionParser.cs" />
+    <Compile Include="SpeakExpressionLocalizer.cs" />
+    <Compile Include="OrderManagement\DataSources\ShopContextFactoryContextSwitcherDataSource.cs" />
+    <Compile Include="OrderManagement\DataSources\ContentContextSwitcherDataSource.cs" />
+    <Compile Include="Web\UI\WebControls\Actions\OrderLineSmartPanelActions.cs" />
+    <Compile Include="Web\UI\WebControls\AllowanceChargeFieldEditor.cs" />
+    <Compile Include="Web\UI\WebControls\BaseFieldEditor.cs" />
+    <Compile Include="Web\UI\WebControls\Buttons\AllowanceChargeSmartPanelButtons.cs" />
+    <Compile Include="Web\UI\WebControls\Buttons\ObservableOmSmartPanelButtons.cs" />
+    <Compile Include="Web\UI\WebControls\Buttons\OrderLineSmartPanelButtons.cs" />
+    <Compile Include="OrderManagement\Views\OrderQuickInfoSmartPanelButtonsView.cs" />
+    <Compile Include="OrderManagement\Views\OrderStateListView.cs" />
+    <Compile Include="OrderManagement\Views\OrderStateListViewSubstateCreatedEventArgs.cs" />
+    <Compile Include="Web\UI\WebControls\Buttons\ProductsSmartPanelButtons.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="OrderManagement\Views\IOrderDetailsView.cs" />
+    <Compile Include="OrderManagement\Presenters\OrderDetailsPresenter.cs" />
+    <Compile Include="Web\UI\WebControls\Actions\ChangeProductAction.cs" />
+    <Compile Include="OrderManagement\ContextStrategies\OnSmartPanelOrderLineStrategy.cs" />
+    <Compile Include="OrderManagement\ContextStrategies\UblEntityResolvingStrategy.cs" />
+    <Compile Include="OrderManagement\ContextStrategies\OnSmartPanelStrategy.cs" />
+    <Compile Include="OrderManagement\ContextStrategies\OnDefaultPageStrategy.cs" />
+    <Compile Include="Web\UI\WebControls\Actions\DefaultAction.cs" />
+    <Compile Include="Web\UI\WebControls\Actions\EditAction.cs" />
+    <Compile Include="Web\UI\WebControls\Actions\AddOrderLineAction.cs" />
+    <Compile Include="Web\UI\WebControls\Actions\OrderLineAction.cs" />
+    <Compile Include="Web\UI\WebControls\Actions\OrderLineActions.cs" />
+    <Compile Include="Web\UI\WebControls\Actions\PrintAction.cs" />
+    <Compile Include="Web\UI\WebControls\Actions\ScriptManagedAction.cs" />
+    <Compile Include="Web\UI\WebControls\Actions\SendOrderConfirmationAction.cs" />
+    <Compile Include="Web\UI\WebControls\ActiveSubstateChangedEventArgs.cs" />
+    <Compile Include="Web\UI\WebControls\ActiveSubstateChangingEventArgs.cs" />
+    <Compile Include="Web\UI\WebControls\Buttons\OmSmartPanelButtons.cs" />
+    <Compile Include="Web\UI\WebControls\ControlTemplate.cs" />
+    <Compile Include="Web\UI\WebControls\CurrentStateChangedEventArgs.cs" />
+    <Compile Include="Web\UI\WebControls\CurrentStateChangingEventArgs.cs" />
+    <Compile Include="Web\UI\WebControls\DefaultPredicateSerializer.cs" />
+    <Compile Include="Web\UI\WebControls\FastQueryPredicateSerializer.cs" />
+    <Compile Include="Web\UI\WebControls\IBoundToField.cs" />
+    <Compile Include="Web\UI\WebControls\DefaultDetailList.cs" />
+    <Compile Include="Web\UI\WebControls\MissingOrderChecker.cs" />
+    <Compile Include="Web\UI\WebControls\OmActionsObjectDetailList.cs" />
+    <Compile Include="OrderManagement\Views\CreateOrderAction.cs" />
+    <Compile Include="Web\UI\WebControls\ProductDetailList.cs" />
+    <Compile Include="Web\UI\WebControls\OrderDetailsRenderer.cs" />
+    <Compile Include="OrderManagement\Views\OrderDetailsView.cs" />
+    <Compile Include="Web\UI\WebControls\OrderFieldEditor.cs" />
+    <Compile Include="Web\UI\WebControls\OrderLineFieldEditor.cs" />
+    <Compile Include="Web\UI\WebControls\OrderStateList.cs" />
+    <Compile Include="Web\UI\WebControls\OrderStateListControlTemplate.cs" />
+    <Compile Include="Web\UI\WebControls\PrintOrder.cs" />
+    <Compile Include="Web\UI\WebControls\QuantityBoxRenderer.cs" />
+    <Compile Include="Web\UI\WebControls\SmartPanelRenderer.cs" />
+    <Compile Include="Web\UI\WebControls\SubstateControlDataBoundEventArgs.cs" />
+    <Compile Include="OrderManagement\Views\OrderTaskFlowButtonsView.cs" />
+    <Compile Include="Web\UI\WebControls\ShopContextDropdown.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Sitecore.Ecommerce.Apps.licenseheader" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

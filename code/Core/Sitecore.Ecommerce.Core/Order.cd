@@ -1,0 +1,582 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Sitecore.Ecommerce.OrderManagement.Orders.Order">
+    <Position X="7.75" Y="1" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="AnticipatedMonetaryTotal" Type="Sitecore.Ecommerce.OrderManagement.Orders.MonetaryTotal">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.128" Y="0.06" Height="0.182" Width="1.973" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="AccountingCustomerParty" Type="Sitecore.Ecommerce.OrderManagement.Orders.CustomerParty" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.75" Y="3.478" />
+        <Point X="6.438" Y="3.478" />
+        <Point X="6.438" Y="5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-1.429" Y="1.235" Height="0.182" Width="1.846" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="FreightForwarderParty" Type="Sitecore.Ecommerce.Common.Party" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.75" Y="3.834" />
+        <Point X="7.375" Y="3.834" />
+        <Point X="7.375" Y="7.447" />
+        <Point X="3" Y="7.447" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.685" Y="-0.368" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="AllowanceCharge" Type="Sitecore.Ecommerce.OrderManagement.Orders.AllowanceCharge">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.445" Y="0.601" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="TaxTotal" Type="Sitecore.Ecommerce.OrderManagement.Orders.TaxTotal" FixedFromPoint="true">
+      <Path>
+        <Point X="8.875" Y="4.738" />
+        <Point X="8.875" Y="14.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.076" Y="1.457" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="BuyerCustomerParty" Type="Sitecore.Ecommerce.OrderManagement.Orders.CustomerParty" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.75" Y="2.851" />
+        <Point X="5.812" Y="2.851" />
+        <Point X="5.812" Y="5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.35" Y="1.979" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="DefaultDelivery" Type="Sitecore.Ecommerce.OrderManagement.Orders.Delivery" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.188" Y="4.738" />
+        <Point X="8.188" Y="10.475" />
+        <Point X="7.75" Y="10.475" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="DefaultFreightForwarderParty" Type="Sitecore.Ecommerce.Common.Party" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8" Y="4.738" />
+        <Point X="8" Y="8.208" />
+        <Point X="3" Y="8.208" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Delivery" Type="Sitecore.Ecommerce.OrderManagement.Orders.Delivery" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.5" Y="4.738" />
+        <Point X="8.5" Y="11.11" />
+        <Point X="7.75" Y="11.11" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>EAAQAgBAUAQogAECAAIEAAAAIABAAAEAAAALhAEAAAg=</HashCode>
+      <FileName>OrderManagement\Orders\Order.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AnticipatedMonetaryTotal" />
+      <Property Name="AccountingCustomerParty" />
+      <Property Name="SellerSupplierParty" />
+      <Property Name="TaxTotal" />
+      <Property Name="BuyerCustomerParty" />
+      <Property Name="DefaultDelivery" />
+      <Property Name="DefaultFreightForwarderParty" />
+      <Property Name="State" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="FreightForwarderParty" />
+      <Property Name="AllowanceCharge" />
+      <Property Name="Delivery" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Sitecore.Ecommerce.OrderManagement.Orders.State">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAgAAgAAQAQAAAAEAAAAAAAAAAAiA=</HashCode>
+      <FileName>OrderManagement\Orders\State.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Substates" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sitecore.Ecommerce.OrderManagement.Orders.MonetaryTotal">
+    <Position X="11.75" Y="3" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="AllowanceTotalAmount" Type="Sitecore.Ecommerce.Common.Amount" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.375" Y="4.363" />
+        <Point X="12.375" Y="7.923" />
+        <Point X="16.5" Y="7.923" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="ChargeTotalAmount" Type="Sitecore.Ecommerce.Common.Amount" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.562" Y="4.363" />
+        <Point X="13.562" Y="6.706" />
+        <Point X="16.5" Y="6.706" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="LineExtensionAmount" Type="Sitecore.Ecommerce.Common.Amount" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.062" Y="4.363" />
+        <Point X="13.062" Y="7.222" />
+        <Point X="16.5" Y="7.222" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="PayableAmount" Type="Sitecore.Ecommerce.Common.Amount" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.562" Y="4.363" />
+        <Point X="12.562" Y="7.696" />
+        <Point X="16.5" Y="7.696" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="PayableRoundingAmount" Type="Sitecore.Ecommerce.Common.Amount" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.375" Y="4.363" />
+        <Point X="13.375" Y="6.964" />
+        <Point X="16.5" Y="6.964" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="PrepaidAmount" Type="Sitecore.Ecommerce.Common.Amount" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.125" Y="4.363" />
+        <Point X="12.125" Y="8.15" />
+        <Point X="16.5" Y="8.15" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="TaxExclusiveAmount" Type="Sitecore.Ecommerce.Common.Amount" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.812" Y="4.363" />
+        <Point X="12.812" Y="7.459" />
+        <Point X="16.5" Y="7.459" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="TaxInclusiveAmount" Type="Sitecore.Ecommerce.Common.Amount" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.75" Y="3.383" />
+        <Point X="17.294" Y="3.383" />
+        <Point X="17.294" Y="6.5" />
+        <Point X="17.25" Y="6.5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAEAEAAAABIAAAAAAAACAAAAEAAgABgAAAAAABAAAAA=</HashCode>
+      <FileName>OrderManagement\Orders\MonetaryTotal.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AllowanceTotalAmount" />
+      <Property Name="ChargeTotalAmount" />
+      <Property Name="LineExtensionAmount" />
+      <Property Name="PayableAmount" />
+      <Property Name="PayableRoundingAmount" />
+      <Property Name="PrepaidAmount" />
+      <Property Name="TaxExclusiveAmount" />
+      <Property Name="TaxInclusiveAmount" />
+      <Property Name="Order" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sitecore.Ecommerce.Common.Party">
+    <Position X="1.25" Y="5.75" Width="1.75" />
+    <AssociationLine Name="Contact" Type="Sitecore.Ecommerce.Common.Contact">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.012" Y="0.094" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="PhysicalLocation" Type="Sitecore.Ecommerce.Common.Location">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.255" Y="0.981" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="PostalAddress" Type="Sitecore.Ecommerce.Common.Address" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.625" Y="8.584" />
+        <Point X="1.625" Y="13.812" />
+        <Point X="4.25" Y="13.812" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.678" Y="0.094" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AIAIAAQAAAIAAAgACAAAAAAAQBCABAAAAACBAAAEAAA=</HashCode>
+      <FileName>Common\Party.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Contact" />
+      <Property Name="PhysicalLocation" />
+      <Property Name="PostalAddress" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sitecore.Ecommerce.OrderManagement.Orders.CustomerParty">
+    <Position X="4.5" Y="5" Width="2.25" />
+    <AssociationLine Name="Party" Type="Sitecore.Ecommerce.Common.Party" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="6.488" />
+        <Point X="6" Y="7.213" />
+        <Point X="3" Y="7.213" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="BuyerContact" Type="Sitecore.Ecommerce.Common.Contact" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.5" Y="5" />
+        <Point X="5.5" Y="3" />
+        <Point X="4.25" Y="3" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.118" Y="0.205" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="DeliveryContact" Type="Sitecore.Ecommerce.Common.Contact" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.125" Y="5" />
+        <Point X="5.125" Y="3.375" />
+        <Point X="4.25" Y="3.375" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.173" Y="-0.403" Height="0.182" Width="1.545" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="AccountingContact" Type="Sitecore.Ecommerce.Common.Contact" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.5" Y="5.812" />
+        <Point X="3.667" Y="5.812" />
+        <Point X="3.667" Y="5.2" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.904" Y="0.789" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AUCAAAAAAAIAAAAAAAAAAAAAAAIAAAAABAAEAAAAAAA=</HashCode>
+      <FileName>OrderManagement\Orders\CustomerParty.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Party" />
+      <Property Name="BuyerContact" />
+      <Property Name="DeliveryContact" />
+      <Property Name="AccountingContact" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sitecore.Ecommerce.Common.Contact">
+    <Position X="2.25" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAIAgAAAAAAAAAQAAAAAAAAAAIAAAAFAQAA=</HashCode>
+      <FileName>Common\Contact.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sitecore.Ecommerce.Common.Location">
+    <Position X="1.75" Y="10.25" Width="2" />
+    <AssociationLine Name="Address" Type="Sitecore.Ecommerce.Common.Address" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.656" Y="12.315" />
+        <Point X="3.656" Y="13.125" />
+        <Point X="4.375" Y="13.125" />
+        <Point X="4.375" Y="13.5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIggAAAAAAAAAAAAAAIAAICAAAAAAAAACA=</HashCode>
+      <FileName>Common\Location.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Address" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sitecore.Ecommerce.OrderManagement.Orders.Substate">
+    <Position X="16" Y="1" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAIAAAAAgAAgAAQAAAAAAIAgAAAAAAAAAiA=</HashCode>
+      <FileName>OrderManagement\Orders\Substate.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sitecore.Ecommerce.Common.Amount">
+    <Position X="16.5" Y="6.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAQAAAAIAYAUDAAAAAAAAACAAAAAgAAAAAgA=</HashCode>
+      <FileName>Common\Amount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sitecore.Ecommerce.OrderManagement.Orders.SupplierParty">
+    <Position X="1.25" Y="0.5" Width="2.25" />
+    <AssociationLine Name="Party" Type="Sitecore.Ecommerce.Common.Party">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.126" Y="1.533" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="AccountingContact" Type="Sitecore.Ecommerce.Common.Contact">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.348" Y="0.108" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AUAAAAAAAAIAAgAAgAAAAAAAAAAAgAAAAAAEAAAAAAA=</HashCode>
+      <FileName>OrderManagement\Orders\SupplierParty.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Party" />
+      <Property Name="AccountingContact" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sitecore.Ecommerce.OrderManagement.Orders.AllowanceCharge">
+    <Position X="9.25" Y="7.75" Width="2.25" />
+    <AssociationLine Name="Amount" Type="Sitecore.Ecommerce.Common.Amount" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.5" Y="9.217" />
+        <Point X="16.75" Y="9.217" />
+        <Point X="16.75" Y="8.315" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.189" Y="0.567" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="TaxTotal" Type="Sitecore.Ecommerce.OrderManagement.Orders.TaxTotal" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="9.25" Y="9.533" />
+        <Point X="9.062" Y="9.533" />
+        <Point X="9.062" Y="14.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.906" Y="0.886" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="TaxCategory" Type="Sitecore.Ecommerce.OrderManagement.Orders.TaxCategory" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.5" Y="9.489" />
+        <Point X="15.875" Y="9.489" />
+        <Point X="15.875" Y="11.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.348" Y="1.454" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="BaseAmount" Type="Sitecore.Ecommerce.Common.Amount" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.5" Y="9" />
+        <Point X="11.875" Y="9" />
+        <Point X="11.875" Y="8.315" />
+        <Point X="16.5" Y="8.315" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="2.043" Y="-0.289" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAGAAAAAEAIggAACAAIAAACAAAAAIAAAAQAABAAAAAA=</HashCode>
+      <FileName>OrderManagement\Orders\AllowanceCharge.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Amount" />
+      <Property Name="TaxTotal" />
+      <Property Name="TaxCategory" />
+      <Property Name="BaseAmount" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sitecore.Ecommerce.OrderManagement.Orders.TaxTotal">
+    <Position X="8" Y="14.25" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="TaxAmount" Type="Sitecore.Ecommerce.Common.Amount" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="9.75" Y="15.126" />
+        <Point X="18.875" Y="15.126" />
+        <Point X="18.875" Y="7.875" />
+        <Point X="18.5" Y="7.875" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.173" Y="0.155" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="RoundingAmount" Type="Sitecore.Ecommerce.Common.Amount" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="9.75" Y="15.455" />
+        <Point X="20.243" Y="15.455" />
+        <Point X="20.243" Y="7.125" />
+        <Point X="18.5" Y="7.125" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.221" Y="0.123" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="TaxSubtotal" Type="Sitecore.Ecommerce.OrderManagement.Orders.TaxSubTotal" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="9.75" Y="14.743" />
+        <Point X="10.125" Y="14.743" />
+        <Point X="10.125" Y="14.309" />
+        <Point X="11" Y="14.309" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAgAAAAAAAAQDAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OrderManagement\Orders\TaxTotal.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TaxAmount" />
+      <Property Name="RoundingAmount" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="TaxSubtotal" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sitecore.Ecommerce.OrderManagement.Orders.TaxSubTotal">
+    <Position X="11" Y="13.25" Width="2.5" />
+    <AssociationLine Name="TaxableAmount" Type="Sitecore.Ecommerce.Common.Amount" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.5" Y="14.214" />
+        <Point X="17.188" Y="14.214" />
+        <Point X="17.188" Y="8.315" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.255" Y="2.581" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="TaxAmount" Type="Sitecore.Ecommerce.Common.Amount" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.5" Y="14.338" />
+        <Point X="17.375" Y="14.338" />
+        <Point X="17.375" Y="8.315" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.017" Y="1.964" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="TransactionCurrencyTaxAmount" Type="Sitecore.Ecommerce.Common.Amount" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.5" Y="14.438" />
+        <Point X="17.625" Y="14.438" />
+        <Point X="17.625" Y="8.315" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-2.205" Y="1.552" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAIAAAAAAAAAIQAAAAAAAAAAAABAAAABAAA=</HashCode>
+      <FileName>OrderManagement\Orders\TaxSubTotal.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TaxCategory" />
+      <Property Name="TaxableAmount" />
+      <Property Name="TaxAmount" />
+      <Property Name="TransactionCurrencyTaxAmount" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sitecore.Ecommerce.OrderManagement.Orders.TaxCategory">
+    <Position X="14.75" Y="11.25" Width="2.25" />
+    <AssociationLine Name="PerUnitAmount" Type="Sitecore.Ecommerce.Common.Amount">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.191" Y="1.628" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAIAgAAAAAAAAAQAAEAAAAACAAIACAAAAgA=</HashCode>
+      <FileName>OrderManagement\Orders\TaxCategory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TaxScheme" />
+      <Property Name="BaseUnitMeasure" />
+      <Property Name="PerUnitAmount" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sitecore.Ecommerce.OrderManagement.Orders.TaxScheme">
+    <Position X="12.25" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAQAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>OrderManagement\Orders\TaxScheme.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sitecore.Ecommerce.OrderManagement.Orders.Delivery">
+    <Position X="5.5" Y="9.25" Width="2.25" />
+    <AssociationLine Name="DeliveryParty" Type="Sitecore.Ecommerce.Common.Party" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.719" Y="9.25" />
+        <Point X="5.719" Y="8.584" />
+        <Point X="3" Y="8.584" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="DeliveryAdress" Type="Sitecore.Ecommerce.Common.Address" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.25" Y="11.7" />
+        <Point X="6.25" Y="12.075" />
+        <Point X="5.5" Y="12.075" />
+        <Point X="5.5" Y="13.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.223" Y="0.823" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAQACAAgAAIAgACAAgAAAAABAAAAYAAAAgBAgAAAAAA=</HashCode>
+      <FileName>OrderManagement\Orders\Delivery.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DeliveryParty" />
+      <Property Name="DeliveryAdress" />
+      <Property Name="DeliveryLocation" />
+      <Property Name="AlternativeDeliveryLocation" />
+      <Property Name="Despatch" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sitecore.Ecommerce.Common.Measure">
+    <Position X="12.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\Measure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sitecore.Ecommerce.Common.Address">
+    <Position X="4.25" Y="13.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAQAQAAogIIgEiAAFACCAAAMAIIAAAEAAAACAoQAAA=</HashCode>
+      <FileName>Common\Address.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sitecore.Ecommerce.OrderManagement.Orders.Despatch">
+    <Position X="0.5" Y="14" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAMEgAAACAAAAAAAAgAAAAAAAAAIAAAAAEA=</HashCode>
+      <FileName>OrderManagement\Orders\Despatch.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DespatchAddress" />
+      <Property Name="DespatchParty" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
